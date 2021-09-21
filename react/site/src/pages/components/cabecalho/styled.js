@@ -4,7 +4,7 @@ const Cabecalho = styled.div`
     display: flex;
     flex-direction: row;
     background: #242424;
-    padding: 1em;
+    padding: 0.6em;
     align-items: center;
     justify-content: space-between;
 
@@ -17,7 +17,14 @@ const Cabecalho = styled.div`
     .opcoes {
         padding-right: 1em;
         padding-left: 1em;
-        font-size: 1.5em;
+        font-size: 1em;
+    }
+
+    .imagem-cab img {
+        width: 130px;
+    }
+    .imagem-cab2 img {
+        width: 60px;
     }
 `
 
