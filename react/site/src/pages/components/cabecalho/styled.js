@@ -4,7 +4,8 @@ const Cabecalho = styled.div`
     display: flex;
     flex-direction: row;
     background: #242424;
-    padding: 0.6em;
+    padding: 0em 1em;
+    font-family: 'Josefin Sans', sans-serif;
     align-items: center;
     justify-content: space-between;
 
@@ -12,12 +13,15 @@ const Cabecalho = styled.div`
         display: flex;
         flex-direction: row;
         color: #FFFFFF;
+        
     }
 
     .opcoes {
         padding-right: 1em;
         padding-left: 1em;
-        font-size: 1em;
+        font-size: 1.1em;
+        font-family: 'Josefin Sans', sans-serif;
+        
     }
 
     .imagem-cab img {

@@ -1,7 +1,7 @@
 import { Container } from './styled';
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
-import customi from './css.css'
+import './css.css'
 import 'react-calendar/dist/Calendar.css';
 
 export default function Calendariooo() {
