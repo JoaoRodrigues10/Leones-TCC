@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import './css.css'
 import 'react-calendar/dist/Calendar.css';
+import Cabecalho from '../components/cabecalho'
 
 export default function Calendariooo() {
     
@@ -29,14 +30,17 @@ export default function Calendariooo() {
     }
 
     return (
-        <Container>
-            <div className="titulo"> Escoha uma Data </div>
-            <div className="calendario">
-                <Calendar onChange={onChange} value={date} minDate={new Date()}  />
-               
-            </div>
-            <div className="titulo2"> Horários disponiveis para o dia {date.getDate()} de {mes(date)} </div>
-            <div className="horarios-dipo"> </div>
-        </Container>
+        <div>
+            <Cabecalho/>
+                <Container>
+                    <div className="titulo"> Escoha uma Data </div>
+                    <div className="calendario">
+                        <Calendar onChange={onChange} value={date} minDate={new Date()}  />
+                    
+                    </div>
+                    <div className="titulo2"> Horários disponiveis para o dia {date.getDate()} de {mes(date)} </div>
+                    <div className="horarios-dipo"> </div>
+                </Container>
+        </div>
     )
 }

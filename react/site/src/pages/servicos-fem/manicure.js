@@ -1,7 +1,11 @@
 import { ContainerCortes } from "./styled"
+import Cabecalho from '../components/cabecalho'
+
 
 export default function Penteados() {
     return(
+        <div>
+            <Cabecalho/>
         <ContainerCortes>
                     <div class="faixa">
             <div class="titulo">
@@ -49,5 +53,6 @@ export default function Penteados() {
             </div>
             </div>
         </ContainerCortes>
+        </div>
     )
 }

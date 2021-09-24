@@ -1,8 +1,11 @@
 import { Container } from "./styled"
-
+import Cabecalho from '../components/cabecalho'
+import { Link } from "react-router-dom"
 
 export default function Servicos() {
     return (
+        <div>
+            <Cabecalho/>
         <Container>
             <div class="faixa1">
         <div class="botoes">
@@ -11,9 +14,7 @@ export default function Servicos() {
                 <img src="/assets/images/feminino.png" alt="" />
             </button>
 
-            <div class="titulo">
-                CORTES
-            </div>
+            <Link to="/cortes"><div class="titulo"> CORTES </div> </Link>
 
             <ul class="serv">
                 <li> Como você <br /> desejar </li>
@@ -25,9 +26,9 @@ export default function Servicos() {
                 <img src="/assets/images/feminino.png" alt="" />
             </button>
 
-            <div class="titulo">
-                PENTEADOS
-            </div>
+            <Link to="/penteados">
+                <div class="titulo"> PENTEADOS</div>
+            </Link>
 
             <ul class="serv">
                 <li> Como você <br /> desejar </li>
@@ -39,10 +40,12 @@ export default function Servicos() {
                 <img src="/assets/images/feminino.png" alt="" />
             </button>
 
+            <Link to="/tratamentos">
             <div class="titulo">
                 TRATAMENTO <br />
                 CAPILAR
             </div>
+            </Link>
 
             <ul class="serv">
                 <li> Hidratação </li>
@@ -58,10 +61,12 @@ export default function Servicos() {
                 <img src="/assets/images/feminino.png" alt="" />
             </button>
 
+            <Link to="/quimicas">
             <div class="titulo">
                 QUÍMICAS EM <br />
                 GERAL
             </div>
+            </Link>
 
             <ul class="serv">
                 <li> Coloração </li>
@@ -75,11 +80,13 @@ export default function Servicos() {
             <button>
                 <img src="/assets/images/feminino.png" alt="" />
             </button>
-
+            <Link to="/serviçosespeciais">
             <div class="titulo">
                 SERVIÇOS <br />
                 ESPECIAIS
             </div>
+            </Link>
+            
 
             <ul class="serv">
                 <li> Mega Hair </li>
@@ -93,10 +100,14 @@ export default function Servicos() {
                 <img src="/assets/images/feminino.png" alt="" />
             </button>
 
+
+            <Link to="/manicure e pedicure">
             <div class="titulo">
                 MANICURE E <br />
                 PEDICURE
             </div>
+            </Link>
+            
 
             <ul class="serv">
                 <li>Alongamento</li>
@@ -108,5 +119,6 @@ export default function Servicos() {
         </div>
         </div>
         </Container>
+        </div>
     )
 }

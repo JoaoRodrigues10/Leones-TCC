@@ -1,7 +1,9 @@
 import { ContainerCortes } from "./styled"
-
+import Cabecalho from '../components/cabecalho'
 export default function Tratamentos() {
     return(
+        <div>
+        <Cabecalho/>
         <ContainerCortes>
                     <div class="faixa">
             <div class="titulo">
@@ -47,5 +49,6 @@ export default function Tratamentos() {
             </div>
             </div>
         </ContainerCortes>
+        </div>
     )
 }

@@ -76,7 +76,7 @@ const ContainerCortes = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #0b1425;
-  padding: 10px 14.4em;
+  padding: 10px 12em;
 }
 
 .cabelo img {
