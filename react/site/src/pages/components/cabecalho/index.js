@@ -1,9 +1,9 @@
 
+import { Link } from 'react-router-dom'
 import { Cabecalho } from './styled'
 
-export default function Cabecalhooo() {
 
-    
+export default function Cabecalhooo() {
     
     return (
             <Cabecalho>
@@ -11,10 +11,10 @@ export default function Cabecalhooo() {
                     <div className="imagem-cab"> <img src="/assets/images/logo.png" alt="" /> </div>
                 </div>
                 <div className="paginas-cab">
-                    <div className="opcoes"> Home </div>
-                    <div className="opcoes"> Serviços </div>
-                    <div className="opcoes"> Reservas </div>
-                    <div className="opcoes"> LEO </div>
+                <Link to="/"> <div className="opcoes" > Home </div> </Link>
+                <Link to="/serviços"> <div className="opcoes"> Serviços </div> </Link>    
+                <Link to="/calendario">  <div className="opcoes"> Reservas </div> </Link>     
+                <Link to="/"> <div className="opcoes"> LEO </div> </Link>     
                 </div>
                 <div>
                     <div className="imagem-cab2"> <img src="/assets/images/fotousu.png" alt=""  /> </div>
