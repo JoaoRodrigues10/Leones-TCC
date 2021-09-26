@@ -18,9 +18,9 @@ export default function Penteados() {
                 </div>
 
                 <div class="cabelo">
-                <img src="/assets/images/unha.png" alt="" />
-                <img src="/assets/images/unha2.png" alt="" />
                 <img src="/assets/images/unha3.png" alt="" />
+                <img src="/assets/images/unha2.png" alt="" />
+                <img src="/assets/images/unha.png" alt="" />
                 </div>
 
                 <div class="seta2">

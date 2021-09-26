@@ -16,8 +16,8 @@ export default function Tratamentos() {
                 </div>
 
                 <div class="cabelo">
-                <img src="/assets/images/tratamento1.png" alt="" />
                 <img src="/assets/images/tratamento2.png" alt="" />
+                <img src="/assets/images/tratamento1.png" alt="" />
                 <img src="/assets/images/tratamento3.png" alt="" />
                 </div>
 

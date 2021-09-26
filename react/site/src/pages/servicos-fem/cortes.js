@@ -17,8 +17,8 @@ export default function Cortes() {
                         </div>
 
                         <div class="cabelo">
-                        <img src="/assets/images/cabelo2.png" alt="" />
                         <img src="/assets/images/cabelo3.png" alt="" />
+                        <img src="/assets/images/cabelo2.png" alt="" />
                         <img src="/assets/images/cabelo4.png" alt="" />
                         </div>
 
