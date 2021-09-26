@@ -25,7 +25,7 @@ export default function Calendariooo() {
             case 8: return 'Setembro'
             case 9: return 'Outubro'
             case 10: return 'Novembro'
-            case 11: return 'Dezembro'
+            default: return 'Dezembro'
         }
     }
 
