@@ -1,17 +1,12 @@
-body {
-  margin: 0px;
-  display: flex;
-}
+import styled from "styled-components"
   
-* {
-  box-sizing: border-box;
-}
-  
+
+const Container = styled.div`
 .container {
   display: flex;
   flex-direction: column;
   background-color: #0c1526;
-  width: 1366px;
+  
   height: 680px;
 }
   
@@ -60,7 +55,7 @@ input::placeholder {
   margin: 17px 0px;
 }
   
-.botao a {
+.botao button {
   color: #ffffff;
   background-color: #e3b052;
   font-family: "Josefin Sans", sans-serif;
@@ -118,3 +113,7 @@ input::placeholder {
   width: 450px;
   height: 145px;
 }
+
+`
+
+export { Container }
