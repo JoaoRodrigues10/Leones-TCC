@@ -13,6 +13,8 @@ const Container = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     padding: 46px 110px;
+    min-height: calc(100vh - 67px);
+    justify-content: center;
   }
   
   .botoes {
@@ -61,6 +63,7 @@ const ContainerCortes = styled.div`
   justify-content: center;
   padding: 58px 0px;
   background-color: #13213c;
+  min-height: calc(100vh - 67px);
 }
 
 .titulo {
@@ -75,8 +78,6 @@ const ContainerCortes = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #0b1425;
-  padding: 10px 14.7em;
 }
 
 .cabelo img {

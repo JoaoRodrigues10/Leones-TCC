@@ -4,7 +4,7 @@ const Cabecalho = styled.div`
     display: flex;
     flex-direction: row;
     background: #242424;
-    padding: 0em 1em;
+    height: 67px;
     font-family: 'Josefin Sans', sans-serif;
     align-items: center;
     justify-content: space-between;
