@@ -1,6 +1,6 @@
 import { Container } from "./styled";
-import Cabecalho from '../components/cabecalho'
-
+import Cabecalho from '../../components/cabecalho'
+import Rodape from '../../components/rodape'
 export default function CortesMas() {
     return (
         <div>
@@ -51,6 +51,7 @@ export default function CortesMas() {
       </div>
     </div>
             </Container>
+            <Rodape/>
         
     </div>
     )

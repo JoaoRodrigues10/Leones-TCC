@@ -1,6 +1,6 @@
 import { ContainerCortes } from "./styled"
-import Cabecalho from '../components/cabecalho'
-
+import Cabecalho from '../../components/cabecalho'
+import Rodape from '../../components/rodape'
 
 export default function Penteados() {
     return(
@@ -53,6 +53,7 @@ export default function Penteados() {
             </div>
             </div>
         </ContainerCortes>
+        <Rodape/>
         </div>
     )
 }

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import './css.css'
 import 'react-calendar/dist/Calendar.css';
-import Cabecalho from '../components/cabecalho'
+import Cabecalho from '../../components/cabecalho'
 
 export default function Calendariooo() {
     

@@ -1,5 +1,6 @@
 import { ContainerCortes } from "./styled"
-import Cabecalho from '../components/cabecalho'
+import Cabecalho from '../../components/cabecalho'
+import Rodape from '../../components/rodape'
 export default function Tratamentos() {
     return(
         <div>
@@ -49,6 +50,7 @@ export default function Tratamentos() {
             </div>
             </div>
         </ContainerCortes>
+        <Rodape/>
         </div>
     )
 }

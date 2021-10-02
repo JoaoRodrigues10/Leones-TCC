@@ -8,6 +8,7 @@ const Cabecalho = styled.div`
     font-family: 'Josefin Sans', sans-serif;
     align-items: center;
     justify-content: space-between;
+    min-height: calc(10vh - 67px);
 
     .paginas-cab {
         display: flex;

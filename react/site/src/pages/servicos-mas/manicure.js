@@ -1,5 +1,6 @@
 import { Container } from "./styled";
-import Cabecalho from '../components/cabecalho'
+import Cabecalho from '../../components/cabecalho'
+import Rodape from '../../components/rodape'
 
 export default function ManicureMas() {
 	return (
@@ -52,6 +53,7 @@ export default function ManicureMas() {
                 </div>
                 </div>
             </Container>
+            <Rodape/>
         </div>
     )
 }

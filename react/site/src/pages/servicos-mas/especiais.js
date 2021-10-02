@@ -1,6 +1,6 @@
 import { Container } from "./styled";
-import Cabecalho from '../components/cabecalho'
-
+import Cabecalho from '../../components/cabecalho'
+import Rodape from '../../components/rodape'
 export default function EspeciaisMas() {
 	return (
         <div>
@@ -48,6 +48,7 @@ export default function EspeciaisMas() {
                 </div>
                 </div>
             </Container>
+            <Rodape/>
         </div>
     )
 }

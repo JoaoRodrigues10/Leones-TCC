@@ -1,5 +1,6 @@
 import { Container } from "./styled";
-import Cabecalho from '../components/cabecalho'
+import Cabecalho from '../../components/cabecalho'
+import Rodape from '../../components/rodape'
 
 export default function ServicosMas() {
 	return (
@@ -46,6 +47,7 @@ export default function ServicosMas() {
                 </div>
                 </div>
             </Container>
+            <Rodape/>
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import { ServicosMascu } from "./styled";
-import Cabecalho from '../components/cabecalho'
+import Cabecalho from '../../components/cabecalho'
+import Rodape from '../../components/rodape'
 import { Link } from "react-router-dom";
 
 
@@ -122,6 +123,7 @@ export default function ServicosMas() {
         </div>
       </div>
         </ServicosMascu >
+        <Rodape/>
     </div>
     )
 
