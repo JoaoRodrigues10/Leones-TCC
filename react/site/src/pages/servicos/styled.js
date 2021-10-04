@@ -1,3 +1,6 @@
+import styled from "styled-components";
+
+const Container = styled.div`
 .cabecalho {
     display: flex;
     flex-direction: row;
@@ -27,52 +30,42 @@
     width: 40px;
   }
   
-  .confirmar-horario {
+  .servicos {
+    background-image: url("imagem-fundo.jpeg");
+    background-repeat: no-repeat;
+    height: 600px;
+    background-position: center;
     background-color: #174580;
     padding: 100px 20px;
   }
   
-  .antes {
+  .boas-vindas {
     font-family: "Josefin Sans";
     font-size: 50px;
     color: #ffffff;
     text-align: center;
     margin: 10px 30px;
-  }
-  
-  .avaliacao {
-    font-family: "Josefin Sans";
-    font-size: 35px;
-    color: #ffffff;
-    text-align: center;
-    margin: 10px 30px;
-  }
-  
-  .confirmar {
-    font-family: "Josefin Sans";
-    font-size: 30px;
-    color: #ffffff;
-    text-align: center;
-    margin: 10px 30px;
+    margin-top: 125px;
   }
   
   .botoes {
     display: flex;
     justify-content: center;
   }
-  
   button {
     font-weight: 700;
+    font-size: 25px;
     color: #fff;
     background: #e3b052;
     border: none;
     border-radius: 10px;
-    padding: 2em 4.5em;
+    padding: 1em 3.5em;
     cursor: pointer;
-    margin-left: 22px;
+    margin-left: 20px;
   }
   
   button:hover {
     background-color: #e01b1b;
   }
   
+`

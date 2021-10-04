@@ -18,7 +18,7 @@ export default function servicos() {
                     o que será melhor para você.
                 </div>
                 <div class="confirmar">
-                    Confirmar avaliação às 9:30?
+                    Confirmar avaliação às 9:30? 
                 </div>
                 <div class="botoes">
                     <button class="botaoS">SIM</button>
