@@ -17,8 +17,8 @@ export default function ServicosFem() {
         </div>
         </div>
         <div class="botoes">
-        <button class="botaoF">Feminino</button>
-        <button class="botaoM">Masculino</button>
+        <Link to="/serviçosfem"><button class="botaoF">Feminino</button> </Link>
+        <Link to="/serviçosmas"><button class="botaoM">Masculino</button> </Link>
         </div>
         </div>
         </Container>

@@ -8,7 +8,7 @@ import Quimicas from './pages/servicos-fem/quimicas'
 import Especiais from './pages/servicos-fem/especiais'
 import Tratamentos from './pages/servicos-fem/tratamentos'
 import Manicure from './pages/servicos-fem/manicure'
-
+import Escolha from './pages/servicos'
 
 import ServicosMas from './pages/servicos-mas';
 import CortesMas from './pages/servicos-mas/cortes';
@@ -24,7 +24,8 @@ export default function Routes() {
             <Switch>
                 <Route path="/" exact={true} component={Home} />
                 <Route path="/calendario" exact={true} component={Calendario} />
-                <Route path="/serviços" exact={true} component={Servicos} />
+                <Route path="/serviços" exact={true} component={Escolha} />
+                <Route path="/serviçosfem" exact={true} component={Servicos} />
                 <Route path="/serviçosmas" exact={true} component={ServicosMas} />
                 <Route path="/cortes" exact={true} component={Cortes} />
                 <Route path="/quimicas" exact={true} component={Quimicas} />
