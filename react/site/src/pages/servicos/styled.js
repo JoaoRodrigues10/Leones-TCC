@@ -31,26 +31,36 @@ const Container = styled.div`
   }
   
   .servicos {
-    background-image: url("imagem-fundo.jpeg");
-    background-repeat: no-repeat;
-    height: 600px;
-    background-position: center;
     background-color: #174580;
     padding: 100px 20px;
+    min-height: calc(75vh - 67px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
-  
+
   .boas-vindas {
     font-family: "Josefin Sans";
     font-size: 50px;
     color: #ffffff;
     text-align: center;
-    margin: 10px 30px;
-    margin-top: 125px;
+    line-height: 1em;  
+  }
+  
+  
+  .boas-vindas2 {
+    font-family: "Josefin Sans";
+    font-size: 50px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1em;  
+    margin: 20px 0px 0px;
   }
   
   .botoes {
     display: flex;
     justify-content: center;
+    margin: 30px 0px 0px;
   }
   button {
     font-weight: 700;
@@ -65,7 +75,7 @@ const Container = styled.div`
   }
   
   button:hover {
-    background-color: #e01b1b;
+    background-color: black;
   }
   
 `
