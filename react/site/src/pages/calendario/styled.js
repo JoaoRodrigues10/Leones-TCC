@@ -16,6 +16,23 @@ const Container = styled.div`
         color: white;
         font-size: 2em ;
     }
+
+    .horarios-dispo {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 5.2em;
+    }
+    .horarios-dispo button {
+        font-size: 2em;
+        margin: 1em;
+        background-color: #e3b052;
+        color: #ffffff;
+        height: 2em;
+        width: 10em;
+        border: none;
+        cursor: pointer;
+        border-radius: 22px;
+    }
 `
 
 export{ Container }

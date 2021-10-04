@@ -1,7 +1,7 @@
 import { Container } from "./styled"
 import Cabecalho from '../../components/cabecalho'
 import Rodape from '../../components/rodape'
-import { Link } from "react-router-dom"
+
 
 export default function aprovacao() {
     return (

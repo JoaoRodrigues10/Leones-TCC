@@ -3,6 +3,7 @@ import Cabecalho from '../../components/cabecalho'
 import Rodape from '../../components/rodape'
 import { Link } from "react-router-dom"
 
+
 export default function servicos() {
     return (
         <div>
@@ -21,10 +22,11 @@ export default function servicos() {
                     Confirmar avaliação às 9:30? 
                 </div>
                 <div class="botoes">
-                    <button class="botaoS">SIM</button>
+                   <Link to="/aprovacao"><button class="botaoS">SIM</button> </Link>
                     <button class="botaoN">NÃO</button>
                 </div>
             </div>
+            <Rodape/>
         </Container>
         </div>
     )  

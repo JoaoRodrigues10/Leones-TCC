@@ -9,7 +9,8 @@ import Especiais from './pages/servicos-fem/especiais'
 import Tratamentos from './pages/servicos-fem/tratamentos'
 import Manicure from './pages/servicos-fem/manicure'
 import Escolha from './pages/servicos'
-
+import Confirmar from './pages/confirmar'
+import Aprovacao from './pages/aprovacao'
 import ServicosMas from './pages/servicos-mas';
 import CortesMas from './pages/servicos-mas/cortes';
 import QuimicasMas from './pages/servicos-mas/quimica'
@@ -25,6 +26,8 @@ export default function Routes() {
                 <Route path="/" exact={true} component={Home} />
                 <Route path="/calendario" exact={true} component={Calendario} />
                 <Route path="/serviços" exact={true} component={Escolha} />
+                <Route path="/aprovacao" exact={true} component={Aprovacao} />
+                <Route path="/confirmar" exact={true} component={Confirmar} />
                 <Route path="/serviçosfem" exact={true} component={Servicos} />
                 <Route path="/serviçosmas" exact={true} component={ServicosMas} />
                 <Route path="/cortes" exact={true} component={Cortes} />

@@ -4,5 +4,8 @@ const api = axios.create({
 })
 
 export default class Api {
+    async Agendar(idfuncionario, idcliente, idservico, data, situacao) {
+        let r = await api.post('/agendamento', {})
+    }
     
 }
