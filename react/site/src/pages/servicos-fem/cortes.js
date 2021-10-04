@@ -3,6 +3,8 @@ import Cabecalho from '../../components/cabecalho'
 import Rodape from '../../components/rodape'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import { Link } from "react-router-dom";
+
 
 const responsive = {
     superLargeDesktop: {
@@ -23,10 +25,6 @@ const responsive = {
       items: 1
     }
   };
-
-import { Link } from "react-router-dom";
-
-
 
 
 export default function Cortes() {
