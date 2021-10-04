@@ -1,32 +1,55 @@
 import { ContainerCortes } from "./styled"
 import Cabecalho from '../../components/cabecalho'
 import Rodape from '../../components/rodape'
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
+const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
+  };
 
 export default function Cortes() {
     return(
         <div>
             <Cabecalho/>
+
+
+
                 <ContainerCortes>
                             <div class="faixa">
                     <div class="titulo">
                         CORTES
                     </div>
 
-                    <div class="slider">
-                        <div class="seta">
-                        <button><img src="/assets/images/arrow.svg" alt="" /></button>
-                        </div>
+                    <Carousel responsive={responsive}>
+                        <div class="slider">
+                        
 
-                        <div class="cabelo">
-                        <img src="/assets/images/cabelo3.png" alt="" />
-                        <img src="/assets/images/cabelo2.png" alt="" />
-                        <img src="/assets/images/cabelo4.png" alt="" />
-                        </div>
+                            <div class="cabelo">
+                            <img src="/assets/images/cabelo3.png" alt="" />
+                            <img src="/assets/images/cabelo2.png" alt="" />
+                            <img src="/assets/images/cabelo4.png" alt="" />
+                            </div>
 
-                        <div class="seta2">
-                        <button><img src="/assets/images/arrow.svg" alt="" /></button>
+                            
                         </div>
-                    </div>
+                    </Carousel>                                   
 
                     <div class="info">
                         <div class="texto">.

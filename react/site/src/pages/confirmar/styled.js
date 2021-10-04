@@ -2,15 +2,19 @@ import styled from "styled-components";
 
 const Container = styled.div`
 .confirmar-horario {
+    display: flex;
+    flex-direction: column;
     background-color: #174580;
-    padding: 100px 20px;
+    min-height: calc(75vh - 67px);
+    justify-content: center;
   }
   
   .antes {
     font-family: "Josefin Sans";
-    font-size: 50px;
+    font-size: 35px;
     color: #ffffff;
     text-align: center;
+    margin: 0px 0px 20px;
   }
   
   .avaliacao {
@@ -18,6 +22,7 @@ const Container = styled.div`
     font-size: 35px;
     color: #ffffff;
     text-align: center;
+    margin: 0px 0px 15px;
   }
   
   .confirmar {
@@ -25,6 +30,7 @@ const Container = styled.div`
     font-size: 30px;
     color: #ffffff;
     text-align: center;
+    margin: 0px 0px 15px;
   }
   
   .botoes {
@@ -34,16 +40,18 @@ const Container = styled.div`
   
   button {
     font-weight: 700;
+    font-size:20px;
+    padding: 15px 60px;
     color: #fff;
     background: #e3b052;
     border: none;
     border-radius: 10px;
-    padding: 2em 4.5em;
     cursor: pointer;
+    margin-left: 20px;
   }
   
   button:hover {
-    background-color: #e01b1b;
+    background-color: black;
   }
   
 `
