@@ -13,11 +13,12 @@ const Container = styled.div`
     background-image: url("/assets/images/cabelo1.png");
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100%;
   }
   
   .text-cabelo {
     display: flex;
-  
+    justify-content: center;
     text-align: center;
     font-size: 144px;
     padding: 96px 213px;

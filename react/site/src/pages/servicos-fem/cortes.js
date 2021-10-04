@@ -2,7 +2,15 @@ import { ContainerCortes } from "./styled"
 import Cabecalho from '../../components/cabecalho'
 import Rodape from '../../components/rodape'
 
+import { Link } from "react-router-dom";
+
+
+
+
 export default function Cortes() {
+
+    
+      
     return(
         <div>
             <Cabecalho/>
@@ -46,7 +54,9 @@ export default function Cortes() {
                         </div>
 
                         <div class="botao">
+                          <Link to="/calendario">
                         <button>Agendar ida ao salão</button>
+                        </Link>
                         </div>
                     </div>
                     </div>

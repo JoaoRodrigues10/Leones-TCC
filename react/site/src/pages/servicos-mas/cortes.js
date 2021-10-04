@@ -1,6 +1,7 @@
 import { Container } from "./styled";
 import Cabecalho from '../../components/cabecalho'
 import Rodape from '../../components/rodape'
+import { Link } from "react-router-dom";
 export default function CortesMas() {
     return (
         <div>
@@ -46,7 +47,9 @@ export default function CortesMas() {
         </div>
 
         <div class="botao">
-          <button>Agendar ida ao salão</button>
+        <Link to="/calendario">
+                        <button>Agendar ida ao salão</button>
+                        </Link>
         </div>
       </div>
     </div>
