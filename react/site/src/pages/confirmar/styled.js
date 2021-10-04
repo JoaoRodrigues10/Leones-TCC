@@ -11,7 +11,6 @@ const Container = styled.div`
     font-size: 50px;
     color: #ffffff;
     text-align: center;
-    margin: 10px 30px;
   }
   
   .avaliacao {
@@ -19,7 +18,6 @@ const Container = styled.div`
     font-size: 35px;
     color: #ffffff;
     text-align: center;
-    margin: 10px 30px;
   }
   
   .confirmar {
@@ -27,7 +25,6 @@ const Container = styled.div`
     font-size: 30px;
     color: #ffffff;
     text-align: center;
-    margin: 10px 30px;
   }
   
   .botoes {

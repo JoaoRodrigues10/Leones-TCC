@@ -47,6 +47,7 @@ const Container = styled.div`
     text-align: center;
     color: #ffffff;
     margin: 20px 0px 0px 0px;
+    cursor: pointer;
   }
   
   li {

@@ -16,6 +16,7 @@ const Container = styled.div`
     font-size: 30px;
     font-weight: bolder;
     margin: 0px 0px 40px;
+    cursor: pointer;
   }
   
   .slider {
@@ -23,8 +24,6 @@ const Container = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #0b1425;
-    padding: 10px 14.4em;
   }
   
   .cabelo img {
@@ -98,6 +97,7 @@ const ServicosMascu = styled.div`
     background-size: cover;
     padding: 46px 110px;
     min-height: calc(100vh - 67px);
+    justify-content: center;
 
   
   .botoes {
