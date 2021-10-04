@@ -1,6 +1,7 @@
 import { ContainerCortes } from "./styled"
 import Cabecalho from '../../components/cabecalho'
 import Rodape from '../../components/rodape'
+import { Link } from "react-router-dom"
 export default function Penteados() {
     return(
         <div>
@@ -44,7 +45,9 @@ export default function Penteados() {
                 </div>
 
                 <div class="botao">
-                <button>Agendar ida ao salão</button>
+                <Link to="/calendario">
+                        <button>Agendar ida ao salão</button>
+                        </Link>
                 </div>
             </div>
             </div>
