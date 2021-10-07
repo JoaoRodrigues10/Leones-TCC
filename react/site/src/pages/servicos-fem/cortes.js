@@ -33,29 +33,54 @@ export default function Cortes() {
       
     return(
         <div>
+
+
             <Cabecalho/>
 
 
 
                 <ContainerCortes>
+
+                    
                             <div class="faixa">
                     <div class="titulo">
                         CORTES
                     </div>
 
-                    <Carousel responsive={responsive}>
-                        <div class="slider">
+                <div className="carrosel">
+                                   
+<Carousel responsive={responsive}>
+                        
                         
 
-                            <div class="cabelo">
-                            <img src="/assets/images/cabelo3.png" alt="" />
-                            <img src="/assets/images/cabelo2.png" alt="" />
-                            <img src="/assets/images/cabelo4.png" alt="" />
-                            </div>
+                        <div class="cabelo">
+                          <img src="/assets/images/cabelo3.png" alt="" />
+                          </div>
 
-                            
+                          <div class="cabelo">
+                        <img src="/assets/images/cabelo2.png" alt="" />
                         </div>
-                    </Carousel>                                   
+
+                        <div class="cabelo">
+                        <img src="/assets/images/cabelo4.png" alt="" />
+                        </div>
+
+                        <div class="cabelo">
+                        <img src="/assets/images/cabelo4.png" alt="" />
+                        </div>
+
+                        <div class="cabelo">
+                        <img src="/assets/images/cabelo4.png" alt="" />
+                        </div>
+
+                        <div class="cabelo">
+                        <img src="/assets/images/cabelo4.png" alt="" />
+                        </div>
+
+                        
+                </Carousel>      
+
+                </div>           
 
                     <div class="info">
                         <div class="texto">.

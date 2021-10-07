@@ -67,6 +67,10 @@ const ContainerCortes = styled.div`
   min-height: calc(100vh - 67px);
 }
 
+.carrosel {
+  width: 100%;
+}
+
 .titulo {
   color: #e3b052;
   font-size: 30px;
