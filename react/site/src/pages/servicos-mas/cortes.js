@@ -2,6 +2,10 @@ import { Container } from "./styled";
 import Cabecalho from '../../components/cabecalho'
 import Rodape from '../../components/rodape'
 import { Link } from "react-router-dom";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import { CarouselConfig } from "./carouselconfig";
+
 export default function CortesMas() {
     return (
         <div>
@@ -12,21 +16,41 @@ export default function CortesMas() {
         CORTES
       </div>
 
-      <div class="slider">
-        <div class="seta">
-          <button><img src="/assets/images/arrow.svg" alt="" /></button>
-        </div>
+                  <div className="carrosel">
+                      <Carousel 
+                        responsive={CarouselConfig}
+                        infinite={true}
+                        >
+                                
+                                
 
-        <div class="cabelo">
-          <img src="/assets/images/corte2.png" alt="" />
-          <img src="/assets/images/corte3.png" alt="" />
-          <img src="/assets/images/corte1.png" alt="" />
-        </div>
+                                <div class="cabelo">
+                                  <img src="./assets/images/corte2.png" alt="" />
+                                </div>
 
-        <div class="seta2">
-          <button><img src="/assets/images/arrow.svg" alt="" /></button>
-        </div>
-      </div>
+                                <div class="cabelo">
+                                    <img src="./assets/images/corte3.png" alt="" />
+                                </div>
+
+                                <div class="cabelo">
+                                    <img src="./assets/images/corte1.png" alt="" />
+                                </div>
+
+                                <div class="cabelo">
+                                    <img src="./assets/images/corte1.png" alt="" />
+                                </div>
+
+                                <div class="cabelo">
+                                    <img src="./assets/images/corte1.png" alt="" />
+                                </div>
+
+                                <div class="cabelo">
+                                    <img src="./assets/images/corte1.png" alt="" />
+                                </div>
+
+                                
+                        </Carousel>
+                </div>
 
       <div class="info">
         <div class="texto">.

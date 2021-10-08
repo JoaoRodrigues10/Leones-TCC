@@ -2,6 +2,9 @@ import { ContainerCortes } from "./styled"
 import Cabecalho from '../../components/cabecalho'
 import Rodape from '../../components/rodape'
 import { Link } from "react-router-dom"
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import { CarouselConfig } from "./carouselconfig";
 
 export default function Penteados() {
     return(
@@ -13,21 +16,44 @@ export default function Penteados() {
                 MANICURE E PEDICURE
             </div>
 
-            <div class="slider">
-                <div class="seta">
-                <button><img src="/assets/images/arrow.svg" alt="" /></button>
-                </div>
 
-                <div class="cabelo">
-                <img src="/assets/images/unha3.png" alt="" />
-                <img src="/assets/images/unha2.png" alt="" />
-                <img src="/assets/images/unha.png" alt="" />
-                </div>
+            <div className="carrosel">
 
-                <div class="seta2">
-                <button><img src="/assets/images/arrow.svg" alt="" /></button>
+                    <Carousel 
+                    responsive={CarouselConfig}
+                    infinite={true}
+                    >
+                                
+                                
+
+                                <div class="cabelo">
+                                    <img src="./assets/images/unha.png" alt="" />
+                                </div>
+
+                                <div class="cabelo">
+                                    <img src="./assets/images/unha2.png" alt="" />
+                                </div>
+
+                                <div class="cabelo">
+                                    <img src="./assets/images/unharoxa.png.png" alt="" />
+                                </div>
+
+                                <div class="cabelo">
+                                    <img src="./assets/images/unha3.png" alt="" />
+                                </div>
+
+                                <div class="cabelo">
+                                    <img src="./assets/images/unhabranca.jpg" alt="" />
+                                </div>
+
+                                <div class="cabelo">
+                                    <img src="./assets/images/maobranca.jpg" alt="" />
+                                </div>
+
+                                
+                        </Carousel>
                 </div>
-            </div>
+            
 
             <div class="info">
                 <div class="texto">.
