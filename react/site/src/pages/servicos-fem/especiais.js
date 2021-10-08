@@ -2,6 +2,10 @@ import { ContainerCortes } from "./styled"
 import Cabecalho from '../../components/cabecalho'
 import Rodape from '../../components/rodape'
 import { Link } from "react-router-dom"
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import { CarouselConfig } from "./carouselconfig";
+
 export default function Penteados() {
     return(
         <div>
@@ -12,21 +16,42 @@ export default function Penteados() {
                 SERVIÇOS ESPECIAIS
             </div>
 
-            <div class="slider">
-                <div class="seta">
-                <button><img src="/assets/images/arrow.svg" alt="" /></button>
-                </div>
+                <div className="carrosel">
 
-                <div class="cabelo">
-                <img src="/assets/images/especiais3.png" alt="" />
-                <img src="/assets/images/especiais.png" alt="" />
-                <img src="/assets/images/especiais2.png" alt="" />
-                </div>
+                    <Carousel 
+                    responsive={CarouselConfig}
+                    infinite={true}
+                    >
+                                
+                                
 
-                <div class="seta2">
-                <button><img src="/assets/images/arrow.svg" alt="" /></button>
+                                <div class="cabelo">
+                                    <img src="./assets/images/especiais3.png" alt="" />
+                                </div>
+
+                                <div class="cabelo">
+                                    <img src="./assets/images/especiais.png" alt="" />
+                                </div>
+
+                                <div class="cabelo">
+                                    <img src="./assets/images/especiais2.png" alt="" />
+                                </div>
+
+                                <div class="cabelo">
+                                    <img src="./assets/images/especiais2.png" alt="" />
+                                </div>
+
+                                <div class="cabelo">
+                                    <img src="./assets/images/especiais2.png" alt="" />
+                                </div>
+
+                                <div class="cabelo">
+                                    <img src="./assets/images/especiais2.png" alt="" />
+                                </div>
+
+                                
+                        </Carousel>
                 </div>
-            </div>
 
             <div class="info">
                 <div class="texto">.

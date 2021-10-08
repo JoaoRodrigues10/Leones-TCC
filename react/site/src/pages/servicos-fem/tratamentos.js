@@ -2,33 +2,59 @@ import { ContainerCortes } from "./styled"
 import Cabecalho from '../../components/cabecalho'
 import Rodape from '../../components/rodape'
 import { Link } from "react-router-dom"
+import { CarouselConfig } from "./carouselconfig"
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
+
 export default function Tratamentos() {
     return(
-        <div>
+    <div>
         <Cabecalho/>
         <ContainerCortes>
-                    <div class="faixa">
-            <div class="titulo">
-                TRATAMENTO CAPILAR 
-            </div>
-
-            <div class="slider">
-                <div class="seta">
-                <button><img src="/assets/images/arrow.svg" alt="" /></button>
+            <div class="faixa">
+                <div class="titulo">
+                    TRATAMENTO CAPILAR 
                 </div>
 
-                <div class="cabelo">
-                <img src="/assets/images/tratamento2.png" alt="" />
-                <img src="/assets/images/tratamento1.png" alt="" />
-                <img src="/assets/images/tratamento3.png" alt="" />
+                <div className="carrosel">
+
+                        <Carousel 
+                        responsive={CarouselConfig}
+                        infinite={true}
+                        >
+                                
+                                
+
+                                <div class="cabelo">
+                                    <img src="./assets/images/tratamento2.png" alt="" />
+                                </div>
+
+                                <div class="cabelo">
+                                    <img src="./assets/images/tratamento.png" alt="" />
+                                </div>
+
+                                <div class="cabelo">
+                                    <img src="./assets/images/tratamento3.png" alt="" />
+                                </div>
+
+                                <div class="cabelo">
+                                    <img src="./assets/images/tratamento3.png" alt="" />
+                                </div>
+
+                                <div class="cabelo">
+                                    <img src="./assets/images/tratamento3.png" alt="" />
+                                </div>
+
+                                <div class="cabelo">
+                                    <img src="./assets/images/tratamento3.png" alt="" />
+                                </div>
+
+                                
+                        </Carousel>
                 </div>
 
-                <div class="seta2">
-                <button><img src="/assets/images/arrow.svg" alt="" /></button>
-                </div>
-            </div>
-
-            <div class="info">
+                <div class="info">
                 <div class="texto">.
                 <div class="text2">
                  É muito importante manter uma rotina <br />
@@ -54,6 +80,6 @@ export default function Tratamentos() {
             </div>
         </ContainerCortes>
         <Rodape/>
-        </div>
+    </div>
     )
 }

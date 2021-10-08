@@ -2,7 +2,11 @@ import { ContainerCortes } from "./styled"
 import Cabecalho from '../../components/cabecalho'
 import Rodape from '../../components/rodape'
 import { Link } from "react-router-dom"
-export default function Penteados() {
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import { CarouselConfig } from "./carouselconfig";
+
+export default function quimicas() {
     return(
         <div>
         <Cabecalho/>
@@ -12,21 +16,44 @@ export default function Penteados() {
                 QUÍMICAS EM GERAL
             </div>
 
-            <div class="slider">
-                <div class="seta">
-                <button><img src="/assets/images/arrow.svg" alt="" /></button>
-                </div>
+            
+            <div className="carrosel">
 
-                <div class="cabelo">
-                <img src="/assets/images/quimica2.png" alt="" />
-                <img src="/assets/images/quimica.png" alt="" />
-                <img src="/assets/images/quimica3.png" alt="" />
-                </div>
+                    <Carousel 
+                    responsive={CarouselConfig}
+                    infinite={true}
+                    >
+                            
+                            
 
-                <div class="seta2">
-                <button><img src="/assets/images/arrow.svg" alt="" /></button>
-                </div>
-            </div>
+                            <div class="cabelo">
+                                <img src="./assets/images/quimica2.png" alt="" />
+                            </div>
+
+                            <div class="cabelo">
+                                <img src="./assets/images/quimica.png" alt="" />
+                            </div>
+
+                            <div class="cabelo">
+                                <img src="./assets/images/quimica3.png" alt="" />
+                            </div>
+
+                            <div class="cabelo">
+                                <img src="./assets/images/quimica3.png" alt="" />
+                            </div>
+
+                            <div class="cabelo">
+                                <img src="./assets/images/quimica3.png" alt="" />
+                            </div>
+
+                            <div class="cabelo">
+                                <img src="./assets/images/quimica3.png" alt="" />
+                            </div>
+
+                            
+                    </Carousel>
+             </div>
+
 
             <div class="info">
                 <div class="texto">.

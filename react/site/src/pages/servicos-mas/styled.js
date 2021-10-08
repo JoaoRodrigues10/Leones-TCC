@@ -25,6 +25,10 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
   }
+
+  .carrosel {
+    width: 100%;
+  }
   
   .cabelo img {
     width: 236px;
@@ -105,6 +109,8 @@ const ServicosMascu = styled.div`
     flex-direction: row;
     justify-content: space-around;
   }
+
+ 
   
   .botao {
     display: flex;
