@@ -3,12 +3,13 @@ import Cabecalho from '../../components/cabecalho'
 import Rodape from '../../components/rodape'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import { useEffect, useState } from "react"
 import { Link } from "react-router-dom";
 
 
 const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
+      
       breakpoint: { max: 4000, min: 3000 },
       items: 5
     },
@@ -28,28 +29,27 @@ const responsive = {
 
 
 export default function Cortes() {
+  const [servico, setServico] = useState([])
+
+  useEffect(() => {
+    setServico({
+      nome: "Cortes"
+    })
+  }, []);
 
     
       
     return(
         <div>
-
-
             <Cabecalho/>
-
-
-
                 <ContainerCortes>
-
-                    
-                            <div class="faixa">
+                  <div class="faixa">
                     <div class="titulo">
-                        CORTES
+                        {servico.nome}
                     </div>
 
                 <div className="carrosel">
-                                   
-<Carousel responsive={responsive}>
+                                  
                         
                         
 
@@ -77,8 +77,7 @@ export default function Cortes() {
                         <img src="/assets/images/cabelo4.png" alt="" />
                         </div>
 
-                        
-                </Carousel>      
+                     
 
                 </div>           
 
@@ -100,7 +99,10 @@ export default function Cortes() {
                         </div>
 
                         <div class="botao">
-                          <Link to="/calendario">
+                        <Link to={{
+                          pathname: '/calendario',
+                          state: servico
+                        }}>
                         <button>Agendar ida ao salão</button>
                         </Link>
                         </div>

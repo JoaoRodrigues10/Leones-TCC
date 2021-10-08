@@ -1,13 +1,116 @@
 import { Container } from './styled';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Calendar from 'react-calendar';
 import './css.css'
 import 'react-calendar/dist/Calendar.css';
 import Cabecalho from '../../components/cabecalho'
 import { Link } from 'react-router-dom';
 
-export default function Calendariooo() {
+import Botaoconfirmar from '../botaoconfirmar'
+
+export default function Calendariooo(props) {
+    const servico = props.location.state;
+    const [horario, setHorario] = useState([])
+
+    function listar() {
+        const r = [
+          {
+            hora: "8:00"
+          },
+          {
+            hora: "8:30"
+          },
+          {
+            hora: "9:00"
+          },
+          {
+            hora: "9:30"
+          },
+          {
+            hora: "10:00"
+          },
+          {
+            hora: "10:30"
+          },
+          {
+            hora: "11:00"
+          },
+          {
+            hora: "11:30"
+          },
+          {
+            hora: "12:00"
+          },
+          {
+            hora: "12:30"
+          },
+          {
+            hora: "13:00"
+          },
+          {
+            hora: "13:30"
+          },
+          {
+            hora: "14:00"
+          },
+          {
+            hora: "14:30"
+          },
+          {
+            hora: "15:00"
+          },
+          {
+            hora: "15:30"
+          },
+          {
+            hora: "16:00"
+          },
+          {
+            hora: "16:30"
+          },
+          {
+            hora: "16:00"
+          },
+          {
+            hora: "16:30"
+          },
+          {
+            hora: "17:00"
+          },
+          {
+            hora: "17:30"
+          },
+          {
+            hora: "18:00"
+          },
+          {
+            hora: "18:30"
+          },
+          {
+            hora: "19:00"
+          },
+          {
+            hora: "19:30"
+          },
+          {
+            hora: "20:00"
+          },
+          {
+            hora: "20:30"
+          },
+          {
+            hora: "21:00"
+          },
+          {
+            hora: "21:30"
+          }
+        ]
     
+        setHorario(r);
+      }
+
+    useEffect(listar, []);
+
     const [date, setDate] = useState(new Date())
     const onChange = date => {
         setDate(date)
@@ -34,40 +137,19 @@ export default function Calendariooo() {
         <div>
             <Cabecalho/>
                 <Container>
-                    <div className="titulo"> Escoha uma Data </div>
+                    <div className="titulo"> Escoha uma Data Para o Serviço {servico.nome}</div>
                     <div className="calendario">
                         <Calendar onChange={onChange} value={date} minDate={new Date()}  />
                     </div>
                     <div className="titulo2"> Horários disponiveis para o dia {date.getDate()} de {mes(date)} </div>
                     <div className="horarios-dispo"> 
-                    <Link to="/confirmar"> </Link>
-                    <Link to="/confirmar"> <button>8:00</button> </Link>
-                    <Link to="/confirmar"><button>8:30</button></Link>
-                    <Link to="/confirmar"><button>9:00</button></Link>
-                    <Link to="/confirmar"><button>9:30</button></Link>
-                    <Link to="/confirmar"><button>10:00</button></Link>
-                    <Link to="/confirmar"><button>10:30</button></Link>
-                    <Link to="/confirmar"><button>11:00</button></Link>
-                    <Link to="/confirmar"><button>11:30</button></Link>
-                    <Link to="/confirmar"><button>12:00</button></Link>
-                    <Link to="/confirmar"><button>12:30</button></Link>
-                    <Link to="/confirmar"><button>13:00</button></Link>
-                    <Link to="/confirmar"><button>13:30</button></Link>
-                    <Link to="/confirmar"><button>14:00</button></Link>
-                    <Link to="/confirmar"><button>14:30</button></Link>
-                    <Link to="/confirmar"><button>15:00</button></Link>
-                    <Link to="/confirmar"><button>15:30</button></Link>
-                    <Link to="/confirmar"><button>16:00</button></Link>
-                    <Link to="/confirmar"><button>16:30</button></Link>
-                    <Link to="/confirmar"><button>17:00</button></Link>
-                    <Link to="/confirmar"><button>17:30</button></Link>
-                    <Link to="/confirmar"><button>18:00</button></Link>
-                    <Link to="/confirmar"><button>18:30</button></Link>
-                    <Link to="/confirmar"><button>19:00</button></Link>
-                    <Link to="/confirmar"><button>19:30</button></Link>
-                    <Link to="/confirmar"><button>20:00</button></Link>
-                    <Link to="/confirmar"><button>20:30</button></Link>
-                    <Link to="/confirmar"><button>21:00</button></Link>
+
+                    {horario.map(item => 
+                            
+                            <Botaoconfirmar horas={item} />
+                            
+                    )}
+
                     </div>
                 </Container>
         </div>
