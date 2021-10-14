@@ -24,7 +24,7 @@ export default function servicos(props) {
                 </div>
                 <div class="botoes">
                    <Link to="/aprovacao"><button class="botaoS">SIM</button> </Link>
-                    <button class="botaoN">NÃO</button>
+                   <Link to="/"><button class="botaoN">NÃO</button> </Link>
                 </div>
             </div>
             <Rodape/>

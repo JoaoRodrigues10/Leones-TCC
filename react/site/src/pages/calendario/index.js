@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import Botaoconfirmar from '../botaoconfirmar'
 
 export default function Calendariooo(props) {
-    const servico = props.location.state;
+    const servicocorte = props.location.state;
     const [horario, setHorario] = useState([])
 
     function listar() {
@@ -137,7 +137,7 @@ export default function Calendariooo(props) {
         <div>
             <Cabecalho/>
                 <Container>
-                    <div className="titulo"> Escoha uma Data Para o Serviço {servico.nome}</div>
+                    <div className="titulo"> Escoha uma Data Para o Serviço {servicocorte.nome}</div>
                     <div className="calendario">
                         <Calendar onChange={onChange} value={date} minDate={new Date()}  />
                     </div>

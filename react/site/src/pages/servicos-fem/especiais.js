@@ -4,16 +4,25 @@ import Rodape from '../../components/rodape'
 import { Link } from "react-router-dom"
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import { useEffect, useState } from "react"
 import { CarouselConfig } from "./carouselconfig";
 
 export default function Penteados() {
+    const [servico, setServico] = useState([])
+
+  useEffect(() => {
+    setServico({
+      nome: "Serviços Especiais"
+    })
+  }, []);
+
     return(
         <div>
         <Cabecalho/>
         <ContainerCortes>
                     <div class="faixa">
             <div class="titulo">
-                SERVIÇOS ESPECIAIS
+                {servico.nome}
             </div>
 
                 <div className="carrosel">
@@ -69,7 +78,10 @@ export default function Penteados() {
                 </div>
 
                 <div class="botao">
-                <Link to="/calendario">
+                <Link to={{
+                 pathname: '/calendario',
+                 state: servico
+                 }}>
                         <button>Agendar ida ao salão</button>
                         </Link>
                 </div>

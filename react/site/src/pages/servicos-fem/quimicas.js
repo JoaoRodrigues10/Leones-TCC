@@ -5,15 +5,23 @@ import { Link } from "react-router-dom"
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { CarouselConfig } from "./carouselconfig";
+import { useEffect, useState } from "react"
 
-export default function quimicas() {
+export default function Quimicas() {
+    const [servico, setServico] = useState([])
+
+  useEffect(() => {
+    setServico({
+      nome: "Químicas em Geral"
+    })
+  }, []);
     return(
         <div>
         <Cabecalho/>
         <ContainerCortes>
                     <div class="faixa">
             <div class="titulo">
-                QUÍMICAS EM GERAL
+                     {servico.nome}
             </div>
 
             
@@ -69,7 +77,10 @@ export default function quimicas() {
                 </div>
 
                 <div class="botao">
-                <Link to="/calendario">
+                <Link to={{
+                 pathname: '/calendario',
+                 state: servico
+                 }}>
                         <button>Agendar ida ao salão</button>
                         </Link>
                 </div>

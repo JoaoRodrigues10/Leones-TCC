@@ -9,10 +9,10 @@ import { CarouselConfig } from "./carouselconfig";
 
 
 export default function Cortes() {
-  const [servico, setServico] = useState([])
+  const [servicocorte, setServicocorte] = useState([])
 
   useEffect(() => {
-    setServico({
+    setServicocorte({
       nome: "Cortes"
     })
   }, []);
@@ -25,7 +25,7 @@ export default function Cortes() {
                 <ContainerCortes>
                   <div class="faixa">
                     <div class="titulo">
-                        {servico.nome}
+                        {servicocorte.nome}
                     </div>
 
               <div className="carrosel">
@@ -61,8 +61,7 @@ export default function Cortes() {
                         <img src="/assets/images/cabelo4.png" alt="" />
                         </div>
 
-                     
-
+                        </Carousel>
               </div>           
 
                     <div class="info">
@@ -85,7 +84,7 @@ export default function Cortes() {
                         <div class="botao">
                         <Link to={{
                           pathname: '/calendario',
-                          state: servico
+                          state: servicocorte
                         }}>
                         <button>Agendar ida ao salão</button>
                         </Link>

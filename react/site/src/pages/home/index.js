@@ -127,11 +127,24 @@ export default function Home() {
             </div>
 
             <div className="marcas">
+                <a href="https://www.sebastianprofessional.com/pt-BR">
                 <img src="/assets/images/sebastian.png" alt="" />
+                </a>
+                <a href="https://www.joico.com.br">
                 <img src="/assets/images/joico.png" alt="" />
+                </a>
+                <a href="https://loja.wella.com.br/">
                 <img src="/assets/images/wella.png" alt="" />
+                </a>
+                <a href="https://cadiveu.com/">
                 <img src="/assets/images/cadiveu.png" alt="" />
+                </a>
+                <a href="https://br.trussprofessional.com/">
                 <img src="/assets/images/truss.png" alt="" />
+                </a>
+                
+                
+                
             </div>
             </div>
 

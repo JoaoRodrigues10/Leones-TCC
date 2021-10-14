@@ -5,9 +5,16 @@ import { Link } from "react-router-dom"
 import { CarouselConfig } from "./carouselconfig"
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-
+import { useEffect, useState } from "react"
 
 export default function Tratamentos() {
+    const [servico, setServico] = useState([])
+
+  useEffect(() => {
+    setServico({
+      nome: "Tratamento Capilar"
+    })
+  }, []);
     return(
     <div>
         <Cabecalho/>
@@ -72,7 +79,10 @@ export default function Tratamentos() {
                 </div>
 
                 <div class="botao">
-                <Link to="/calendario">
+                <Link to={{
+                 pathname: '/calendario',
+                 state: servico
+                 }}>              
                         <button>Agendar ida ao salão</button>
                         </Link>
                 </div>
