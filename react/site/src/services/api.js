@@ -7,5 +7,10 @@ export default class Api {
     async Agendar(idfuncionario, idcliente, idservico, data, situacao) {
         let r = await api.post('/agendamento', {})
     }
+
+    async Remover(idfuncionario, idcliente, idservico, data, situacao) {
+        let r = await api.delete('/agendamento/' + id);
+        return r.data;
+    }
     
 }
