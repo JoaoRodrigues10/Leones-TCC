@@ -32,15 +32,15 @@ export default function ManicureMas() {
                                 </div>
 
                                 <div class="cabelo">
-                                    <img src="./assets/images/manicure3.png" alt="" />
+                                    <img src="./assets/images/mao3.jpg" alt="" />
                                 </div>
 
                                 <div class="cabelo">
-                                    <img src="./assets/images/manicure3.png" alt="" />
+                                    <img src="./assets/images/mao.jpg" alt="" />
                                 </div>
 
                                 <div class="cabelo">
-                                    <img src="./assets/images/manicure3.png" alt="" />
+                                    <img src="./assets/images/mao2.jpg" alt="" />
                                 </div>
 
                                 <div class="cabelo">

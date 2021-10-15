@@ -11,9 +11,9 @@ export default function Cabecalhooo() {
                     <div className="imagem-cab"> <img src="/assets/images/logo.png" alt="" /> </div>
                 </div>
                 <div className="paginas-cab">
-                <Link to="/"> <div className="opcoes" > Home </div> </Link>
+                <Link to="/home"> <div className="opcoes" > Home </div> </Link>
                 <Link to="/serviços"> <div className="opcoes"> Serviços </div> </Link>         
-                <Link to="/"> <div className="opcoes"> LEO </div> </Link>     
+                <Link to="/home"> <div className="opcoes"> LEO </div> </Link>     
                 </div>
                 <div>
                     <div className="imagem-cab2"> <img src="/assets/images/fotousu.png" alt=""  /> </div>

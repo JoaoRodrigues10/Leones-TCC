@@ -11,9 +11,11 @@ export default function ServicosFem() {
             <div class="faixa1">
         <div class="botoes">
             <div class="botao">
-            <button>
-                <img src="/assets/images/feminino.png" alt="" />
-            </button>
+                <Link to="/cortes">
+                    <button>
+                        <img src="/assets/images/feminino.png" alt="" />
+                    </button>
+                </Link>
 
             <Link to="/cortes"><div class="titulo"> CORTES </div> </Link>
 
@@ -23,9 +25,11 @@ export default function ServicosFem() {
             </div>
 
             <div class="botao">
-            <button>
-                <img src="/assets/images/feminino.png" alt="" />
-            </button>
+            <Link to="/penteados">
+                <button>
+                    <img src="/assets/images/feminino.png" alt="" />
+                </button>
+            </Link>
 
             <Link to="/penteados">
                 <div class="titulo"> PENTEADOS</div>
@@ -37,9 +41,11 @@ export default function ServicosFem() {
             </div>
 
             <div class="botao">
-            <button>
-                <img src="/assets/images/feminino.png" alt="" />
-            </button>
+            <Link to="/tratamentos">
+                <button>
+                    <img src="/assets/images/feminino.png" alt="" />
+                </button>
+            </Link>
 
             <Link to="/tratamentos">
             <div class="titulo">
@@ -58,9 +64,11 @@ export default function ServicosFem() {
 
         <div class="botoes">
             <div class="botao">
-            <button>
-                <img src="/assets/images/feminino.png" alt="" />
-            </button>
+            <Link to="/quimicas">
+                <button>
+                    <img src="/assets/images/feminino.png" alt="" />
+                </button>
+            </Link>
 
             <Link to="/quimicas">
             <div class="titulo">
@@ -78,9 +86,12 @@ export default function ServicosFem() {
             </div>
 
             <div class="botao">
-            <button>
-                <img src="/assets/images/feminino.png" alt="" />
-            </button>
+            <Link to="/serviçosespeciais">
+                <button>
+                    <img src="/assets/images/feminino.png" alt="" />
+                </button>
+            </Link>
+
             <Link to="/serviçosespeciais">
             <div class="titulo">
                 SERVIÇOS <br />
@@ -97,9 +108,11 @@ export default function ServicosFem() {
             </div>
 
             <div class="botao">
-            <button>
-                <img src="/assets/images/feminino.png" alt="" />
-            </button>
+            <Link to="/manicure e pedicure">
+                <button>
+                    <img src="/assets/images/feminino.png" alt="" />
+                </button>
+            </Link>
 
 
             <Link to="/manicure e pedicure">

@@ -11,9 +11,11 @@ export default function ServicosMas() {
         <ServicosMascu>
         <div class="botoes">
         <div class="botao">
-          <button>
-            <img src="/assets/images/masculino.png" alt="" />
-          </button>
+          <Link to="/cortesmas">
+            <button>
+              <img src="/assets/images/masculino.png" alt="" />
+            </button>
+          </Link>
 
           <Link to="/cortesmas">
           <div class="titulo">
@@ -29,9 +31,11 @@ export default function ServicosMas() {
         </div>
 
         <div class="botao">
-          <button>
-            <img src="/assets/images/masculino.png" alt="" />
-          </button>
+          <Link to="/pigmentacaomas">
+            <button>
+              <img src="/assets/images/masculino.png" alt="" />
+            </button>
+          </Link>
 
           <Link to="/pigmentacaomas">
           <div class="titulo">
@@ -46,9 +50,11 @@ export default function ServicosMas() {
         </div>
 
         <div class="botao">
-          <button>
-            <img src="/assets/images/masculino.png" alt="" />
-          </button>
+          <Link to="/tratamentosmas">
+            <button>
+              <img src="/assets/images/masculino.png" alt="" />
+            </button>
+          </Link>
 
           <Link to="/tratamentosmas">
           <div class="titulo">
@@ -67,9 +73,11 @@ export default function ServicosMas() {
 
       <div class="botoes">
         <div class="botao">
-          <button>
-            <img src="/assets/images/masculino.png" alt="" />
-          </button>
+          <Link to="/quimicamas">
+            <button>
+              <img src="/assets/images/masculino.png" alt="" />
+            </button>
+          </Link>
 
           <Link to="/quimicamas">
           <div class="titulo">
@@ -87,9 +95,11 @@ export default function ServicosMas() {
         </div>
 
         <div class="botao">
-          <button>
-            <img src="/assets/images/masculino.png" alt="" />
-          </button>
+          <Link to="/serviçosespeciaismas">
+            <button>
+              <img src="/assets/images/masculino.png" alt="" />
+            </button>
+          </Link>
 
           <Link to="/serviçosespeciaismas"> 
           <div class="titulo">
@@ -106,9 +116,11 @@ export default function ServicosMas() {
         </div>
 
         <div class="botao">
-          <button>
-            <img src="/assets/images/masculino.png" alt="" />
-          </button>
+          <Link to="/manicure e pedicure masculino">
+            <button>
+              <img src="/assets/images/masculino.png" alt="" />
+            </button>
+          </Link>
 
           <Link to="/manicure e pedicure masculino"> 
           <div class="titulo">
@@ -119,6 +131,7 @@ export default function ServicosMas() {
 
           <ul class="serv">
             <li>Cutilagem</li>
+            <li>Esmaltação</li>
           </ul>
         </div>
       </div>

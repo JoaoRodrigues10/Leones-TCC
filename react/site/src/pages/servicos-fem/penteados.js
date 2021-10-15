@@ -46,15 +46,15 @@ export default function Penteados() {
                             </div>
 
                             <div class="cabelo">
-                                <img src="./assets/images/penteado3.png" alt="" />
+                                <img src="./assets/images/coque1.jpg" alt="" />
                             </div>
 
                             <div class="cabelo">
-                                <img src="./assets/images/penteado3.png" alt="" />
+                                <img src="./assets/images/coque12.jpg" alt="" />
                             </div>
 
                             <div class="cabelo">
-                                <img src="./assets/images/penteado3.png" alt="" />
+                                <img src="./assets/images/coque3.jpg" alt="" />
                             </div>
 
                             

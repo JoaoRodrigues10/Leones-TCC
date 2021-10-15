@@ -130,6 +130,7 @@ const Container = styled.div`
     padding: 19px 124px;
     border: none;
     border-radius: 22px;
+    cursor:pointer;
   }
   
   .marcas {

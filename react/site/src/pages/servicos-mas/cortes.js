@@ -37,15 +37,15 @@ export default function CortesMas() {
                                 </div>
 
                                 <div class="cabelo">
-                                    <img src="./assets/images/corte1.png" alt="" />
+                                    <img src="./assets/images/corte4.jpg" alt="" />
                                 </div>
 
                                 <div class="cabelo">
-                                    <img src="./assets/images/corte1.png" alt="" />
+                                    <img src="./assets/images/corte5.jpg" alt="" />
                                 </div>
 
                                 <div class="cabelo">
-                                    <img src="./assets/images/corte1.png" alt="" />
+                                    <img src="./assets/images/corte6.jpg" alt="" />
                                 </div>
 
                                 

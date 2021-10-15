@@ -36,15 +36,15 @@ export default function Pigmentacao() {
                                 </div>
 
                                 <div class="cabelo">
-                                    <img src="./assets/images/pig2.png" alt="" />
+                                    <img src="./assets/images/pig7.png" alt="" />
                                 </div>
 
                                 <div class="cabelo">
-                                    <img src="./assets/images/pig2.png" alt="" />
+                                    <img src="./assets/images/pig8.jpg" alt="" />
                                 </div>
 
                                 <div class="cabelo">
-                                    <img src="./assets/images/pig2.png" alt="" />
+                                    <img src="./assets/images/pig9.jpg" alt="" />
                                 </div>
 
                                 

@@ -47,15 +47,15 @@ export default function Quimicas() {
                             </div>
 
                             <div class="cabelo">
-                                <img src="./assets/images/quimica3.png" alt="" />
+                                <img src="./assets/images/desc.jpg" alt="" />
                             </div>
 
                             <div class="cabelo">
-                                <img src="./assets/images/quimica3.png" alt="" />
+                                <img src="./assets/images/desc2.jpg" alt="" />
                             </div>
 
                             <div class="cabelo">
-                                <img src="./assets/images/quimica3.png" alt="" />
+                                <img src="./assets/images/desc3.jpg" alt="" />
                             </div>
 
                             

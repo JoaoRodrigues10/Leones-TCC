@@ -24,15 +24,11 @@ export default function EspeciaisMas() {
                                 
             
                                 <div class="cabelo">
-                                  <img src="./assets/images/especiaismasc2.png" alt="" />
+                                  <img src="./assets/images/especiaismasc.png" alt="" />
                                 </div>
 
                                 <div class="cabelo">
-                                    <img src="./assets/images/especiaismasc.png" alt="" />
-                                </div>
-
-                                <div class="cabelo">
-                                    <img src="./assets/images/especiais2.png" alt="" />
+                                    <img src="./assets/images/especiaismasc2.png" alt="" />
                                 </div>
 
                                 <div class="cabelo">
@@ -40,11 +36,15 @@ export default function EspeciaisMas() {
                                 </div>
 
                                 <div class="cabelo">
-                                    <img src="./assets/images/especiais2.png" alt="" />
+                                    <img src="./assets/images/spamasc.jpg" alt="" />
                                 </div>
 
                                 <div class="cabelo">
-                                    <img src="./assets/images/especiais2.png" alt="" />
+                                    <img src="./assets/images/spamasc2.jpg" alt="" />
+                                </div>
+
+                                <div class="cabelo">
+                                    <img src="./assets/images/spamasc3.jpg" alt="" />
                                 </div>
 
                                 

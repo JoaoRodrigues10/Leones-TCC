@@ -1,5 +1,6 @@
 import { Container } from "./styled"
 import Cabecalho from '../../components/cabecalho'
+import { Link } from "react-router-dom"
 
 export default function Home() {
 
@@ -77,7 +78,7 @@ export default function Home() {
             </div>
 
             <div className="destaques">
-                <div className="box">
+              <div className="box">
                 <img src="/assets/images/unha1.png" alt="" />
 
                 <div className="des">
@@ -90,8 +91,10 @@ export default function Home() {
                     serviços como Barboterapia.
                 </div>
 
-                <button>Ver Mais</button>
-                </div>
+                    <Link to="/manicure e pedicure">
+                        <button>Ver Mais</button>
+                    </Link>
+              </div>
 
                 <div className="box">
                 <img src="/assets/images/cabelo.png" alt="" />
@@ -105,8 +108,10 @@ export default function Home() {
                     em barba e cortes de cabelo, além de oferecer <br />
                     serviços como Barboterapia.
                 </div>
-
-                <button>Ver Mais</button>
+                
+                <Link to="/quimicas">
+                    <button>Ver Mais</button>
+                </Link>
                 </div>
 
                 <div className="box">
@@ -122,7 +127,9 @@ export default function Home() {
                     serviços como Barboterapia.
                 </div>
 
-                <button>Ver Mais</button>
+                <Link to="/cortesmas">
+                    <button>Ver Mais</button>
+                </Link>
                 </div>
             </div>
 

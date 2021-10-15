@@ -46,7 +46,7 @@ export default function Cortes() {
                         </div>
 
                         <div class="cabelo">
-                        <img src="/assets/images/cabelo4.png" alt="" />
+                        <img src="/assets/images/corte1.jpg" alt="" />
                         </div>
 
                         <div class="cabelo">
@@ -54,11 +54,11 @@ export default function Cortes() {
                         </div>
 
                         <div class="cabelo">
-                        <img src="/assets/images/cabelo4.png" alt="" />
+                        <img src="/assets/images/corte2.jpg" alt="" />
                         </div>
 
                         <div class="cabelo">
-                        <img src="/assets/images/cabelo4.png" alt="" />
+                        <img src="/assets/images/corte3.jpg" alt="" />
                         </div>
 
                         </Carousel>

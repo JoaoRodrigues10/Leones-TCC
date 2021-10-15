@@ -129,6 +129,7 @@ const ServicosMascu = styled.div`
     border: none;
     width: 100px;
     height: 80px;
+    cursor:pointer;
   }
   
   .titulo {
