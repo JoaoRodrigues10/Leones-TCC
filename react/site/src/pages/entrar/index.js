@@ -1,4 +1,5 @@
 import { Container } from "./styled"
+import { Link } from "react-router-dom"
 
 
 export default function Entrarr() {
@@ -25,7 +26,9 @@ export default function Entrarr() {
         </div>
 
         <div class="botao">
-          <button>ENTRAR</button>
+          <Link to="/home">
+            <button>ENTRAR</button>
+          </Link>
         </div>
       </div>
 

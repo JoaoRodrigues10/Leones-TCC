@@ -59,14 +59,13 @@ const Container = styled.div`
   background-color: #e3b052;
   font-family: "Josefin Sans", sans-serif;
   
-  border-radius: 20px;
+  border-radius: 10px;
   text-decoration: none;
   font-size: 14px;
-  padding-top: 10px;
-  padding-left: 70px;
-  padding-right: 70px;
-  padding-bottom: 7px;
+  padding: 10px 120px;
   align-items: center;
+  border: none;
+  cursor: pointer;
 }
   
 .cadrastro {

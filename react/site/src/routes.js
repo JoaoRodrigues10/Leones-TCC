@@ -18,12 +18,14 @@ import EspeciaisMas from './pages/servicos-mas/especiais'
 import TratamentosMas from './pages/servicos-mas/tratamentos'
 import ManicureMas from './pages/servicos-mas/manicure'
 import PigmentacaoMas from './pages/servicos-mas/pigmentacao'
+import Entrar from './pages/entrar'
 
 export default function Routes() {
     return (
         <BrowserRouter>
             <Switch>
-                <Route path="/" exact={true} component={Home} />
+                <Route path="/" exact={true} component={Entrar}/>
+                <Route path="/home" exact={true} component={Home} />
                 <Route path="/calendario" exact={true} component={Calendario} />
                 <Route path="/serviços" exact={true} component={Escolha} />
                 <Route path="/aprovacao" exact={true} component={Aprovacao} />
