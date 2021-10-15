@@ -131,6 +131,7 @@ export default function ServicosMas() {
 
           <ul class="serv">
             <li>Cutilagem</li>
+            <li>Esmaltação</li>
           </ul>
         </div>
       </div>

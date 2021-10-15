@@ -36,15 +36,15 @@ export default function ServicosMas() {
                                 </div>
 
                                 <div class="cabelo">
-                                    <img src="./assets/images/quimicamasc3.png" alt="" />
+                                    <img src="./assets/images/qim.jpg" alt="" />
                                 </div>
 
                                 <div class="cabelo">
-                                    <img src="./assets/images/quimicamasc3.png" alt="" />
+                                    <img src="./assets/images/qim2.jpg" alt="" />
                                 </div>
 
                                 <div class="cabelo">
-                                    <img src="./assets/images/quimicamasc3.png" alt="" />
+                                    <img src="./assets/images/qim3.jpg" alt="" />
                                 </div>
 
                                 
