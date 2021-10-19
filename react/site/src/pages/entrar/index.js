@@ -21,7 +21,7 @@ export default function Entrarr() {
               <input type="text" placeholder="E-mail ou telefone" />
             </div>
             <div class="f2-nome">
-              <input type="text" placeholder="Senha" />
+              <input type="password" placeholder="Senha" />
             </div>
           </div>
         </div>
