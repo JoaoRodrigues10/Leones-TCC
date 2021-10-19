@@ -51,8 +51,8 @@ const Container = styled.div`
   .botao {
     display: flex;
     flex-direction: column;
-  align-items: center;
-  margin: 17px 0px;
+    align-items: center;
+    margin: 17px 0px;
 }
   
 .botao button {
