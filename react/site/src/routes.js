@@ -21,6 +21,7 @@ import TratamentosMas from './pages/servicos-mas/tratamentos'
 import ManicureMas from './pages/servicos-mas/manicure'
 import PigmentacaoMas from './pages/servicos-mas/pigmentacao'
 import Entrar from './pages/entrar'
+import meuPerfil from './pages/meuPerfil'
 
 export default function Routes() {
     return (
@@ -48,7 +49,7 @@ export default function Routes() {
                 <Route path="/serviçosespeciaismas" exact={true} component={EspeciaisMas} />
                 <Route path="/tratamentosmas" exact={true} component={TratamentosMas} />
                 <Route path="/manicure e pedicure masculino" exact={true} component={ManicureMas} />
-                
+                <Route path="/meuPerfil" exact={true} component={meuPerfil}/>
             </Switch>
         </BrowserRouter>
     )
