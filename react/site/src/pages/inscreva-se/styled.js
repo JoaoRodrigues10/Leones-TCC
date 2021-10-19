@@ -7,6 +7,7 @@ const Container = styled.div`
     background-color: #0c1526;
 
     height: 680px;
+
   }
   
   .faixa1 {
