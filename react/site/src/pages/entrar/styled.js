@@ -38,6 +38,7 @@ const Container = styled.div`
     font-family: "Josefin Sans", sans-serif;
     border: none;
     background-color: #0c1526;
+    color: white;
     border-bottom: 3px solid #e3b052;
     width: 300px;
     height: 30px;
