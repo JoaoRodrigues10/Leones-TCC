@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Container = styled.div`
 .cabecalho {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     background-color: #242424;
