@@ -16,7 +16,7 @@ export default function Cabecalhooo() {
                 <Link to="/home"> <div className="opcoes"> LEO </div> </Link>     
                 </div>
                 <div>
-                    <div className="imagem-cab2"> <img src="/assets/images/fotousu.png" alt=""  /> </div>
+                    <Link to="/meuPerfil"><div className="imagem-cab2"> <img src="/assets/images/fotousu.png" alt=""  /> </div></Link>
                 </div>
             </Cabecalho> 
                  
