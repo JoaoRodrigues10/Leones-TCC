@@ -1,6 +1,8 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Calendario from './pages/calendario/index'
 import Home from './pages/home';
+import CadrastrarFuncionário from './pages/cadastrar-funcionario'
+import Inscrevase from './pages/inscreva-se'
 import Servicos from './pages/servicos-fem';
 import Penteados from './pages/servicos-fem/penteados';
 import Cortes from './pages/servicos-fem/cortes';
@@ -26,6 +28,8 @@ export default function Routes() {
             <Switch>
                 <Route path="/" exact={true} component={Entrar}/>
                 <Route path="/home" exact={true} component={Home} />
+                <Route path="/cadastrar-funcionario" exact={true} component={CadrastrarFuncionário} />
+                <Route path="/inscreva-se" exact={true} component={Inscrevase} />
                 <Route path="/calendario" exact={true} component={Calendario} />
                 <Route path="/serviços" exact={true} component={Escolha} />
                 <Route path="/aprovacao" exact={true} component={Aprovacao} />
