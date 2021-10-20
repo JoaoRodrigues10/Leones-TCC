@@ -6,6 +6,7 @@ const api = axios.create({
 export default class Api {
     async ListarCliente() {
         let r = await api.get('/cliente', {})
+        return r.data;
     }
 
     async InserirCliente(nome, email, senha, telefone) {
@@ -24,9 +25,21 @@ export default class Api {
     }
 
 
+    async login(email, senha) {
+        let b = await api.post('/login', { email, senha })
+        return b.data;
+    }
+
+    async cadastrar(nome, cargo, email, telefone, senha) {
+        let r = await api.post('/cadastro', {nome, cargo, email, telefone, senha })
+        return r.data;
+    }
+
+
 
     async ListarFuncionario() {
         let r = await api.get('/funcionario', {})
+        return r.data;
     }
 
     async InserirFuncionario(nome, cargo, email, senha, telefone) {
@@ -48,6 +61,7 @@ export default class Api {
 
     async ListarServicos() {
         let r = await api.get('/servicos', {})
+        return r.data;
     }
 
     async InserirServicos(tipo, nome, descricao, valor) {
@@ -69,6 +83,7 @@ export default class Api {
 
     async ListarServicosImg() {
         let r = await api.get('/servicoimg', {})
+        return r.data;
     }
 
     async InserirServicosImg(idservico, imgservico) {
@@ -90,6 +105,7 @@ export default class Api {
     
     async ListarAgendamento() {
         let r = await api.get('/agendamento', {})
+        return r.data;
     }
 
     async InserirAgendamento(funcionario, cliente, servico, agendamento, situacao) {

@@ -1,35 +1,56 @@
 import { Container } from "./styled"
-import { Link } from "react-router-dom"
+import CabecalhoImagem from '../../components/img-cabecalho'
 import Rodape from '../../components/rodape'
+
+import { useState } from 'react'
+import { useHistory } from 'react-router-dom'
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Cookies from 'js-cookie'
+
+import Api from '../../services/api'
+const api = new Api();
 
 
 export default function Entrarr() {
+  const navigation = useHistory();
+
+  const [emailOuTelefone, setEmailOuTelefone] = useState('');
+  const [senha, setSenha] = useState('');
+
+  const logar = async () => {
+    let b = await api.login(emailOuTelefone, senha)
+    if (b.erro) {
+      toast.error(`${b.erro}`)
+
+    } else {
+      Cookies.set('usuario-logado', JSON.stringify(b));
+      navigation.push('/home')
+    }
+  }
+
   return (
     <Container>
+    <ToastContainer/>
       <div class="box">
       <div class="container">
-        <div class="faixa1">
-          <div class="f1-logo">
-            <img src="/assets/images/logo.png" alt="" /> 
-          </div>
-        </div>
-
+        <CabecalhoImagem/>
+       
         <div class="inscreva-se">
           <div class="titulo"> <h1>Entrar</h1> </div>
           <div class="faixa2">
             <div class="f2-nome">
-              <input type="text" placeholder="E-mail ou telefone" />
+              <input type="text" placeholder="E-mail ou telefone" value={emailOuTelefone} onChange={e => setEmailOuTelefone(e.target.value)} />
             </div>
             <div class="f2-nome">
-              <input type="password" placeholder="Senha" />
+              <input type="password" placeholder="Senha" value={senha} onChange={e => setSenha(e.target.value)} />
             </div>
           </div>
         </div>
 
         <div class="botao">
-          <Link to="/home">
-            <button>ENTRAR</button>
-          </Link>
+            <button onClick={logar}>ENTRAR</button>
         </div>
       </div>
     </div>
@@ -37,8 +58,6 @@ export default function Entrarr() {
     <Rodape/>
  
     </Container>
-
-
 
   )
 }

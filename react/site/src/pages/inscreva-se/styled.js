@@ -46,6 +46,7 @@ const Container = styled.div`
   
   input::placeholder {
     color: white;
+    text-align: center;
   }
   
   .botao {
