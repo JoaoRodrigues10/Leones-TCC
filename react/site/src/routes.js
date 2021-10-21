@@ -24,6 +24,9 @@ import Entrar from './pages/entrar'
 import meuPerfil from './pages/meuPerfil'
 import alterar from './pages/alterar'
 
+import Recuperacao from './pages/esqueciSenha/recuperacao';
+import Reset from './pages/esqueciSenha/reset';
+
 
 export default function Routes() {
     return (
@@ -53,6 +56,9 @@ export default function Routes() {
                 <Route path="/manicure e pedicure masculino" exact={true} component={ManicureMas} />
                 <Route path="/meuPerfil" exact={true} component={meuPerfil}/>
                 <Route path="/alterar" exact={true} component={alterar}/>
+
+                <Route path="/recuperacao" exact={true} component={Recuperacao}/>
+                <Route path="/reset" exact={true} component={Reset}/>
             </Switch>
         </BrowserRouter>
     )

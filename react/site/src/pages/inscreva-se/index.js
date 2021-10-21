@@ -14,9 +14,9 @@ export default function InscreverFun() {
   
   return (
     <Container>
-        <div class="box">
-          <div class="container"></div>
-          <CabecalhoImagem/>
+      <div class="box">
+      <div class="container">
+        <CabecalhoImagem/>
       
           <div class="inscreva-se">
             <div class="titulo"> <h1>Inscreva-se</h1> </div>
@@ -35,15 +35,16 @@ export default function InscreverFun() {
               </div>
             </div>
           </div>
+
+          <div class="botao">
+            <button>INSCREVER-SE</button>
           </div>
 
-        <div class="botao">
-          <button>INSCREVER-SE</button>
+          <div class="inscreva-se">
+            <div class="cadrastro">Já tem cadastro? Faça o LOGIN</div>
+          </div>
         </div>
-
-        <div class="inscreva-se">
-          <div class="cadrastro">Já tem cadastro? Faça o LOGIN</div>
-        </div>
+      </div>
 
     <Rodape/>
 
