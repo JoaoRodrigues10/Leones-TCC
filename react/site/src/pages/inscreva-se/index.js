@@ -38,7 +38,7 @@ export default function InscreverFun() {
           </div>
 
         <div class="botao">
-          <a href="#">INSCREVER-SE</a>
+          <button>INSCREVER-SE</button>
         </div>
 
         <div class="inscreva-se">

@@ -56,7 +56,7 @@ const Container = styled.div`
     margin: 17px 0px;
   }
   
-  .botao a {
+  .botao button {
     color: #ffffff;
     background-color: #e3b052;
     font-family: "Josefin Sans", sans-serif;

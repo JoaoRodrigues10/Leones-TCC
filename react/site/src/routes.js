@@ -24,6 +24,7 @@ import Entrar from './pages/entrar'
 import meuPerfil from './pages/meuPerfil'
 import alterar from './pages/alterar'
 
+
 export default function Routes() {
     return (
         <BrowserRouter>

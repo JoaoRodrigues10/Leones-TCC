@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Cabecalho from "../../components/cabecalho";
 import Rodape from "../../components/rodape";
 import { Container } from "./styled";
@@ -11,7 +10,7 @@ export default function meuPerfil(){
             <div className="containerperfil"> 
           
                 <div className="faixa1">
-                    <div className="fotoperfil"> <img src="/assets/images/perfil.jpg"/></div>
+                    <div className="fotoperfil"> <img src="/assets/images/perfil.jpg" alt="" /></div>
                     <div className="dadosperfil">
                         <div className="dados">Nome do Cliente</div>
                     </div>
@@ -53,8 +52,8 @@ export default function meuPerfil(){
                                 <td> Pigmentação </td>
                                 <td> Carlos </td>
                                 <td> 10:10 10/10/2010 </td>
-                                <td className="acao"> <button> <img src="/assets/images/edit.svg"/> </button> </td>
-                                <td className="acao"> <button> <img src="/assets/images/delete.svg"/> </button></td>
+                                <td className="acao"> <button> <img src="/assets/images/edit.svg" alt="" /> </button> </td>
+                                <td className="acao"> <button> <img src="/assets/images/delete.svg" alt="" /> </button></td>
                             </tr>
                         
                             <tr >
@@ -63,8 +62,8 @@ export default function meuPerfil(){
                                 <td> Pigmentação </td>
                                 <td> Carlos </td>
                                 <td> 10:10 10/10/2010 </td>
-                                <td className="acao"> <button> <img src="/assets/images/edit.svg"/> </button> </td>
-                                <td className="acao"> <button> <img src="/assets/images/delete.svg"/> </button></td>
+                                <td className="acao"> <button> <img src="/assets/images/edit.svg" alt=""/> </button> </td>
+                                <td className="acao"> <button> <img src="/assets/images/delete.svg" alt=""/> </button></td>
                             </tr>
         
                             <tr >
@@ -73,8 +72,8 @@ export default function meuPerfil(){
                                 <td> Pigmentação </td>
                                 <td> Carlos </td>
                                 <td> 10:10 10/10/2010 </td>
-                                <td className="acao"> <button> <img src="/assets/images/edit.svg"/> </button> </td>
-                                <td className="acao"> <button> <img src="/assets/images/delete.svg"/> </button></td>
+                                <td className="acao"> <button> <img src="/assets/images/edit.svg" alt="" /> </button> </td>
+                                <td className="acao"> <button> <img src="/assets/images/delete.svg" alt="" /> </button></td>
                             </tr>
         
                             <tr >
@@ -83,8 +82,8 @@ export default function meuPerfil(){
                                 <td> Pigmentação </td>
                                 <td> Carlos </td>
                                 <td> 10:10 10/10/2010 </td>
-                                <td className="acao"> <button> <img src="/assets/images/edit.svg"/> </button> </td>
-                                <td className="acao"> <button> <img src="/assets/images/delete.svg"/> </button></td>
+                                <td className="acao"> <button> <img src="/assets/images/edit.svg" alt="" /> </button> </td>
+                                <td className="acao"> <button> <img src="/assets/images/delete.svg" alt="" /> </button></td>
                             </tr>
                         
                         </tbody> 
