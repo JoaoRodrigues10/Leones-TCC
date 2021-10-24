@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   .container{
-    padding: 2em;
+    padding: 5em;
   }
 
   body {
@@ -12,6 +12,15 @@ const Container = styled.div`
 
   * {
     box-sizing: border-box;
+  }
+
+  .alinhar {
+    display: flex;
+    flex-direction: column;
+    background-color: #0c1526;
+    align-items: center;
+
+    height: 680px;
   }
 `
 

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Container } from '../styled'
 
-import Cabecalho from '../../../components/cabecalho'
+import CabecalhoImagem from '../../../components/img-cabecalho'
 import Rodape from '../../../components/rodape'
 
 export default function Recuperacao() {
@@ -22,14 +22,17 @@ export default function Recuperacao() {
 
     return (
             <Container>
-                <Cabecalho/>
-                <h1> Recuperação de Senha </h1>
+                <CabecalhoImagem/>
 
-                <div>
-                    E-mail: <input type="text" value={email} onChange={e => setEmail(e.target.value)} />
+                <div className="alinhar">
+                    <h1> Recuperação de Senha </h1>
+
+                    <div>
+                        E-mail: <input type="text" value={email} onChange={e => setEmail(e.target.value)} />
+                    </div>
+
+                    <button onClick={recuperar}> Enviar Código </button>
                 </div>
-
-                <button onClick={recuperar}> Enviar Código </button>
                 <Rodape/>
             </Container>
             

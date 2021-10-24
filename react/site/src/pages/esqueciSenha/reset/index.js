@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Container } from '../styled'
 
-import Cabecalho from '../../../components/cabecalho'
+import CabecalhoImagem from '../../../components/img-cabecalho'
 import Rodape from '../../../components/rodape'
 
 export default function Reset(props) {
@@ -40,28 +40,32 @@ export default function Reset(props) {
 
     return (
         <Container> 
-            <Cabecalho/>
-            <h1> Recuperação de Senha </h1>
+            <CabecalhoImagem/>
 
-            <div>
-                Código de Recuperação: <input type="text" value={codigo} onChange={e => setCodigo(e.target.value)} />
-            </div>
+            <div className="alinhar">
+                <h1> Recuperação de Senha </h1>
 
-            <button onClick={validarCodigo}> Enviar Código </button>
-
-            <br />
-            {validado &&
                 <div>
-                    <h3> Altere sua senha </h3>
+                    Código de Recuperação: <input type="text" value={codigo} onChange={e => setCodigo(e.target.value)} />
+                </div>
 
+                <button onClick={validarCodigo}> Enviar Código </button>
+
+                <br />
+                {validado &&
                     <div>
-                        Nova senha: <input type="text" value={novaSenha} onChange={e => setNovaSenha(e.target.value)} />   
+                        <h3> Altere sua senha </h3>
+
                         <div>
-                            <button onClick={alterarSenha}> Alterar </button>
+                            Nova senha: <input type="text" value={novaSenha} onChange={e => setNovaSenha(e.target.value)} />   
+                            <div>
+                                <button onClick={alterarSenha}> Alterar </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            }
+                }
+            </div>
+
             <Rodape/>
         </Container>
     )
