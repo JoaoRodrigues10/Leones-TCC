@@ -35,7 +35,7 @@ export default function Entrarr() {
     <ToastContainer/>
       <div class="box">
       <div class="container">
-        <CabecalhoImagem/>
+        <CabecalhoImagem />
        
         <div class="inscreva-se">
           <div class="titulo"> <h1>Entrar</h1> </div>
