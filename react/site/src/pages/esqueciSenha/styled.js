@@ -19,9 +19,54 @@ const Container = styled.div`
     flex-direction: column;
     background-color: #0c1526;
     align-items: center;
-
-    height: 680px;
+    justify-content: center;
+    min-height: calc(100vh - 300px);
   }
+  
+  h1 {
+    color: white;
+  }
+
+  .email{
+    font-size: 15px;
+    margin: 10px;
+    font-family: "Josefin Sans", sans-serif;
+    border: none;
+    color: white;
+    
+  }
+
+  .email input{
+    background-color: #0c1526;
+    border: none;
+    border-bottom: 3px solid #e3b052;
+    width: 300px;
+    height: 30px;
+    color: white;
+    font-family: "Josefin Sans",sans-serif;
+  }
+
+  input::placeholder {
+    text-align: center;
+    color: white;
+  }
+
+  .alinhar button{
+      color: #ffffff;
+      background-color: #e3b052;
+      font-family: "Josefin Sans", sans-serif;
+      
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 14px;
+      width: 300px;
+      height: 40px;
+      align-items: center;
+      border: none;
+      cursor: pointer;
+  }
+
+ 
 `
 
 export { Container };

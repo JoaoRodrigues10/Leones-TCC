@@ -32,10 +32,10 @@ export default function Routes() {
     return (
         <BrowserRouter>
             <Switch>
-                <Route path="/" exact={true} component={Entrar}/>
+                <Route path="/login" exact={true} component={Entrar}/>
                 <Route path="/home" exact={true} component={Home} />
                 <Route path="/cadastrar-funcionario" exact={true} component={CadrastrarFuncionário} />
-                <Route path="/inscreva-se" exact={true} component={Inscrevase} />
+                <Route path="/" exact={true} component={Inscrevase} />
                 <Route path="/calendario" exact={true} component={Calendario} />
                 <Route path="/serviços" exact={true} component={Escolha} />
                 <Route path="/aprovacao" exact={true} component={Aprovacao} />

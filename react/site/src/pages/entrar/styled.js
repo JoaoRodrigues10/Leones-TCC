@@ -7,6 +7,9 @@ const Container = styled.div`
     background-color: #0c1526;
     
     height: 680px;
+    min-height: calc(100vh - 300px);
+    min-height: calc(100vh - 300px);
+    justify-content: center;
   }
   
   .faixa1 {
@@ -77,6 +80,22 @@ const Container = styled.div`
   font-family: "Josefin Sans", sans-serif;
 }
   
+.text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.entrar{
+  color: #ffffff;
+  font-family: "Josefin Sans", sans-serif;
+  margin-top: 10px;
+}
+
+.text a {
+  border-bottom: 1px solid white;
+}
 
 
 `

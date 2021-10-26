@@ -9,6 +9,7 @@ const CabecalhoImage = styled.div`
     .faixa1 {
         display: flex;
         flex-direction: row;
+        height: 60px;
     }
     
     .f1-logo img {

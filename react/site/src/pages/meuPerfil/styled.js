@@ -38,6 +38,11 @@ const Container = styled.div`
 .fotoperfil{
     padding-left: 0.5em;
 }
+.fotoperfil img{
+  border-radius: 50%;
+  width: 9em;
+  height: 9em;
+}
 
 .faixa2{
   background-color: #174580;

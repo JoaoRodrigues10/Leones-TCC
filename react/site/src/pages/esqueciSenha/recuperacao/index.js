@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Container } from '../styled'
+import { Link } from 'react-router-dom';
 
 import CabecalhoImagem from '../../../components/img-cabecalho'
 import Rodape from '../../../components/rodape'
@@ -27,11 +28,11 @@ export default function Recuperacao() {
                 <div className="alinhar">
                     <h1> Recuperação de Senha </h1>
 
-                    <div>
-                        E-mail: <input type="text" value={email} onChange={e => setEmail(e.target.value)} />
+                    <div className="email">
+                        <input type="text" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
                     </div>
 
-                    <button onClick={recuperar}> Enviar Código </button>
+                    <button onClick={recuperar}> <Link to="/reset"> Enviar Código </Link> </button>
                 </div>
                 <Rodape/>
             </Container>

@@ -1,7 +1,10 @@
+import axios from 'axios'
+import { useState } from 'react'
 import Cabecalho from "../../components/cabecalho";
 import Rodape from "../../components/rodape";
 import { Container } from "./styled";
 
+<<<<<<< HEAD
 import { useState, useEffect, useRef } from 'react';
 
 import { confirmAlert } from 'react-confirm-alert';
@@ -67,6 +70,37 @@ export default function MeuPerfil() {
     useEffect(() => {
         listar();
     }, [])
+=======
+
+export default function MeuPerfil(){
+    const [arquivo, setArquivo] = useState();
+
+    async function cadastrar() {
+
+        let formData = new FormData();
+        formData.append('arquivo', arquivo);
+
+        let resp = await axios.post('https://943zj.sse.codesandbox.io/produto', formData, {
+          headers: {
+            "Content-Type": "multipart/form-data"
+          }});
+    
+        console.log(resp.data);
+      }
+
+
+      function previewImage() {
+        if (arquivo) {
+          return URL.createObjectURL(arquivo);
+        }
+      }
+    
+      function selectFile() {
+        let input = document.getElementById("arquivo-input-file");
+        input.click();
+      }
+    
+>>>>>>> da8b9fd8fa5b78a0f35ea97c31a301d2733f4179
 
     return(
     <div>
@@ -77,7 +111,11 @@ export default function MeuPerfil() {
             <div className="containerperfil"> 
           
                 <div className="faixa1">
-                    <div className="fotoperfil"> <img src="/assets/images/perfil.jpg" alt="" /></div>
+                    <div className="fotoperfil" onClick={selectFile}> <input id="arquivo-input-file" type="file" onChange={e => setArquivo(e.target.files[0])} />
+                    <img src={previewImage()} alt="" /></div>
+                    
+                    
+                    
                     <div className="dadosperfil">
                         <div className="dados">Nome do Cliente {cliente} </div>
                     </div>

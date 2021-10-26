@@ -1,6 +1,8 @@
 import { Container } from './styled'
 import CabecalhoImagem from '../../components/img-cabecalho'
 import Rodape from '../../components/rodape'
+import { Link } from 'react-router-dom'
+
 
 import { useState } from 'react'
 
@@ -15,8 +17,8 @@ export default function InscreverFun() {
   return (
     <Container>
       <div class="box">
+      <CabecalhoImagem/>
       <div class="container">
-        <CabecalhoImagem/>
       
           <div class="inscreva-se">
             <div class="titulo"> <h1>Inscreva-se</h1> </div>
@@ -31,7 +33,7 @@ export default function InscreverFun() {
                 <input type="text" placeholder="Telefone" value={telefone} onChange={e => setTelefone(e.target.value)} />
               </div>
               <div class="f2-nome">
-                <input type="text" placeholder="Senha" value={senha} onChange={e => setSenha(e.target.value)} />
+                <input type="password" placeholder="Senha" value={senha} onChange={e => setSenha(e.target.value)} />
               </div>
             </div>
           </div>
@@ -41,7 +43,7 @@ export default function InscreverFun() {
           </div>
 
           <div class="inscreva-se">
-            <div class="cadrastro">Já tem cadastro? Faça o LOGIN</div>
+            <div class="cadrastro">Já tem cadastro? Faça o  <Link to="/login"> <a> login </a> </Link> </div>
           </div>
         </div>
       </div>
