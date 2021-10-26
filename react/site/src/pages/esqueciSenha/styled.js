@@ -43,6 +43,7 @@ const Container = styled.div`
     width: 300px;
     height: 30px;
     color: white;
+    font-family: "Josefin Sans",sans-serif;
   }
 
   input::placeholder {
