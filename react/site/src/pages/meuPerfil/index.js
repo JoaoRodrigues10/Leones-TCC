@@ -1,8 +1,39 @@
+import axios from 'axios'
+import { useState } from 'react'
 import Cabecalho from "../../components/cabecalho";
 import Rodape from "../../components/rodape";
 import { Container } from "./styled";
 
-export default function meuPerfil(){
+
+export default function MeuPerfil(){
+    const [arquivo, setArquivo] = useState();
+
+    async function cadastrar() {
+
+        let formData = new FormData();
+        formData.append('arquivo', arquivo);
+
+        let resp = await axios.post('https://943zj.sse.codesandbox.io/produto', formData, {
+          headers: {
+            "Content-Type": "multipart/form-data"
+          }});
+    
+        console.log(resp.data);
+      }
+
+
+      function previewImage() {
+        if (arquivo) {
+          return URL.createObjectURL(arquivo);
+        }
+      }
+    
+      function selectFile() {
+        let input = document.getElementById("arquivo-input-file");
+        input.click();
+      }
+    
+
     return(
     <div>
     <Cabecalho/>
@@ -10,7 +41,11 @@ export default function meuPerfil(){
             <div className="containerperfil"> 
           
                 <div className="faixa1">
-                    <div className="fotoperfil"> <img src="/assets/images/perfil.jpg" alt="" /></div>
+                    <div className="fotoperfil" onClick={selectFile}> <input id="arquivo-input-file" type="file" onChange={e => setArquivo(e.target.files[0])} />
+                    <img src={previewImage()} alt="" /></div>
+                    
+                    
+                    
                     <div className="dadosperfil">
                         <div className="dados">Nome do Cliente</div>
                     </div>
