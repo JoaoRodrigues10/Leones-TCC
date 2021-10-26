@@ -45,8 +45,8 @@ export default function Reset(props) {
             <div className="alinhar">
                 <h1> Recuperação de Senha </h1>
 
-                <div>
-                    Código de Recuperação: <input type="text" value={codigo} onChange={e => setCodigo(e.target.value)} />
+                <div className="email">
+                    <input type="text" placeholder="Código de recuperação" value={codigo} onChange={e => setCodigo(e.target.value)} />
                 </div>
 
                 <button onClick={validarCodigo}> Enviar Código </button>
@@ -56,8 +56,8 @@ export default function Reset(props) {
                     <div>
                         <h3> Altere sua senha </h3>
 
-                        <div>
-                            Nova senha: <input type="text" value={novaSenha} onChange={e => setNovaSenha(e.target.value)} />   
+                        <div className="email">
+                            <input type="text" placeholder="Nova senha" value={novaSenha} onChange={e => setNovaSenha(e.target.value)} />   
                             <div>
                                 <button onClick={alterarSenha}> Alterar </button>
                             </div>

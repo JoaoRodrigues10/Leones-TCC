@@ -1,6 +1,8 @@
 import { Container } from "./styled"
 import CabecalhoImagem from '../../components/img-cabecalho'
 import Rodape from '../../components/rodape'
+import { Link } from 'react-router-dom'
+
 
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
@@ -34,8 +36,8 @@ export default function Entrarr() {
     <Container>
     <ToastContainer/>
       <div class="box">
-      <div class="container">
-        <CabecalhoImagem />
+      <CabecalhoImagem/>
+        <div class="container">
        
         <div class="inscreva-se">
           <div class="titulo"> <h1>Entrar</h1> </div>
@@ -52,9 +54,13 @@ export default function Entrarr() {
         <div class="botao">
             <button onClick={logar}>ENTRAR</button>
         </div>
-      </div>
-    </div>
 
+          <div className="text">
+            <div className="entrar"> Não tem login? <Link to="/"> <a> Inscreva-se </a> </Link> </div>
+            <div className="entrar"> <Link to="/recuperacao"> <a> Esqueci minha senha </a> </Link> </div>
+          </div>
+        </div>
+      </div>
     <Rodape/>
  
     </Container>

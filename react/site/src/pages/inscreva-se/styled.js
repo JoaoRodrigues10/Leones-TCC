@@ -7,7 +7,8 @@ const Container = styled.div`
     background-color: #0c1526;
 
     height: 680px;
-
+    min-height: calc(100vh - 300px);
+    justify-content: center;
   }
   
   .faixa1 {
@@ -42,6 +43,7 @@ const Container = styled.div`
     border-bottom: 3px solid #e3b052;
     width: 300px;
     height: 30px;
+    color: white;
   }
   
   input::placeholder {
@@ -66,13 +68,24 @@ const Container = styled.div`
     font-size: 14px;
     padding: 14px 100px;
     align-items: center;
+    border: none;
+  }
+
+  .inscreva-se {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
   }
   
-  .cadrastro {
-    font-size: 15px;
-    margin: 20px;
+  .cadrastro{
     color: #ffffff;
     font-family: "Josefin Sans", sans-serif;
+    margin-top: 10px;
+  }
+  
+  .cadrastro a {
+    border-bottom: 1px solid white;
   }
 `
 export { Container }
