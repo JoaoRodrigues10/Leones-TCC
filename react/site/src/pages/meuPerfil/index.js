@@ -4,8 +4,8 @@ import Cabecalho from "../../components/cabecalho";
 import Rodape from "../../components/rodape";
 import { Container } from "./styled";
 
+import { useState, useEffect, useRef } from 'react';
 
-import { UseState, useEffect, useRef } from 'react';
 
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
