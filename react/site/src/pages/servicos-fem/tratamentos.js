@@ -34,15 +34,11 @@ export default function Tratamentos() {
                                 
 
                                 <div class="cabelo">
-                                    <img src="./assets/images/tratamento2.png" alt="" />
-                                </div>
-
-                                <div class="cabelo">
                                     <img src="./assets/images/tratamento.png" alt="" />
                                 </div>
 
                                 <div class="cabelo">
-                                    <img src="./assets/images/tratamento3.png" alt="" />
+                                    <img src="./assets/images/tratamento2.png" alt="" />
                                 </div>
 
                                 <div class="cabelo">
@@ -50,11 +46,23 @@ export default function Tratamentos() {
                                 </div>
 
                                 <div class="cabelo">
-                                    <img src="./assets/images/tratamento3.png" alt="" />
+                                    <img src="./assets/images/tratamento4.png" alt="" />
                                 </div>
 
                                 <div class="cabelo">
-                                    <img src="./assets/images/tratamento3.png" alt="" />
+                                    <img src="./assets/images/tratamento5.png" alt="" />
+                                </div>
+
+                                <div class="cabelo">
+                                    <img src="./assets/images/tratamento6.png" alt="" />
+                                </div>
+
+                                <div class="cabelo">
+                                    <img src="./assets/images/tratamento7.png" alt="" />
+                                </div>
+
+                                <div class="cabelo">
+                                    <img src="./assets/images/tratamento8.png" alt="" />
                                 </div>
 
                                 
