@@ -4,8 +4,8 @@ import Cabecalho from "../../components/cabecalho";
 import Rodape from "../../components/rodape";
 import { Container } from "./styled";
 
-<<<<<<< HEAD
-import { useState, useEffect, useRef } from 'react';
+
+import { UseState, useEffect, useRef } from 'react';
 
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
@@ -70,7 +70,7 @@ export default function MeuPerfil() {
     useEffect(() => {
         listar();
     }, [])
-=======
+
 
 export default function MeuPerfil(){
     const [arquivo, setArquivo] = useState();
@@ -99,8 +99,7 @@ export default function MeuPerfil(){
         let input = document.getElementById("arquivo-input-file");
         input.click();
       }
-    
->>>>>>> da8b9fd8fa5b78a0f35ea97c31a301d2733f4179
+    }
 
     return(
     <div>
