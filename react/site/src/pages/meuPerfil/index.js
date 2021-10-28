@@ -5,72 +5,7 @@ import Rodape from "../../components/rodape";
 import { Container } from "./styled";
 
 
-// import { useState, useEffect, useRef } from 'react';
 
-// import { confirmAlert } from 'react-confirm-alert';
-// import 'react-confirm-alert/src/react-confirm-alert.css';
-
-// import LoadingBar from 'react-top-loading-bar';
-
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
-
-// import Api from '../../services/api'
-// const api = new Api();
-
-// export default function MeuPerfil() {
-
-//     const [cliente, setCliente] = useState('');
-//     const [agendamento, setAgendamento] = useState('');
-//     const [nomeCliente, setNomeCliente] = useState('');
-//     const [idCliente, setIdCliente] = useState('');
-
-//     let loading = useRef(null);
- 
-//     async function listar() {
-//         loading.current.continuousStart();
-//         let b = await api.listar();
-//         setCliente(b);
-//         loading.current.complete();
-//     }
-
-//     async function remover(id) {
-//         loading.current.continuousStart();
-
-//         confirmAlert({
-//             title: 'Remover agendamento',
-//             message: `Tem certeza que quer remover o agendamento ${id} ?`,
-//             buttons: [
-//                 {
-//                     label: 'Sim',
-//                     onClick: async() => {
-//                         let r = await api.remover(id);
-//                         if(r.erro){
-//                             toast.dark(`${r.erro}`);
-//                         } else {
-//                             toast.dark('Agendamento removido')
-//                             listar();
-//                         }
-//                     }
-//                 },
-//                 {
-//                     label: 'Não'
-//                 }
-//             ]
-//         })
-        
-//         listar();
-//         loading.current.complete();
-//     }
-
-//     async function editar(item) {
-       
-//     }
-
-//     useEffect(() => {
-//         listar();
-//     }, [])
-// =======
 
 export default function MeuPerfil(){
     const [arquivo, setArquivo] = useState();
@@ -108,8 +43,6 @@ export default function MeuPerfil(){
     <div>
     <Cabecalho/>
         <Container>
-        {/* <ToastContainer /> */}
-        {/* <LoadingBar color='#f11946' ref={loading} /> */}
             <div className="containerperfil"> 
           
                 <div className="faixa1">
