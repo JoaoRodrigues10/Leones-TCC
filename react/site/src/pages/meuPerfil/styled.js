@@ -40,8 +40,8 @@ const Container = styled.div`
 }
 .fotoperfil img{
   border-radius: 50%;
-  width: 9em;
-  height: 9em;
+  width: 12em;
+  height: 12em;
 }
 
 .faixa2{
@@ -143,6 +143,24 @@ button {
   border-radius: 50px;
   border: none;
     }
+
+    .input-file {
+    position: relative;
+  }
+  .input-file div {
+    padding: .2em 1em;
+    border-radius: 1em;
+    border: none;
+    outline: none;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+  input[type=file] {
+    visibility: hidden;
+    position: absolute;
+  }
+  
 
 `
 export { Container }

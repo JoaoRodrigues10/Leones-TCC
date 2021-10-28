@@ -4,83 +4,83 @@ import Cabecalho from "../../components/cabecalho";
 import Rodape from "../../components/rodape";
 import { Container } from "./styled";
 
-<<<<<<< HEAD
-import { useState, useEffect, useRef } from 'react';
 
-import { confirmAlert } from 'react-confirm-alert';
-import 'react-confirm-alert/src/react-confirm-alert.css';
+// import { useState, useEffect, useRef } from 'react';
 
-import LoadingBar from 'react-top-loading-bar';
+// import { confirmAlert } from 'react-confirm-alert';
+// import 'react-confirm-alert/src/react-confirm-alert.css';
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+// import LoadingBar from 'react-top-loading-bar';
 
-import Api from '../../services/api'
-const api = new Api();
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
-export default function MeuPerfil() {
+// import Api from '../../services/api'
+// const api = new Api();
 
-    const [cliente, setCliente] = useState('');
-    //const [agendamento, setAgendamento] = useState('');
-    //const [nomeCliente, setNomeCliente] = useState('');
-    //const [idCliente, setIdCliente] = useState('');
+// export default function MeuPerfil() {
 
-    let loading = useRef(null);
+//     const [cliente, setCliente] = useState('');
+//     const [agendamento, setAgendamento] = useState('');
+//     const [nomeCliente, setNomeCliente] = useState('');
+//     const [idCliente, setIdCliente] = useState('');
+
+//     let loading = useRef(null);
  
-    async function listar() {
-        loading.current.continuousStart();
-        let b = await api.listar();
-        setCliente(b);
-        loading.current.complete();
-    }
+//     async function listar() {
+//         loading.current.continuousStart();
+//         let b = await api.listar();
+//         setCliente(b);
+//         loading.current.complete();
+//     }
 
-    async function remover(id) {
-        loading.current.continuousStart();
+//     async function remover(id) {
+//         loading.current.continuousStart();
 
-        confirmAlert({
-            title: 'Remover agendamento',
-            message: `Tem certeza que quer remover o agendamento ${id} ?`,
-            buttons: [
-                {
-                    label: 'Sim',
-                    onClick: async() => {
-                        let r = await api.remover(id);
-                        if(r.erro){
-                            toast.dark(`${r.erro}`);
-                        } else {
-                            toast.dark('Agendamento removido')
-                            listar();
-                        }
-                    }
-                },
-                {
-                    label: 'Não'
-                }
-            ]
-        })
+//         confirmAlert({
+//             title: 'Remover agendamento',
+//             message: `Tem certeza que quer remover o agendamento ${id} ?`,
+//             buttons: [
+//                 {
+//                     label: 'Sim',
+//                     onClick: async() => {
+//                         let r = await api.remover(id);
+//                         if(r.erro){
+//                             toast.dark(`${r.erro}`);
+//                         } else {
+//                             toast.dark('Agendamento removido')
+//                             listar();
+//                         }
+//                     }
+//                 },
+//                 {
+//                     label: 'Não'
+//                 }
+//             ]
+//         })
         
-        listar();
-        loading.current.complete();
-    }
+//         listar();
+//         loading.current.complete();
+//     }
 
-    async function editar(item) {
+//     async function editar(item) {
        
-    }
+//     }
 
-    useEffect(() => {
-        listar();
-    }, [])
-=======
+//     useEffect(() => {
+//         listar();
+//     }, [])
+// =======
 
 export default function MeuPerfil(){
     const [arquivo, setArquivo] = useState();
 
-    async function cadastrar() {
+    async function fazerUpload() {
 
         let formData = new FormData();
         formData.append('arquivo', arquivo);
 
-        let resp = await axios.post('https://943zj.sse.codesandbox.io/produto', formData, {
+        let resp = await axios.post('http://localhost:3030/criarArquivo', formData, {
           headers: {
             "Content-Type": "multipart/form-data"
           }});
@@ -92,6 +92,8 @@ export default function MeuPerfil(){
       function previewImage() {
         if (arquivo) {
           return URL.createObjectURL(arquivo);
+        } else{
+            return 
         }
       }
     
@@ -100,24 +102,25 @@ export default function MeuPerfil(){
         input.click();
       }
     
->>>>>>> da8b9fd8fa5b78a0f35ea97c31a301d2733f4179
+
 
     return(
     <div>
     <Cabecalho/>
         <Container>
-        <ToastContainer />
-        <LoadingBar color='#f11946' ref={loading} />
+        {/* <ToastContainer /> */}
+        {/* <LoadingBar color='#f11946' ref={loading} /> */}
             <div className="containerperfil"> 
           
                 <div className="faixa1">
                     <div className="fotoperfil" onClick={selectFile}> <input id="arquivo-input-file" type="file" onChange={e => setArquivo(e.target.files[0])} />
                     <img src={previewImage()} alt="" /></div>
+                    <button onClick={fazerUpload}> Salvar Imagem </button>                 
                     
                     
                     
                     <div className="dadosperfil">
-                        <div className="dados">Nome do Cliente {cliente} </div>
+                        <div className="dados">Nome do Cliente  </div>
                     </div>
                 </div>
         
@@ -150,7 +153,7 @@ export default function MeuPerfil(){
                         </tr>
                         </thead>
         
-                        <tbody>
+                        {/* <tbody>
                             {cliente.map((item) =>   
                                 <tr >
                                     <td> {item.id_agendamento} </td>
@@ -167,7 +170,7 @@ export default function MeuPerfil(){
                                 </tr>
                             )}
                         
-                        </tbody> 
+                        </tbody>  */}
         
                     </table>
                     
