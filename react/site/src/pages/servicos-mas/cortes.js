@@ -20,6 +20,7 @@ export default function CortesMas() {
                       <Carousel 
                         responsive={CarouselConfig}
                         infinite={true}
+                        showDots={true}
                         >
                                 
                                 

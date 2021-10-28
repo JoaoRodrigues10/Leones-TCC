@@ -20,6 +20,7 @@ export default function ServicosMas() {
                       <Carousel 
                         responsive={CarouselConfig}
                         infinite={true}
+                        showDots={true}
                         >
                                 
             

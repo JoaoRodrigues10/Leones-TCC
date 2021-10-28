@@ -33,6 +33,7 @@ export default function Cortes() {
                 <Carousel 
                 responsive={CarouselConfig}
                 infinite={true}
+                showDots={true}
                 >
                         
                         

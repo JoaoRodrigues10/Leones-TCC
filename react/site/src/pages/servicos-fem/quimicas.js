@@ -30,6 +30,7 @@ export default function Quimicas() {
                     <Carousel 
                     responsive={CarouselConfig}
                     infinite={true}
+                    showDots={true}
                     >
                             
                             

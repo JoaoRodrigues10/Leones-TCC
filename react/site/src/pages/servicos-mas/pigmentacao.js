@@ -20,6 +20,7 @@ export default function Pigmentacao() {
                       <Carousel 
                         responsive={CarouselConfig}
                         infinite={true}
+                        showDots={true}
                         >
                                 
             

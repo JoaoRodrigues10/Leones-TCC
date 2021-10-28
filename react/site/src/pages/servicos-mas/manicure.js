@@ -20,6 +20,7 @@ export default function ManicureMas() {
                       <Carousel 
                         responsive={CarouselConfig}
                         infinite={true}
+                        showDots={true}
                         >
                                 
             

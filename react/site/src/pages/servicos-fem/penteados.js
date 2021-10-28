@@ -29,6 +29,7 @@ export default function Penteados() {
                     <Carousel 
                     responsive={CarouselConfig}
                     infinite={true}
+                    showDots={true}
                     >
                             
                             

@@ -20,6 +20,7 @@ export default function EspeciaisMas() {
                       <Carousel 
                         responsive={CarouselConfig}
                         infinite={true}
+                        showDots={true}
                         >
                                 
             

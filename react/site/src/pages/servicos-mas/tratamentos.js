@@ -21,6 +21,7 @@ export default function TratamentoMas() {
                     <Carousel 
                     responsive={CarouselConfig}
                     infinite={true}
+                    showDots={true}
                     >
                             
                             
