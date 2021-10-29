@@ -37,11 +37,11 @@ export default function CadrastoFun() {
     <Container>
     <ToastContainer/>
       <div class="box">
+      <CabecalhoImagem/>
       <div class="container">
-        <CabecalhoImagem/>
 
         <div class="inscreva-se">
-          <div class="titulo"> <h1>Inscreva-se Funcionário</h1> </div>
+          <div class="titulo"> <h1>Cadastrar funcionário</h1> </div>
           <div class="faixa2">
             <div class="f2-nome">
               <input type="text" placeholder="Nome" value={nome} onChange={e => setNome(e.target.value)} />

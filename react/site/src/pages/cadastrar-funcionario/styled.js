@@ -6,13 +6,14 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   background-color: #0c1526;
-  
+  justify-content: center;
   height: 680px;
 }
   
 .faixa1 {
   display: flex;
   flex-direction: row;
+  
 }
   
 .f1-logo img {
@@ -67,6 +68,7 @@ input::placeholder {
   font-size: 14px;
   padding: 14px 100px;
   align-items: center;
+  border: none;
 }
 
 `
