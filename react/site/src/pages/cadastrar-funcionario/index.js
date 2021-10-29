@@ -62,7 +62,7 @@ export default function CadrastoFun() {
         </div>
 
         <div class="botao">
-         <button onClick={logar}>ENTRAR</button>
+         <button onClick={logar}> Cadastrar </button>
         </div>
       </div>
     </div>
