@@ -1,14 +1,82 @@
 import axios from 'axios'
-import { useState } from 'react'
 import Cabecalho from "../../components/cabecalho";
 import Rodape from "../../components/rodape";
 import { Container } from "./styled";
 
+import { useState, useEffect, useRef } from 'react';
 
+import { confirmAlert } from 'react-confirm-alert';
+import 'react-confirm-alert/src/react-confirm-alert.css';
+
+import LoadingBar from 'react-top-loading-bar';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import Api from '../../services/api'
+const api = new Api();
 
 
 export default function MeuPerfil(){
-    const [arquivo, setArquivo] = useState();
+    const [arquivo, setArquivo] = useState('');
+    const [cliente, setCliente] = useState([]);
+    
+
+    let loading = useRef(null);
+
+    const atualizar = async() => {
+        loading.current.continuousStart();
+    
+       // const cliente = await api.listar(1);
+       // setCliente(cliente)
+    
+        loading.current.complete();
+    }
+ 
+    async function listar() {
+        loading.current.continuousStart();
+     //   let b = await api.listar();
+     //     setCliente(b);
+        loading.current.complete();
+    }
+
+    async function remover(id) {
+        loading.current.continuousStart();
+
+        confirmAlert({
+            title: 'Remover agendamento',
+            message: `Tem certeza que quer remover o agendamento ${id} ?`,
+            buttons: [
+                {
+                    label: 'Sim',
+                    onClick: async() => {
+                        let r = await api.remover(id);
+                        if(r.erro){
+                            toast.dark(`${r.erro}`);
+                        } else {
+                            toast.dark('Agendamento removido')
+                            listar();
+                        }
+                    }
+                },
+                {
+                    label: 'Não'
+                }
+            ]
+        })
+        
+        listar();
+        atualizar();
+        loading.current.complete();
+    }
+
+    async function editar(item) {
+       
+    }
+
+    useEffect(() => {
+        listar();
+    }, [])
 
     async function fazerUpload() {
 
@@ -43,6 +111,8 @@ export default function MeuPerfil(){
     <div>
     <Cabecalho/>
         <Container>
+        <ToastContainer />
+        <LoadingBar color='#174580' ref={loading} />
             <div className="containerperfil"> 
           
                 <div className="faixa1">
@@ -74,19 +144,19 @@ export default function MeuPerfil(){
                 <div className="faixa3"> 
                     <div className="minhaagenda">Minha Agenda</div>
                     <table className="table-user">
-                    <thead>
-                        <tr>
-                            <th> Id </th>
-                            <th> Cliente </th>
-                            <th> Serviço </th>
-                            <th> Profissional </th>
-                            <th> Horario Agenda </th>
-                            <th className="a"> </th>
-                            <th className="a"> </th>
-                        </tr>
+                        <thead>
+                            <tr>
+                                <th> Id </th>
+                                <th> Cliente </th>
+                                <th> Serviço </th>
+                                <th> Profissional </th>
+                                <th> Horario Agenda </th>
+                                <th> Situacão </th>
+                                <th className="a"> </th>
+                            </tr>
                         </thead>
         
-                        {/* <tbody>
+                        <tbody>
                             {cliente.map((item) =>   
                                 <tr >
                                     <td> {item.id_agendamento} </td>
@@ -98,12 +168,12 @@ export default function MeuPerfil(){
                                     <td> {item.nm_servico} </td>
                                     <td> {item.nm_funcionario} </td>
                                     <td> {item.dt_agendamento} </td>
+                                    <td> {item.tp_situacao} </td>
                                     <td className="acao"> <button onClick={ () => editar(item) }> <img src="/assets/images/edit.svg" alt="" /> </button> </td>
                                     <td className="acao"> <button onClick={ () => remover(item.id_agendamento) }> <img src="/assets/images/delete.svg" alt="" /> </button> </td>
                                 </tr>
                             )}
-                        
-                        </tbody>  */}
+                        </tbody>  
         
                     </table>
                     
