@@ -23,6 +23,7 @@ import PigmentacaoMas from './pages/servicos-mas/pigmentacao'
 import Entrar from './pages/entrar'
 import meuPerfil from './pages/meuPerfil'
 import alterar from './pages/alterar'
+import perfilFuncionario from './pages/perfilFuncionario'
 
 import Recuperacao from './pages/esqueciSenha/recuperacao';
 import Reset from './pages/esqueciSenha/reset';
@@ -59,6 +60,7 @@ export default function Routes() {
 
                 <Route path="/recuperacao" exact={true} component={Recuperacao}/>
                 <Route path="/reset" exact={true} component={Reset}/>
+                <Route path="/perfilFuncionario" exact={true} component={perfilFuncionario}/>
             </Switch>
         </BrowserRouter>
     )
