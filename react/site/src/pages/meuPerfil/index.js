@@ -19,7 +19,7 @@ const api = new Api();
 
 export default function MeuPerfil(){
     const [arquivo, setArquivo] = useState('');
-    const [cliente, setCliente] = useState([]);
+    const [agendamentos, setAgendamentos] = useState([]);
     
 
     let loading = useRef(null);
@@ -27,16 +27,16 @@ export default function MeuPerfil(){
     const atualizar = async() => {
         loading.current.continuousStart();
     
-       // const cliente = await api.listar(1);
-       // setCliente(cliente)
+        const cliente = await api.listar(1);
+        setAgendamentos(cliente)
     
         loading.current.complete();
     }
  
     async function listar() {
         loading.current.continuousStart();
-     //   let b = await api.listar();
-     //     setCliente(b);
+        let b = await api.ListarAgendamento();
+        setAgendamentos(b);
         loading.current.complete();
     }
 
@@ -153,21 +153,22 @@ export default function MeuPerfil(){
                                 <th> Horario Agenda </th>
                                 <th> Situacão </th>
                                 <th className="a"> </th>
+                                <th className="a"> </th>
                             </tr>
                         </thead>
         
                         <tbody>
-                            {cliente.map((item) =>   
+                            {agendamentos.map((item) =>   
                                 <tr >
                                     <td> {item.id_agendamento} </td>
-                                    <td title={item.nm_cliente}>
-                                        {item.nm_cliente != null && item.nm_cliente.length >= 15
-                                                ? item.nm_cliente.substr(0, 15) + "..." 
-                                                : item.nm_cliente} 
+                                    <td title={item.id_cliente_infod_leo_cliente.nm_cliente}>
+                                        {item.id_cliente_infod_leo_cliente.nm_cliente != null && item.id_cliente_infod_leo_cliente.nm_cliente.length >= 15
+                                                ? item.id_cliente_infod_leo_cliente.nm_cliente.substr(0, 15) + "..." 
+                                                : item.id_cliente_infod_leo_cliente.nm_cliente} 
                                     </td>
-                                    <td> {item.nm_servico} </td>
-                                    <td> {item.nm_funcionario} </td>
-                                    <td> {item.dt_agendamento} </td>
+                                    <td> {item.id_servico_infod_leo_servico.nm_servico} </td>
+                                    <td> {item.id_funcionario_infod_leo_funcionario.nm_funcionario} </td>
+                                    <td> {item.dt_agendamento.substr(0, 10)} </td>
                                     <td> {item.tp_situacao} </td>
                                     <td className="acao"> <button onClick={ () => editar(item) }> <img src="/assets/images/edit.svg" alt="" /> </button> </td>
                                     <td className="acao"> <button onClick={ () => remover(item.id_agendamento) }> <img src="/assets/images/delete.svg" alt="" /> </button> </td>
