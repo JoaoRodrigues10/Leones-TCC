@@ -137,7 +137,7 @@ export default function Calendariooo(props) {
         <div>
             <Cabecalho/>
                 <Container>
-                    <div className="titulo"> Escoha uma Data Para o Serviço {servicocorte.nome}</div>
+                    <div className="titulo"> Escoha uma Data Para o Serviço {servicocorte}</div>
                     <div className="calendario">
                         <Calendar onChange={onChange} value={date} minDate={new Date()}  />
                     </div>

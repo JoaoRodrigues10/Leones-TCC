@@ -162,8 +162,8 @@ export default function Home() {
                 </div>
 
                 <div className="info">
-                SEGUNDA À SÁBADO: 10h às 22h <br />
-                DOMINDOS E FERIADOS: 14h às 20h
+                SEGUNDA À SÁBADO: 08h às 21h30 <br />
+                DOMINDOS E FERIADOS: 08h às 21h30
                 </div>
 
                 <div className="tit2">

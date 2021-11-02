@@ -83,10 +83,7 @@ export default function Cortes() {
                         </div>
 
                         <div class="botao">
-                        <Link to={{
-                          pathname: '/calendario',
-                          state: servicocorte
-                        }}>
+                        <Link to="/calendario">
                         <button>Agendar ida ao salão</button>
                         </Link>
                         </div>
