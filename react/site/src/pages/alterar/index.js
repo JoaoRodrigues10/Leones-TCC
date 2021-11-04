@@ -25,6 +25,7 @@ export default function alterar(){
                             <div className="Alterar">
                                 <h1> Alterar </h1>
                                 <div className="Alterar-Horario">Horario: <input></input></div>
+                                <div className="Botao-alterar"><button> Atualizar </button></div> 
                             </div>
                         </div>
                     </div>
