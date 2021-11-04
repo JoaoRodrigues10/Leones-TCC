@@ -14,7 +14,7 @@ export default function Reset(props) {
     const nav = useHistory();
 
     async function validarCodigo() {
-        const r = await axios.post(`https://943zj.sse.codesandbox.io/validarCodigo`, { email: props.location.state.email, codigo: codigo });
+        const r = await axios.post(`http://localhost:3030/validarCodigo`, { email: props.location.state.email, codigo: codigo });
         if (r.data.status === 'ok') {
             setValidado(true);
         } else {
@@ -24,7 +24,7 @@ export default function Reset(props) {
     }
 
     async function alterarSenha() {
-        const r = await axios.post(`https://943zj.sse.codesandbox.io/validarCodigo`, { 
+        const r = await axios.post(`http://localhost:3030/validarCodigo`, { 
           email: props.location.state.email,
           codigo: codigo,
           novaSenha: novaSenha
@@ -32,7 +32,7 @@ export default function Reset(props) {
 
         if (r.data.state === 'ok') {
             alert('Senha Alterada!');
-            nav.push('/page/login');
+            nav.push('/login');
         } else {
             alert(r.data.mensagem);
         }
