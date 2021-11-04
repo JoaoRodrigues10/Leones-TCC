@@ -40,7 +40,7 @@ export default function Entrarr() {
         <div class="container">
        
         <div class="inscreva-se">
-          <div class="titulo"> <h1>Entrar</h1> </div>
+          <div class="titulo"> <h1>Entrar como Funcionário</h1> </div>
           <div class="faixa2">
             <div class="f2-nome">
               <input type="text" placeholder="E-mail ou telefone" value={emailOuTelefone} onChange={e => setEmailOuTelefone(e.target.value)} />
@@ -56,7 +56,7 @@ export default function Entrarr() {
         </div>
 
           <div className="text">
-            <div className="entrar"> Não tem login? <Link to="/inscreva-se"> <a> Inscreva-se </a> </Link> </div>
+            
             <div className="entrar"> <Link to="/recuperacao"> <a> Esqueci minha senha </a> </Link> </div>
           </div>
         </div>

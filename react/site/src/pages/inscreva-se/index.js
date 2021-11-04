@@ -1,10 +1,16 @@
 import { Container } from './styled'
 import CabecalhoImagem from '../../components/img-cabecalho'
 import Rodape from '../../components/rodape'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom'
-
+import { useHistory } from 'react-router-dom'
 
 import { useState } from 'react'
+
+import Api from '../../services/api'
+const api = new Api()
+
 
 export default function InscreverFun() {
 
@@ -13,9 +19,21 @@ export default function InscreverFun() {
   const [telefone, setTelefone] = useState('');
   const [senha, setSenha] = useState('');
 
+  const navigation = useHistory();
+
+  const criarConta = async () => {
+    let r = await api.InserirCliente(nome, email, telefone, senha)
+    if (r.erro)
+    toast.error(`❌ ${r.erro}`)
+    else { 
+    toast.dark('✔️ Sua Conta Foi Criada com Sucesso');
+    navigation.push('/login')
+    }
+  }
   
   return (
     <Container>
+      <ToastContainer/>
       <div class="box">
       <CabecalhoImagem/>
       <div class="container">
@@ -39,11 +57,11 @@ export default function InscreverFun() {
           </div>
 
           <div class="botao">
-            <button>INSCREVER-SE</button>
+            <button onClick={criarConta}>INSCREVER-SE</button>
           </div>
 
           <div class="inscreva-se">
-            <div class="cadrastro">Já tem cadastro? Faça o  <Link to="/login"> <a> login </a> </Link> </div>
+            <div class="cadrastro">Já tem cadastro? Faça o  <Link to="/"> <a> login </a> </Link> </div>
           </div>
         </div>
       </div>

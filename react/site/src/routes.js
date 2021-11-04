@@ -24,6 +24,7 @@ import Entrar from './pages/entrar'
 import meuPerfil from './pages/meuPerfil'
 import alterar from './pages/alterar'
 import perfilFuncionario from './pages/perfilFuncionario'
+import Entrarfuncionario from './pages/entrar-funcionario'
 
 import Recuperacao from './pages/esqueciSenha/recuperacao';
 import Reset from './pages/esqueciSenha/reset';
@@ -33,10 +34,11 @@ export default function Routes() {
     return (
         <BrowserRouter>
             <Switch>
-                <Route path="/login" exact={true} component={Entrar}/>
+                <Route path="/" exact={true} component={Entrar}/>
                 <Route path="/home" exact={true} component={Home} />
+                <Route path="/entrar-funcionario" exact={true} component={Entrarfuncionario} />
                 <Route path="/cadastrar-funcionario" exact={true} component={CadrastrarFuncionário} />
-                <Route path="/" exact={true} component={Inscrevase} />
+                <Route path="/inscreva-se" exact={true} component={Inscrevase} />
                 <Route path="/calendario" exact={true} component={Calendario} />
                 <Route path="/serviços" exact={true} component={Escolha} />
                 <Route path="/aprovacao" exact={true} component={Aprovacao} />

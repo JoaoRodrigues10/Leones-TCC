@@ -78,10 +78,7 @@ export default function Quimicas() {
                 </div>
 
                 <div class="botao">
-                <Link to={{
-                 pathname: '/calendario',
-                 state: servico
-                 }}>
+                <Link to="/calendario">
                         <button>Agendar ida ao salão</button>
                         </Link>
                 </div>
