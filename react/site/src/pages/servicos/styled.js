@@ -74,10 +74,6 @@ const Container = styled.div`
     margin-left: 20px;
   }
   
-  button:hover {
-    background-color: #ffc222;
-  }
-  
 `
 
 export { Container }
