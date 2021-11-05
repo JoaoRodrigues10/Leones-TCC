@@ -15,7 +15,7 @@ import Api from '../../services/api'
 const api = new Api();
 
 
-export default function Entrarr() {
+export default function Entrarr(props) {
   const navigation = useHistory();
 
   const [emailOuTelefone, setEmailOuTelefone] = useState('');
@@ -56,8 +56,8 @@ export default function Entrarr() {
         </div>
 
           <div className="text">
-            <div className="entrar"> Não tem login? <Link to="/inscreva-se"> <a> Inscreva-se </a> </Link> </div>
-            <div className="entrar"> <Link to="/recuperacao"> <a> Esqueci minha senha </a> </Link> </div>
+            <div className="entrar"> Não tem login? <Link to="/inscreva-se"> <b> Inscreva-se </b> </Link> </div>
+            <div className="entrar"> <Link to="/recuperacao"> <b> Esqueci minha senha </b> </Link> </div>
           </div>
         </div>
       </div>

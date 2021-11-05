@@ -21,7 +21,7 @@ export default function Tratamentos() {
         <ContainerCortes>
             <div class="faixa">
                 <div class="titulo">
-                    TRATAMENTO CAPILAR 
+                {servico.nome} 
                 </div>
 
                 <div className="carrosel">

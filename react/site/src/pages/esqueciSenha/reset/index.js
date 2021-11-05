@@ -24,7 +24,7 @@ export default function Reset(props) {
     }
 
     async function alterarSenha() {
-        const r = await axios.post(`http://localhost:3030/validarCodigo`, { 
+        const r = await axios.put(`http://localhost:3030/resetSenha`, { 
           email: props.location.state.email,
           codigo: codigo,
           novaSenha: novaSenha
@@ -32,7 +32,7 @@ export default function Reset(props) {
 
         if (r.data.state === 'ok') {
             alert('Senha Alterada!');
-            nav.push('/login');
+            nav.push('/');
         } else {
             alert(r.data.mensagem);
         }

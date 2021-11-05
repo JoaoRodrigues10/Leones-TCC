@@ -11,6 +11,10 @@ const Container = styled.div`
     min-height: calc(100vh - 300px);
     justify-content: center;
   }
+
+  .b {
+    text-decoration: underline;
+  }
   
   .faixa1 {
     display: flex;

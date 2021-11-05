@@ -1,7 +1,7 @@
 import { Container } from "./styled"
 import CabecalhoImagem from '../../components/img-cabecalho'
 import Rodape from '../../components/rodape'
-import { Link } from 'react-router-dom'
+
 
 
 import { useState } from 'react'
@@ -57,7 +57,7 @@ export default function Entrarr() {
 
           <div className="text">
             
-            <div className="entrar"> <Link to="/recuperacao"> <a> Esqueci minha senha </a> </Link> </div>
+            
           </div>
         </div>
       </div>

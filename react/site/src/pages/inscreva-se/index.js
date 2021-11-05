@@ -12,7 +12,7 @@ import Api from '../../services/api'
 const api = new Api()
 
 
-export default function InscreverFun() {
+export default function InscreverCli() {
 
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
@@ -61,7 +61,7 @@ export default function InscreverFun() {
           </div>
 
           <div class="inscreva-se">
-            <div class="cadrastro">Já tem cadastro? Faça o  <Link to="/"> <a> login </a> </Link> </div>
+            <div class="cadrastro">Já tem cadastro? Faça o  <Link to="/"> <b> login </b> </Link> </div>
           </div>
         </div>
       </div>
