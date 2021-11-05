@@ -12,7 +12,7 @@ import Api from '../../services/api'
 const api = new Api()
 
 
-export default function InscreverFun() {
+export default function InscreverCli() {
 
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');

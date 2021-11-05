@@ -75,7 +75,7 @@ const Container = styled.div`
   }
   
   button:hover {
-    background-color: black;
+    background-color: #ffc222;
   }
   
 `
