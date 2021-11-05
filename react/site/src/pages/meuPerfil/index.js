@@ -170,7 +170,7 @@ export default function MeuPerfil(){
                                     <td> {item.id_funcionario_infod_leo_funcionario.nm_funcionario} </td>
                                     <td> {item.dt_agendamento.substr(0, 10)} </td>
                                     <td> {item.tp_situacao} </td>
-                                    <td className="acao"> <button onClick={ () => editar(item) }> <img src="/assets/images/edit.svg" alt="" /> </button> </td>
+                                    <td className="acao"> <link to="/alterar"> <button onClick={ () => editar(item) }> <img src="/assets/images/edit.svg" alt="" /> </button> </link> </td>
                                     <td className="acao"> <button onClick={ () => remover(item.id_agendamento) }> <img src="/assets/images/delete.svg" alt="" /> </button> </td>
                                 </tr>
                             )}
