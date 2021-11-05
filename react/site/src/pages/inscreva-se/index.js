@@ -61,7 +61,7 @@ export default function InscreverFun() {
           </div>
 
           <div class="inscreva-se">
-            <div class="cadrastro">Já tem cadastro? Faça o  <Link to="/"> <a> login </a> </Link> </div>
+            <div class="cadrastro">Já tem cadastro? Faça o  <Link to="/"> <b> login </b> </Link> </div>
           </div>
         </div>
       </div>

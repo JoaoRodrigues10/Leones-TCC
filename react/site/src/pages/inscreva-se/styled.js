@@ -15,6 +15,10 @@ const Container = styled.div`
     display: flex;
     flex-direction: row;
   }
+
+  .b {
+    text-decoration: underline;
+  }
   
   .f1-logo img {
     width: 300px;
