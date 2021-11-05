@@ -13,9 +13,9 @@ export default function Recuperacao() {
     const nav = useHistory();
 
     async function recuperar() {
-        const r = await axios.post('https://943zj.sse.codesandbox.io/esqueciASenha', {email: email});
+        const r = await axios.post('http://localhost:3030/esqueciASenha', {email: email});
         if (r.data.status === 'ok') {
-            nav.push('/pages/reset', {email: email });
+            nav.push('/reset', {email: email });
         } else {
             alert(r.data.mensagem);
         }

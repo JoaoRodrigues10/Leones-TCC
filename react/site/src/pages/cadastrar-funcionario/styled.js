@@ -43,6 +43,7 @@ const Container = styled.div`
   border-bottom: 3px solid #e3b052;
   width: 300px;
   height: 30px;
+  color: white;
 }
 
   
