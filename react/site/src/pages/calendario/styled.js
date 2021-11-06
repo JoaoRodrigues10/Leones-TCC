@@ -5,11 +5,14 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     background: #141C48;
+    justify-content: center;
+
 
     .titulo {
         padding: 1em 0em;
         color: white;
         font-size: 2em ;
+
     }
     .titulo2 {
         padding: 1em 0em;
@@ -20,7 +23,7 @@ const Container = styled.div`
     .horarios-dispo {
         display: flex;
         flex-wrap: wrap;
-        padding-left: 5.2em;
+        justify-content: center;
     }
     .horarios-dispo button {
         font-size: 2em;
@@ -33,6 +36,12 @@ const Container = styled.div`
         cursor: pointer;
         border-radius: 22px;
     }
+
+    @media (max-width: 1024px){
+
+        
+      }
+      
 `
 
 export{ Container }

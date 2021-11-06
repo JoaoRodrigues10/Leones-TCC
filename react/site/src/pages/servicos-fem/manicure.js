@@ -85,7 +85,10 @@ export default function Penteados() {
                 </div>
 
                 <div class="botao">
-                <Link to="/calendario">
+                <Link to={{
+                          pathname: '/calendario',
+                          state: servico
+                        }}>
                         <button>Agendar ida ao salão</button>
                         </Link>
                 </div>

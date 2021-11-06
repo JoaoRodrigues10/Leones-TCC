@@ -5,7 +5,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     background-color: #174580;
-    min-height: calc(75vh - 67px);
+    min-height: calc(80vh - 67px);
     justify-content: center;
   }
   
@@ -49,9 +49,24 @@ const Container = styled.div`
     cursor: pointer;
     margin-left: 20px;
   }
-  
-  button:hover {
-    background-color: black;
+
+  @media (max-width: 1024px){
+    .antes {
+      font-size: 25px;
+    }
+    
+    .avaliacao {
+      font-size: 25px;
+    }
+    
+    .confirmar {
+      font-size: 20px;
+    }
+
+    button {
+      font-size:15px;
+      padding: 10px 50px;
+    }
   }
   
 `

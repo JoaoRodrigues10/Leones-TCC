@@ -71,7 +71,12 @@ const Container = styled.div`
       cursor: pointer;
   }
 
- 
+  @media(max-width: 1024px){
+    .alinhar {
+      min-height: calc(150vh - 300px);
+    }
+  }
+
 `
 
 export { Container };

@@ -104,6 +104,8 @@ const Container = styled.div`
   .box img {
     width: 267px;
     height: 283px;
+    border-radius: 10px;
+
   }
   
   .box {
@@ -115,6 +117,7 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     margin: 32px 30px 58px 30px;
+    border-radius: 10px;
   }
   
   .des {
@@ -170,6 +173,53 @@ const Container = styled.div`
     color: #ffffff;
     font-size: 16px;
     line-height: 30px;
+  }
+
+  @media (max-width: 1024px){
+
+    .box {
+      width: 242px;
+      height: 436px;
+      border-radius: 10px;
+    }
+
+      
+  .box button {
+    padding: 15px 80px;
+  }
+
+  .box img {
+    width: 207px;
+    height: 223px;
+    border-radius: 10px;
+  }
+
+    .marcas img {
+      width: 130px;
+    }
+
+    .des {
+      font-size: 9px;
+    }
+
+    .faixa3 img {
+      width: 508px;
+      height: 306px;
+    }
+
+    .faixa3 {
+      display: flex;
+      align-items: center;
+    }
+
+    .desc2{
+      font-size: 10px;
+    }
+
+    .text-cabelo {
+      font-size: 70px;
+    }
+    
   }
   
 `

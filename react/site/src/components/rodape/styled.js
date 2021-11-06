@@ -47,6 +47,19 @@ const Container = styled.div`
   width: 450px;
   height: 145px;
 }
+
+@media (max-width: 1024px){
+  .img-local img{
+    width: 330px;
+    height: 95px;
+  }
+
+  .rodape-text{
+    font-size: 9px;
+    margin: 0px;
+  }
+}
+
 `
 
 export { Container }

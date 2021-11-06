@@ -86,27 +86,14 @@ const ContainerCortes = styled.div`
   align-items: center;
 }
 
+.cabelo {
+  padding: 0px;
+  margin 0px;
+}
+
 .cabelo img {
   width: 236px;
   height: 310px;
-  margin: 0px 15px 0px 15px;
-}
-
-.seta button {
-  transform: rotate(180deg);
-  width: 40px;
-  height: 40px;
-  border: none;
-  border-radius: 50px;
-  background-color: #3b70a2;
-}
-
-.seta2 button {
-  width: 40px;
-  height: 40px;
-  border: none;
-  border-radius: 50px;
-  background-color: #3b70a2;
 }
 
 .info {
@@ -142,6 +129,28 @@ const ContainerCortes = styled.div`
   background-color: #e3b052;
   font-weight: bold;
   margin: 0px 0px 50px;
+}
+
+@media (max-width: 1024px){
+
+  .carrosel {
+    width: 90%;
+  }
+
+  .cabelo img {
+    width: 156px;
+    height: 230px;
+    margin: 0px;
+  }
+
+  .text2{
+    font-size: 15px;
+  }
+
+  .botao button {
+    width: 251px;
+    height: 40px;
+  }
 }
 
 `
