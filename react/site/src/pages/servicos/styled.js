@@ -73,6 +73,20 @@ const Container = styled.div`
     cursor: pointer;
     margin-left: 20px;
   }
+
+  @media (max-width: 1024px){
+    .boas-vindas {
+      font-size: 30px; 
+    }
+
+    .boas-vindas2 {
+      font-size: 30px; 
+    }
+
+    button {
+      padding: 0.5em 2.5em;
+    }
+  }
   
 `
 
