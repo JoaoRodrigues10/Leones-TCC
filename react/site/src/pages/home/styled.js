@@ -118,7 +118,6 @@ const Container = styled.div`
     justify-content: center;
     margin: 32px 30px 58px 30px;
     border-radius: 10px;
-
   }
   
   .des {

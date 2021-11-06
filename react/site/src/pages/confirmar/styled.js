@@ -49,10 +49,6 @@ const Container = styled.div`
     cursor: pointer;
     margin-left: 20px;
   }
-  
-  button:hover {
-    background-color: black;
-  }
 
   @media (max-width: 1024px){
     .antes {
