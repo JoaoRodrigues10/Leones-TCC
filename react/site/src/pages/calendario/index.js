@@ -9,7 +9,7 @@ import Cabecalho from '../../components/cabecalho'
 import Botaoconfirmar from '../botaoconfirmar'
 
 export default function Calendariooo(props) {
-    const servicocorte = props.location.state;
+    const servico = props.location.state;
     const [horario, setHorario] = useState([])
 
     function listar() {
@@ -92,7 +92,7 @@ export default function Calendariooo(props) {
         <div>
             <Cabecalho/>
                 <Container>
-                    <div className="titulo"> Escolha uma data para o serviço {servicocorte}</div>
+                    <div className="titulo"> Escolha uma data para o serviço {servico.nome}</div>
                     <div className="calendario">
                         <Calendar onChange={onChange} value={date} minDate={new Date()}  />
                     </div>

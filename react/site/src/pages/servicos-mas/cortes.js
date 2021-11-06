@@ -5,15 +5,25 @@ import { Link } from "react-router-dom";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { CarouselConfig } from "./carouselconfig";
+import { useEffect, useState } from "react"
 
 export default function CortesMas() {
+
+  const [servico, setServico] = useState([])
+
+    useEffect(() => {
+        setServico({
+        nome: "Cortes"
+        })
+    }, []);
+
     return (
         <div>
         <Cabecalho/>
             <Container>
                 <div class="faixa">
       <div class="titulo">
-        CORTES
+         {servico.nome}
       </div>
 
                   <div className="carrosel">
@@ -72,7 +82,10 @@ export default function CortesMas() {
         </div>
 
         <div class="botao">
-        <Link to="/calendario">
+        <Link to={{
+                          pathname: '/calendario',
+                          state: servico
+                        }}>
                         <button>Agendar ida ao salão</button>
                         </Link>
         </div>

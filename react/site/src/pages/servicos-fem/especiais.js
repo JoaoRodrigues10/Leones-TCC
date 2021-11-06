@@ -12,7 +12,7 @@ export default function Penteados() {
 
   useEffect(() => {
     setServico({
-      nome: "Serviços Especiais"
+      nome: "Especiais"
     })
   }, []);
 
@@ -22,7 +22,7 @@ export default function Penteados() {
         <ContainerCortes>
                     <div class="faixa">
             <div class="titulo">
-                {servico.nome}
+               Serviços {servico.nome}
             </div>
 
                 <div className="carrosel">
@@ -79,7 +79,10 @@ export default function Penteados() {
                 </div>
 
                 <div class="botao">
-                <Link to="/calendario">
+                <Link to={{
+                          pathname: '/calendario',
+                          state: servico
+                        }}>
                         <button>Agendar ida ao salão</button>
                         </Link>
                 </div>

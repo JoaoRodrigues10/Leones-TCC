@@ -69,7 +69,7 @@ const Container = styled.div`
     background: #e3b052;
     border: none;
     border-radius: 10px;
-    padding: 1em 3.5em;
+    padding: 0.7em 3.2em;
     cursor: pointer;
     margin-left: 20px;
   }
