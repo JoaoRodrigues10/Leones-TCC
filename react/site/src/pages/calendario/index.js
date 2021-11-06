@@ -18,92 +18,47 @@ export default function Calendariooo(props) {
             hora: "8:00"
           },
           {
-            hora: "8:30"
-          },
-          {
             hora: "9:00"
-          },
-          {
-            hora: "9:30"
           },
           {
             hora: "10:00"
           },
           {
-            hora: "10:30"
-          },
-          {
             hora: "11:00"
-          },
-          {
-            hora: "11:30"
           },
           {
             hora: "12:00"
           },
           {
-            hora: "12:30"
-          },
-          {
             hora: "13:00"
-          },
-          {
-            hora: "13:30"
           },
           {
             hora: "14:00"
           },
           {
-            hora: "14:30"
-          },
-          {
             hora: "15:00"
           },
           {
-            hora: "15:30"
-          },
-          {
             hora: "16:00"
           },
           {
-            hora: "16:30"
-          },
-          {
             hora: "16:00"
-          },
-          {
-            hora: "16:30"
           },
           {
             hora: "17:00"
           },
           {
-            hora: "17:30"
-          },
-          {
             hora: "18:00"
-          },
-          {
-            hora: "18:30"
           },
           {
             hora: "19:00"
           },
           {
-            hora: "19:30"
-          },
-          {
             hora: "20:00"
-          },
-          {
-            hora: "20:30"
           },
           {
             hora: "21:00"
           },
-          {
-            hora: "21:30"
-          }
         ]
     
         setHorario(r);
@@ -137,7 +92,7 @@ export default function Calendariooo(props) {
         <div>
             <Cabecalho/>
                 <Container>
-                    <div className="titulo"> Escoha uma Data Para o Serviço {servicocorte}</div>
+                    <div className="titulo"> Escolha uma data para o serviço {servicocorte}</div>
                     <div className="calendario">
                         <Calendar onChange={onChange} value={date} minDate={new Date()}  />
                     </div>

@@ -87,6 +87,29 @@ const Container = styled.div`
     font-weight: bold;
     margin: 0px 0px 50px;
   }
+
+  @media (max-width: 1024px){
+
+    .carrosel {
+      width: 90%;
+    }
+  
+    .cabelo img {
+      width: 156px;
+      height: 230px;
+      margin: 0px;
+    }
+  
+    .text2{
+      font-size: 15px;
+    }
+  
+    .botao button {
+      width: 251px;
+      height: 40px;
+    }
+  }
+  
   
 `
 
