@@ -28,7 +28,7 @@ export default function Entrarr(props) {
 
     } else {
       Cookies.set('usuario-logado', JSON.stringify(b));
-      navigation.push('/home')
+      navigation.push('/')
     }
   }
 

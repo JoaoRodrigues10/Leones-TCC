@@ -3,6 +3,8 @@ import Cabecalho from '../../components/cabecalho'
 import Rodape from '../../components/rodape'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import Cookies from 'js-cookie'
+import { useHistory } from "react-router";
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom";
 import { CarouselConfig } from "./carouselconfig";
@@ -16,6 +18,17 @@ export default function Cortes() {
       nome: "Cortes"
     })
   }, []);
+
+  const navegation = useHistory()
+  
+
+    async function logadoouNao () {
+      let usuarioLogado = Cookies.get('usuario-logado')
+      if(usuarioLogado == null)
+      navegation.push('/entrar')
+      
+  }
+
 
     
       
@@ -82,12 +95,12 @@ export default function Cortes() {
                         </div>
                         </div>
 
-                        <div class="botao">
+                        <div class="botao" onClick={logadoouNao}>
                         <Link to={{
                           pathname: '/calendario',
                           state: servico
                         }}>
-                        <button>Agendar ida ao salão</button>
+                        <button >Agendar ida ao salão</button>
                         </Link>
                         </div>
                     </div>
