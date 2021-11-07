@@ -35,10 +35,10 @@ export default function Cabecalhooo() {
                 <Link to="/serviços"> <div className="opcoes"> Serviços </div> </Link>         
                 <Link to="/home"> <div className="opcoes"> LEO </div> </Link>     
                 </div>
-                <div>
+                <div className="ft" >
                     
                         
-                            <Link to="/entrar"><button onClick={logoof}>SAIR</button> </Link>
+                    <Link to="/entrar"><button onClick={logoof}> <img src="/assets/images/porta.svg" alt="" /> </button> </Link>
                         
 
                     

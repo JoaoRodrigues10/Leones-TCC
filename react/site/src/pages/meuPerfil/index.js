@@ -135,7 +135,7 @@ export default function MeuPerfil(){
                 <div className="faixa1">
                     <div className="fotoperfil" onClick={selectFile}> <input id="arquivo-input-file" type="file" onChange={e => setArquivo(e.target.files[0])} />
                     <img src={previewImage()} alt="" /></div>
-                    <button onClick={fazerUpload}> Salvar Imagem </button>                 
+                    <button onClick={fazerUpload}> <img src="/assets/images/porta.svg" alt="" /> </button>                 
                     
                     
                     

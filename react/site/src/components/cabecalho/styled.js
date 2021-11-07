@@ -31,6 +31,26 @@ const Cabecalho = styled.div`
     .imagem-cab2 img {
         width: 60px;
     }
+
+    .ft {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .ft button {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: white;
+        border: none;
+        border-radius: 100%;
+        padding: 7px 9px;
+    }
+
+    .ft button img {
+        width: 12px;
+    }
 `
 
 

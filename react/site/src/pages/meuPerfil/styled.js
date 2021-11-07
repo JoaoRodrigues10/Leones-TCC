@@ -20,6 +20,10 @@ const Container = styled.div`
   align-items: center;
 }
 
+.faixa button img {
+  width: 10px;
+}
+
 .dadosperfil{     
     padding-left: 2.5em;
 
