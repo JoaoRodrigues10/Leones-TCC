@@ -4,6 +4,8 @@ import Rodape from "../../components/rodape";
 import { Container } from "./styled";
 
 import { useState, useEffect, useRef } from 'react';
+import { useHistory } from 'react-router-dom'
+
 
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
@@ -13,15 +15,30 @@ import LoadingBar from 'react-top-loading-bar';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import Cookies from 'js-cookie'
+
 import Api from '../../services/api'
 const api = new Api();
 
+function lerUsuarioLogado(navigation) {
+    let logado = Cookies.get('usuario-logado');
+    if ( logado == null){
+        navigation.push('/meuPerfil');
+        return null;
+    }
+
+    let usuarioLogado = JSON.parse(logado);
+    return usuarioLogado;
+}
 
 export default function MeuPerfil(){
+    const navigation = useHistory( );
+    let usuarioLogado = lerUsuarioLogado(navigation) || {} ;
+
     const [arquivo, setArquivo] = useState('');
     const [agendamentos, setAgendamentos] = useState([]);
+    const [usu, setUsu] = useState(usuarioLogado.nm_cliente)
     
-
     let loading = useRef(null);
 
     const atualizar = async() => {
@@ -123,7 +140,7 @@ export default function MeuPerfil(){
                     
                     
                     <div className="dadosperfil">
-                        <div className="dados">Nome do Cliente  </div>
+                        <div className="dados"> {usu}  </div>
                     </div>
                 </div>
         
