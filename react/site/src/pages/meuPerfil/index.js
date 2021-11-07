@@ -38,7 +38,6 @@ export default function MeuPerfil(){
     const [arquivo, setArquivo] = useState('');
     const [agendamentos, setAgendamentos] = useState([]);
     const [usu] = useState(usuarioLogado.nm_cliente)
-    const [idusu] = useState(usuarioLogado.id_cliente)
     const [imgusu] = useState(usuarioLogado.img_cliente)
     
     let loading = useRef(null);
@@ -102,12 +101,10 @@ export default function MeuPerfil(){
         let formData = new FormData();
         formData.append('arquivo', arquivo);
 
-        let resp = await axios.put('http://localhost:3030/criarArquivo', formData, {
+        let resp = await axios.post('http://localhost:3030/criarArquivo', formData, {
           headers: {
             "Content-Type": "multipart/form-data"
-          },
-          email: idusu
-        });
+          }});
     
         console.log(resp.data);
       }
@@ -139,7 +136,7 @@ export default function MeuPerfil(){
                 <div className="faixa1">
                     <div className="fotoperfil" onClick={selectFile}> <input id="arquivo-input-file" type="file" onChange={e => setArquivo(e.target.files[0])} />
                     <img src={previewImage()} alt="" /></div>
-                    <button onClick={fazerUpload}> <a> Salvar foto </a> </button>                 
+                    <button onClick={fazerUpload}>  Salvar foto  </button>                 
                     
                     
                     
