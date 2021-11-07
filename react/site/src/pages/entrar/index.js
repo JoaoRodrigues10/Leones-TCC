@@ -10,7 +10,7 @@ import { useHistory } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Cookies from 'js-cookie'
-
+import Cabecalho from "../../components/cabecalho";
 import Api from '../../services/api'
 const api = new Api();
 
@@ -34,6 +34,7 @@ export default function Entrarr(props) {
 
   return (
     <Container>
+      <Cabecalho/>
     <ToastContainer/>
       <div class="box">
       <CabecalhoImagem/>

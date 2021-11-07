@@ -2,31 +2,62 @@
 import { Link } from 'react-router-dom'
 import { Cabecalho } from './styled'
 import Cookies from 'js-cookie'
-// import { useState } from 'react'
+import { useState } from 'react'
 import { useHistory } from 'react-router-dom';
+import { useEffect } from 'react';
+import { confirmAlert } from 'react-confirm-alert';
+import 'react-confirm-alert/src/react-confirm-alert.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; 
+
 
 
 export default function Cabecalhooo() {
-    // const [logado, setLogado] = useState(false)
+    const [logado, setLogado] = useState(false)
     const nav = useHistory()
 
-    const logoof = () => {
-        Cookies.remove('usuario-logado')
-        nav.push('/')
+    
+    function logadoOUnao() {
+       
+        let usuarioLogado = Cookies.get('usuario-logado')
+        if (usuarioLogado == null) {
+            setLogado(false)
+        } else {
+            setLogado(true);
+        }
     }
 
-    // const logadoOUnao = () => {
-       
-    //     let usuarioLogado = Cookies.get('usuario-logado')
-    //     if (usuarioLogado == null) {
-    //         setLogado(false)
-    //     } else {
-    //         setLogado(true);
-    //     }
-    // }
+    useEffect(logadoOUnao, []);
+
+
+    async function sairdaConta() {
+        confirmAlert({
+            title: 'Deseja Sair ?',
+            message: `Tem certeza que deseja sair de sua conta ?`,
+            buttons: [
+              {
+                label: 'Sim', 
+                onClick: async () => {
+                    Cookies.remove('usuario-logado'); 
+                    toast.dark('Até a proxima ')
+                    nav.push('/entrar')
+                        
+                    
+                }  
+              },
+              {
+                label: 'Não'
+              }
+            ]
+        });
+    }
+    
 
     return (
+        <div>
+            <ToastContainer />
             <Cabecalho>
+                
                 <div className="logo-cab">
                     <div className="imagem-cab"> <img src="/assets/images/logo.png" alt="" /> </div>
                 </div>
@@ -36,15 +67,18 @@ export default function Cabecalhooo() {
                 <Link to="/home"> <div className="opcoes"> LEO </div> </Link>     
                 </div>
                 <div className="ft" >
-                    
+                    {logado &&
+                        <button onClick={() => sairdaConta()}> <img src="/assets/images/porta.svg" alt="" /> </button> 
+                    }
                         
-                    <Link to="/entrar"><button onClick={logoof}> <img src="/assets/images/porta.svg" alt="" /> </button> </Link>
+        
                         
 
                     
                     <Link to="/meuPerfil"><div className="imagem-cab2"> <img src="/assets/images/fotousu.png" alt=""  /> </div></Link>
                 </div>
             </Cabecalho> 
+            </div>
                  
     )
 }
