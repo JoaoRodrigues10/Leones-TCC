@@ -20,13 +20,9 @@ const Container = styled.div`
   align-items: center;
 }
 
-.faixa button img {
-  width: 10px;
-}
 
 .dadosperfil{     
-    padding-left: 2.5em;
-
+  margin: 0px 0px 0px 20px;
     
   }
 
@@ -136,7 +132,13 @@ th {
   padding-right: 3.5em;
 } 
 
-button {
+ .faixa1 button {
+  background: none;
+  border: none;
+  margin: 0px 0px 0px 20px;
+}
+
+.faixa1 button:hover {
   background-color: #E3B052;
   border-radius: 50px;
   border: none;

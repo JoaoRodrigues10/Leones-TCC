@@ -22,7 +22,10 @@ const Cabecalho = styled.div`
         padding-left: 1em;
         font-size: 1.1em;
         font-family: 'Josefin Sans', sans-serif;
-        
+    }
+
+    .opcoes:hover{
+        text-decoration: underline;
     }
 
     .imagem-cab img {
@@ -30,11 +33,12 @@ const Cabecalho = styled.div`
     }
     .imagem-cab2 img {
         width: 60px;
+        margin: 0px;
     }
 
     .ft {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
     }
 
@@ -42,14 +46,31 @@ const Cabecalho = styled.div`
         display: flex;
         flex-direction: row;
         align-items: center;
-        background-color: white;
+        background: none;
         border: none;
-        border-radius: 100%;
-        padding: 7px 9px;
+        margin: -15px 0px 0px 0px;
+    }
+
+    .ft button a:hover{
+        box-shadow: inset 0 0 1em gray, 0 0 1em #c4c4c4;
+        text-decoration: underline;
+        cursor: pointer;
     }
 
     .ft button img {
         width: 12px;
+    }
+
+    .login button {
+        background: none;
+        border: none;
+        font-family: 'Josefin Sans', sans-serif;
+        margin: 0px 10px;
+        cursor: pointer;
+    }
+
+    .login button a:hover {
+        text-decoration: underline;
     }
 `
 

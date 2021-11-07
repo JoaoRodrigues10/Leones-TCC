@@ -14,6 +14,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default function Cabecalhooo() {
     const [logado, setLogado] = useState(false)
+    const [naologado, setNao] = useState(false)
     const nav = useHistory()
 
     
@@ -27,19 +28,31 @@ export default function Cabecalhooo() {
         }
     }
 
+    function naoLogado(){
+        let usuarioLogado = Cookies.get('usuario-logado')
+        if (usuarioLogado == null) {
+            setNao(true)
+        } else {
+            setNao(false);
+        }
+    }
+    
+
     useEffect(logadoOUnao, []);
+    useEffect(naoLogado, []);
+
 
 
     async function sairdaConta() {
         confirmAlert({
-            title: 'Deseja Sair ?',
-            message: `Tem certeza que deseja sair de sua conta ?`,
+            title: 'Deseja sair?',
+            message: `Tem certeza que deseja sair de sua conta?`,
             buttons: [
               {
                 label: 'Sim', 
                 onClick: async () => {
                     Cookies.remove('usuario-logado'); 
-                    toast.dark('Até a proxima ')
+                    toast.dark('👋 Até a proxima!')
                     nav.push('/entrar')
                         
                     
@@ -62,23 +75,28 @@ export default function Cabecalhooo() {
                     <div className="imagem-cab"> <img src="/assets/images/logo.png" alt="" /> </div>
                 </div>
                 <div className="paginas-cab">
-                <Link to="/home"> <div className="opcoes" > Home </div> </Link>
-                <Link to="/serviços"> <div className="opcoes"> Serviços </div> </Link>         
-                <Link to="/home"> <div className="opcoes"> LEO </div> </Link>     
+                    <Link to="/"> <div className="opcoes" > Home </div> </Link>
+                    <Link to="/serviços"> <div className="opcoes"> Serviços </div> </Link>         
+                    <Link to="/home"> <div className="opcoes"> LEO </div> </Link>     
                 </div>
-                <div className="ft" >
-                    {logado &&
-                        <button onClick={() => sairdaConta()}> <img src="/assets/images/porta.svg" alt="" /> </button> 
-                    }
-                        
-        
-                        
+               
+                {logado &&
+                    <div className="ft" >
+                        <Link to="/meuPerfil"><div className="imagem-cab2"> <img src="/assets/images/fotousu.png" alt=""  /> </div></Link>
+                        <button onClick={() => sairdaConta()}> <a> Sair </a> </button> 
+                    </div>
+                }
 
-                    
-                    <Link to="/meuPerfil"><div className="imagem-cab2"> <img src="/assets/images/fotousu.png" alt=""  /> </div></Link>
-                </div>
+                {naologado &&
+                
+                    <div className="login">
+                         <Link to="/entrar"> <button> <a> Fazer login </a> </button> </Link>
+                    </div>
+
+                }
+                
             </Cabecalho> 
-            </div>
+        </div>
                  
     )
 }

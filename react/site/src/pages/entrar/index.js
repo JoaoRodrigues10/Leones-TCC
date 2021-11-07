@@ -34,7 +34,6 @@ export default function Entrarr(props) {
 
   return (
     <Container>
-      <Cabecalho/>
     <ToastContainer/>
       <div class="box">
       <CabecalhoImagem/>
