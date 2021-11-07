@@ -122,5 +122,7 @@ export default class Api {
         let r = await api.delete('/agendamento/' + id);
         return r.data;
     }
+
+    
     
 }

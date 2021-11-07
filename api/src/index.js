@@ -13,6 +13,8 @@ import enviarEmail from './email.js'
 import multer from 'multer'
 import path from 'path'
 
+
+
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -29,7 +31,7 @@ app.get('/cliente', async (req, resp) => {
 
 app.post('/cliente', async (req, resp) => {
     try {
-        let { nome, email, senha, imagem, telefone } = req.body
+        let { nome, email, senha,  telefone } = req.body
 
         if (nome === "" && email === "" && telefone === "" && senha === "") {
             return resp.send({ erro: 'Preencha todos os campos!' });
@@ -50,7 +52,7 @@ app.post('/cliente', async (req, resp) => {
             nm_cliente: nome,
             ds_email: email,
             ds_senha: senha,
-            img_cliente: imagem,
+            img_cliente: "https://leonessalaodebeleza.netlify.app/assets/images/fotousu.png",
             ds_telefone: telefone
         }
 
@@ -630,11 +632,14 @@ const storage = multer.diskStorage({
 
   app.post('/criarArquivo', upload.single('arquivo'), async (req, resp) => {
 
+
     const {path} = req.file;
 
     const r = await db.infod_leo_cliente.create({
         img_cliente: path
-    })
+      })
+
+    
     resp.send(r);
   })
 
