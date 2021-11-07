@@ -11,11 +11,23 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; 
 
 
+function lerUsuarioLogado(navigation) {
+    let logado = Cookies.get('usuario-logado');
+    if ( logado == null){
+        navigation.push('/meuPerfil');
+        return null;
+    }
+
+    let usuarioLogado = JSON.parse(logado);
+    return usuarioLogado;
+}
 
 export default function Cabecalhooo() {
     const [logado, setLogado] = useState(false)
     const [naologado, setNao] = useState(false)
-    const nav = useHistory()
+    const navigation = useHistory()
+    let usuarioLogado = lerUsuarioLogado(navigation) || {} ;
+    const [usu] = useState(usuarioLogado.img_cliente)
 
     
     function logadoOUnao() {
@@ -53,7 +65,7 @@ export default function Cabecalhooo() {
                 onClick: async () => {
                     Cookies.remove('usuario-logado'); 
                     toast.dark('👋 Até a proxima!')
-                    nav.push('/entrar')
+                    navigation.push('/entrar')
                         
                     
                 }  
@@ -82,7 +94,7 @@ export default function Cabecalhooo() {
                
                 {logado &&
                     <div className="ft" >
-                        <Link to="/meuPerfil"><div className="imagem-cab2"> <img src="/assets/images/fotousu.png" alt=""  /> </div></Link>
+                        <Link to="/meuPerfil"><div className="imagem-cab2"> <img src={usu} alt=""  /> </div></Link>
                         <button onClick={() => sairdaConta()}> <a> Sair </a> </button> 
                     </div>
                 }

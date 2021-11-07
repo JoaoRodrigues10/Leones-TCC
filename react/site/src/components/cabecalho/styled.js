@@ -61,6 +61,12 @@ const Cabecalho = styled.div`
         width: 12px;
     }
 
+    .ft img {
+        border-radius: 50%;
+        width: 3em;
+        height: 3em;   
+    }
+
     .login button {
         background: none;
         border: none;
