@@ -48,7 +48,6 @@ const Cabecalho = styled.div`
         align-items: center;
         background: none;
         border: none;
-        margin: -15px 0px 0px 0px;
     }
 
     .ft button a:hover{
