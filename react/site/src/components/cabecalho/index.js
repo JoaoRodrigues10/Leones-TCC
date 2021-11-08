@@ -94,14 +94,14 @@ export default function Cabecalhooo() {
                 {logado &&
                     <div className="ft" >
                         <Link to="/meuPerfil"><div className="imagem-cab2"> <img src={usu} alt=""  /> </div></Link>
-                        <button onClick={() => sairdaConta()}>  Sair  </button> 
+                        <button onClick={() => sairdaConta()}> <a> Sair </a>  </button> 
                     </div>
                 }
 
                 {naologado &&
                 
                     <div className="login">
-                         <Link to="/entrar"> <button>  Fazer login  </button> </Link>
+                         <Link to="/entrar"> <button> <a> Fazer login </a>  </button> </Link>
                     </div>
 
                 }
