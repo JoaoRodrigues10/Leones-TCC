@@ -17,6 +17,10 @@ const Cabecalho = styled.div`
         
     }
 
+    .b {
+    text-decoration: underline;
+  }
+
     .opcoes {
         padding-right: 1em;
         padding-left: 1em;

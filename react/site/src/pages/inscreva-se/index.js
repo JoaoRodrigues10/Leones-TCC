@@ -27,7 +27,7 @@ export default function InscreverCli() {
     toast.error(`❌ ${r.erro}`)
     else { 
     toast.dark('✔️ Sua Conta Foi Criada com Sucesso');
-    navigation.push('/login')
+    navigation.push('/entrar')
     }
   }
   
