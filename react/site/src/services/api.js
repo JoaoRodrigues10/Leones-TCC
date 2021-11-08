@@ -10,8 +10,8 @@ export default class Api {
         return r.data;
     }
 
-    async InserirCliente(nome, email, senha, telefone) {
-        let r = await api.post('/cliente', { nome, email, senha, telefone});
+    async InserirCliente(nome, email, telefone, senha) {
+        let r = await api.post('/cliente', { nome, email, telefone, senha});
         return r.data;
     }
 
