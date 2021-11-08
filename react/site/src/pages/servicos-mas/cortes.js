@@ -7,6 +7,9 @@ import 'react-multi-carousel/lib/styles.css';
 import { CarouselConfig } from "./carouselconfig";
 import { useEffect, useState } from "react"
 
+import Cookies from 'js-cookie'
+import { useHistory } from "react-router";
+
 export default function CortesMas() {
 
   const [servico, setServico] = useState([])
@@ -16,6 +19,16 @@ export default function CortesMas() {
         nome: "Cortes"
         })
     }, []);
+
+    const navegation = useHistory()
+  
+
+    async function logadoouNao () {
+      let usuarioLogado = Cookies.get('usuario-logado')
+      if(usuarioLogado == null)
+      navegation.push('/entrar')
+      
+  }
 
     return (
         <div>
@@ -81,7 +94,7 @@ export default function CortesMas() {
           </div>
         </div>
 
-        <div class="botao">
+        <div class="botao" onClick={logadoouNao}  >
         <Link to={{
                           pathname: '/calendario',
                           state: servico

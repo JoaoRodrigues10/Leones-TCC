@@ -4,6 +4,8 @@ import Rodape from '../../components/rodape'
 import { Link } from "react-router-dom"
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import Cookies from 'js-cookie'
+import { useHistory } from "react-router";
 import { CarouselConfig } from "./carouselconfig";
 import { useEffect, useState } from "react"
 
@@ -16,6 +18,16 @@ export default function Penteados() {
     })
   }, []);
 
+  const navegation = useHistory()
+  
+
+    async function logadoouNao () {
+      let usuarioLogado = Cookies.get('usuario-logado')
+      if(usuarioLogado == null)
+      navegation.push('/entrar')
+      
+  }
+  
     return(
         <div>
             <Cabecalho/>
@@ -84,7 +96,7 @@ export default function Penteados() {
                 </div>
                 </div>
 
-                <div class="botao">
+                <div class="botao" onClick={logadoouNao}>
                 <Link to={{
                           pathname: '/calendario',
                           state: servico

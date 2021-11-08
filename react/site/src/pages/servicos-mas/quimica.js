@@ -7,6 +7,8 @@ import 'react-multi-carousel/lib/styles.css';
 import { CarouselConfig } from "./carouselconfig";
 import { useEffect, useState } from "react"
 
+import Cookies from 'js-cookie'
+import { useHistory } from "react-router";
 
 export default function ServicosMas() {
 
@@ -18,6 +20,16 @@ export default function ServicosMas() {
         })
     }, []);
     
+    const navegation = useHistory()
+  
+
+    async function logadoouNao () {
+      let usuarioLogado = Cookies.get('usuario-logado')
+      if(usuarioLogado == null)
+      navegation.push('/entrar')
+      
+  }
+
 	return (
         <div>
             <Cabecalho/>
@@ -76,7 +88,7 @@ export default function ServicosMas() {
                     </div>
                     </div>
 
-                    <div class="botao">
+                    <div class="botao" onClick={logadoouNao}>
                     <Link to={{
                           pathname: '/calendario',
                           state: servico
