@@ -6,6 +6,8 @@ import { Container } from "./styled";
 import { useState, useEffect, useRef } from 'react';
 import { useHistory } from 'react-router-dom'
 
+import { Link } from "react-router-dom"
+
 
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
@@ -89,7 +91,7 @@ export default function MeuPerfil(){
     }
 
     async function editar(item) {
-       
+        <Link to="/alterar"> </Link>
     }
 
     useEffect(() => {
@@ -165,7 +167,6 @@ export default function MeuPerfil(){
                         <thead>
                             <tr>
                                 <th> Id </th>
-                                <th> Cliente </th>
                                 <th> Serviço </th>
                                 <th> Profissional </th>
                                 <th> Horario Agenda </th>
@@ -177,7 +178,7 @@ export default function MeuPerfil(){
         
                         <tbody>
                             {agendamentos.map((item) =>   
-                                <tr >
+                                <tr>
                                     <td> {item.id_agendamento} </td>
                                     <td title={item.id_cliente_infod_leo_cliente.nm_cliente}>
                                         {item.id_cliente_infod_leo_cliente.nm_cliente != null && item.id_cliente_infod_leo_cliente.nm_cliente.length >= 15
@@ -188,7 +189,7 @@ export default function MeuPerfil(){
                                     <td> {item.id_funcionario_infod_leo_funcionario.nm_funcionario} </td>
                                     <td> {item.dt_agendamento.substr(0, 10)} </td>
                                     <td> {item.tp_situacao} </td>
-                                    <td className="acao"> <link to="/alterar"> <button onClick={ () => editar(item) }> <img src="/assets/images/edit.svg" alt="" /> </button> </link> </td>
+                                    <td className="acao"> <button onClick={ () => editar(item) }> <img src="/assets/images/edit.svg" alt="" /> </button> </td>
                                     <td className="acao"> <button onClick={ () => remover(item.id_agendamento) }> <img src="/assets/images/delete.svg" alt="" /> </button> </td>
                                 </tr>
                             )}

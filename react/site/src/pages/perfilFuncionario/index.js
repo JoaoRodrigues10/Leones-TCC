@@ -3,6 +3,10 @@ import Cabecalho from "../../components/cabecalho";
 import Rodape from "../../components/rodape";
 import { Container } from "./styled";
 
+
+import { Link } from "react-router-dom"
+import { useHistory } from 'react-router-dom'
+
 import { useState, useEffect, useRef } from 'react';
 
 import { confirmAlert } from 'react-confirm-alert';
@@ -13,13 +17,31 @@ import LoadingBar from 'react-top-loading-bar';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import Cookies from 'js-cookie'
+
 import Api from '../../services/api'
 const api = new Api();
 
+function lerUsuarioLogado(navigation) {
+    let logado = Cookies.get('usuario-logado');
+    if ( logado == null){
+        navigation.push('/perfilFuncionario');
+        return null;
+    }
+
+    let usuarioLogado = JSON.parse(logado);
+    return usuarioLogado;
+}
+
 
 export default function MeuPerfil(){
+    const navigation = useHistory( );
+    let usuarioLogado = lerUsuarioLogado(navigation) || {} ; 
+
     const [arquivo, setArquivo] = useState('');
     const [agendamentos, setAgendamentos] = useState([]);
+    const [usu] = useState(usuarioLogado.nm_cliente)
+    const [imgusu] = useState(usuarioLogado.img_cliente)
     
     
 
@@ -74,7 +96,7 @@ export default function MeuPerfil(){
     }
 
     async function editar(item) {
-       
+        <Link to="/alterar"> </Link>
     }
 
     useEffect(() => {
@@ -99,7 +121,7 @@ export default function MeuPerfil(){
         if (arquivo) {
           return URL.createObjectURL(arquivo);
         } else{
-            return 
+            return imgusu
         }
       }
     
@@ -126,7 +148,7 @@ export default function MeuPerfil(){
                     
                     
                     <div className="dadosperfil">
-                        <div className="dados">Nome do Funcionário  </div>
+                        <div className="dados"> {usu} </div>
                     </div>
                 </div>
         
@@ -153,6 +175,8 @@ export default function MeuPerfil(){
                                 <th> Cliente </th>
                                 <th> Serviço </th>
                                 <th> Horario Agenda </th>
+                                <th> Situacão </th>
+                                <th className="a"> </th>
                                 <th className="a"> </th>
                             </tr>
                         </thead>
