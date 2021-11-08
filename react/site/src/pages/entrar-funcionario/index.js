@@ -16,11 +16,12 @@ const api = new Api();
 export default function Entrarr() {
   const navigation = useHistory();
 
-  const [emailOuTelefone, setEmailOuTelefone] = useState('');
+  const [email, setEmail] = useState('');
+  const [cargo, setCargo] = useState('');
   const [senha, setSenha] = useState('');
 
   const logar = async () => {
-    let b = await api.login(emailOuTelefone, senha)
+    let b = await api.login(email, cargo, senha)
     if (b.erro) {
       toast.error(`${b.erro}`)
 
@@ -41,7 +42,10 @@ export default function Entrarr() {
           <div class="titulo"> <h1>Entrar como Funcionário</h1> </div>
           <div class="faixa2">
             <div class="f2-nome">
-              <input type="text" placeholder="E-mail ou telefone" value={emailOuTelefone} onChange={e => setEmailOuTelefone(e.target.value)} />
+              <input type="text" placeholder="E-mail" value={email} onChange={e => setEmail(e.target.value)} />
+            </div>
+            <div class="f2-nome">
+              <input type="text" placeholder="Cargo" value={cargo} onChange={e => setCargo(e.target.value)} />
             </div>
             <div class="f2-nome">
               <input type="password" placeholder="Senha" value={senha} onChange={e => setSenha(e.target.value)} />
