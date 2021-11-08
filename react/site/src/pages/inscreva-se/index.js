@@ -61,7 +61,8 @@ export default function InscreverCli() {
           </div>
 
           <div class="inscreva-se">
-            <div class="cadrastro">Já tem cadastro? Faça o  <Link to="/"> <b> login </b> </Link> </div>
+            <div class="cadrastro">Já tem cadastro? Faça o  <Link to="/entrar"> <b> login </b> </Link> </div>
+            <div class="funcionario"> <Link to="/entrar-funcionario"> <b> Entrar como funcionário </b> </Link> </div>
           </div>
         </div>
       </div>

@@ -2,8 +2,6 @@ import { Container } from "./styled"
 import CabecalhoImagem from '../../components/img-cabecalho'
 import Rodape from '../../components/rodape'
 
-
-
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
@@ -28,7 +26,7 @@ export default function Entrarr() {
 
     } else {
       Cookies.set('usuario-logado', JSON.stringify(b));
-      navigation.push('/home')
+      navigation.push('/')
     }
   }
 

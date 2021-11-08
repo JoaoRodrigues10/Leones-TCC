@@ -91,5 +91,15 @@ const Container = styled.div`
   .cadrastro a {
     border-bottom: 1px solid white;
   }
+
+  .funcionario{
+    color: #ffffff;
+    font-family: "Josefin Sans", sans-serif;
+    margin-top: 10px;
+  }
+  
+  .funcionario a {
+    border-bottom: 1px solid white;
+  }
 `
 export { Container }
