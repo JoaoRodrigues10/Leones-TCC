@@ -44,7 +44,7 @@ export default function Entrarr(props) {
           <div class="titulo"> <h1>Entrar</h1> </div>
           <div class="faixa2">
             <div class="f2-nome">
-              <input type="text" placeholder="E-mail ou telefone" value={emailOuTelefone} onChange={e => setEmailOuTelefone(e.target.value)} />
+              <input type="text" placeholder="E-mail" value={emailOuTelefone} onChange={e => setEmailOuTelefone(e.target.value)} />
             </div>
             <div class="f2-nome">
               <input type="password" placeholder="Senha" value={senha} onChange={e => setSenha(e.target.value)} />

@@ -26,7 +26,8 @@ export default function Cabecalhooo() {
     const [naologado, setNao] = useState(false)
     const navigation = useHistory()
     let usuarioLogado = lerUsuarioLogado(navigation) || {} ;
-    const [usu] = useState(usuarioLogado.img_cliente)
+    const [imgusu] = useState(usuarioLogado.img_cliente)
+    const [usu] = useState(`http://localhost:3030/imagemPerfil?imagem=${imgusu}`)
     const [usufuncionario] = useState(usuarioLogado.img_funcionario)
 
     
@@ -95,14 +96,14 @@ export default function Cabecalhooo() {
                 {logado &&
                     <div className="ft" >
                         <Link to="/meuPerfil"><div className="imagem-cab2"> <img src={usu || usufuncionario} alt=""  /> </div></Link>
-                        <button onClick={() => sairdaConta()}> <b> Sair </b>  </button> 
+                        <button onClick={() => sairdaConta()}> Sair </button> 
                     </div>
                 }
 
                 {naologado &&
                 
                     <div className="login">
-                         <Link to="/entrar"> <button> <b> Fazer login </b>  </button> </Link>
+                         <Link to="/entrar"> <button> Fazer login  </button> </Link>
                     </div>
 
                 }

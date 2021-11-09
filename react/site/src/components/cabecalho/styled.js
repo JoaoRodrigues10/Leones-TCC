@@ -52,9 +52,10 @@ const Cabecalho = styled.div`
         align-items: center;
         background: none;
         border: none;
+        color: white;
     }
 
-    .ft button a:hover{
+    .ft button:hover{
         box-shadow: inset 0 0 1em gray, 0 0 1em #c4c4c4;
         text-decoration: underline;
         cursor: pointer;
@@ -79,7 +80,7 @@ const Cabecalho = styled.div`
         cursor: pointer;
     }
 
-    .login button a:hover {
+    .login button:hover {
         text-decoration: underline;
     }
 `
