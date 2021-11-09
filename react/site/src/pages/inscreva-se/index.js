@@ -35,7 +35,7 @@ export default function InscreverCli() {
     <Container>
       <ToastContainer/>
       <div class="box">
-      <CabecalhoImagem/>
+      <Link to="/"> <CabecalhoImagem/> </Link>
       <div class="container">
       
           <div class="inscreva-se">
@@ -62,7 +62,7 @@ export default function InscreverCli() {
 
           <div class="inscreva-se">
             <div class="cadrastro">Já tem cadastro? Faça o  <Link to="/entrar"> <b> login </b> </Link> </div>
-            <div class="funcionario"> <Link to="/entrar-funcionario"> <b> Entrar como funcionário </b> </Link> </div>
+
           </div>
         </div>
       </div>

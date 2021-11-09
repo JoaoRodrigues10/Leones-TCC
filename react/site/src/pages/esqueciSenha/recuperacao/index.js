@@ -23,7 +23,7 @@ export default function Recuperacao() {
 
     return (
             <Container>
-                <CabecalhoImagem/>
+                 <Link to="/"> <CabecalhoImagem/> </Link>
 
                 <div className="alinhar">
                     <h1> Recuperação de Senha </h1>

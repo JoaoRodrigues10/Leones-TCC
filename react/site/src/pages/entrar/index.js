@@ -36,7 +36,8 @@ export default function Entrarr(props) {
     <Container>
     <ToastContainer/>
       <div class="box">
-      <CabecalhoImagem/>
+
+      <Link to="/"> <CabecalhoImagem/> </Link>
         <div class="container">
        
         <div class="inscreva-se">
@@ -58,6 +59,7 @@ export default function Entrarr(props) {
           <div className="text">
             <div className="entrar"> Não tem login? <Link to="/inscreva-se"> <b> Inscreva-se </b> </Link> </div>
             <div className="entrar"> <Link to="/recuperacao"> <b> Esqueci minha senha </b> </Link> </div>
+            <div className="entrar"> <Link to="/entrar-funcionario"> <b> Entrar como funcionário </b> </Link> </div>
           </div>
         </div>
       </div>

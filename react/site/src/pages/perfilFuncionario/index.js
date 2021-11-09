@@ -2,21 +2,14 @@ import axios from 'axios'
 import Cabecalho from "../../components/cabecalho";
 import Rodape from "../../components/rodape";
 import { Container } from "./styled";
-
-
 import { Link } from "react-router-dom"
 import { useHistory } from 'react-router-dom'
-
 import { useState, useEffect, useRef } from 'react';
-
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
-
 import LoadingBar from 'react-top-loading-bar';
-
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 import Cookies from 'js-cookie'
 
 import Api from '../../services/api'
@@ -40,8 +33,9 @@ export default function MeuPerfil(){
 
     const [arquivo, setArquivo] = useState('');
     const [agendamentos, setAgendamentos] = useState([]);
-    const [usu] = useState(usuarioLogado.nm_cliente)
-    const [imgusu] = useState(usuarioLogado.img_cliente)
+    const [usu] = useState(usuarioLogado.nm_funcionario)
+    const [usufuncionario] = useState(usuarioLogado.img_funcionario)
+    
     
     
 
@@ -108,7 +102,7 @@ export default function MeuPerfil(){
         let formData = new FormData();
         formData.append('arquivo', arquivo);
 
-        let resp = await axios.post('http://localhost:3030/criarArquivo', formData, {
+        let resp = await axios.post('http://localhost:3030/criarArquivo2', formData, {
           headers: {
             "Content-Type": "multipart/form-data"
           }});
@@ -121,7 +115,7 @@ export default function MeuPerfil(){
         if (arquivo) {
           return URL.createObjectURL(arquivo);
         } else{
-            return imgusu
+            return usufuncionario
         }
       }
     

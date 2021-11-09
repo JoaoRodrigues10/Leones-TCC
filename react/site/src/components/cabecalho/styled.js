@@ -73,6 +73,7 @@ const Cabecalho = styled.div`
     .login button {
         background: none;
         border: none;
+        color: #FFFFFF;
         font-family: 'Josefin Sans', sans-serif;
         margin: 0px 10px;
         cursor: pointer;

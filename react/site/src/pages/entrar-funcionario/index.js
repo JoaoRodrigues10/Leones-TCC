@@ -4,7 +4,7 @@ import Rodape from '../../components/rodape'
 
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
-
+import { Link } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Cookies from 'js-cookie'
@@ -21,7 +21,7 @@ export default function Entrarr() {
   const [senha, setSenha] = useState('');
 
   const logar = async () => {
-    let b = await api.login(email, cargo, senha)
+    let b = await api.cadastrar(email, cargo, senha)
     if (b.erro) {
       toast.error(`${b.erro}`)
 
@@ -35,7 +35,7 @@ export default function Entrarr() {
     <Container>
     <ToastContainer/>
       <div class="box">
-      <CabecalhoImagem/>
+      <Link to="/"> <CabecalhoImagem/> </Link>
         <div class="container">
        
         <div class="inscreva-se">

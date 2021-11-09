@@ -1,7 +1,7 @@
 
 import axios from 'axios'
 const api = axios.create({
-    baseURL: 'https://leonesuiosuioasd.herokuapp.com'
+    baseURL: 'http://localhost:3030'
 })
 
 export default class Api {
@@ -31,8 +31,10 @@ export default class Api {
         return b.data;
     }
 
-    async cadastrar(nome, cargo, email, telefone, senha) {
-        let r = await api.post('/cadastro', {nome, cargo, email, telefone, senha })
+    
+
+    async cadastrar(email, cargo, senha) {
+        let r = await api.post('/cadastro', { email, cargo, senha })
         return r.data;
     }
 

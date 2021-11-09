@@ -27,6 +27,7 @@ export default function Cabecalhooo() {
     const navigation = useHistory()
     let usuarioLogado = lerUsuarioLogado(navigation) || {} ;
     const [usu] = useState(usuarioLogado.img_cliente)
+    const [usufuncionario] = useState(usuarioLogado.img_funcionario)
 
     
     function logadoOUnao() {
@@ -93,7 +94,7 @@ export default function Cabecalhooo() {
                
                 {logado &&
                     <div className="ft" >
-                        <Link to="/meuPerfil"><div className="imagem-cab2"> <img src={usu} alt=""  /> </div></Link>
+                        <Link to="/meuPerfil"><div className="imagem-cab2"> <img src={usu || usufuncionario} alt=""  /> </div></Link>
                         <button onClick={() => sairdaConta()}> <b> Sair </b>  </button> 
                     </div>
                 }
