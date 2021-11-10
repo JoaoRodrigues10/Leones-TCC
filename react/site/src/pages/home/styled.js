@@ -318,6 +318,11 @@ const Container = styled.div`
       width: 300px;
       margin: 20px 0px;
     }
+
+    .tit, .tit2, .info {
+      font-size: 10px;
+    }
+  
   }
   
 `

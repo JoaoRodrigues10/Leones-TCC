@@ -80,7 +80,7 @@ const Cabecalho = styled.div`
         text-decoration: underline;
     }
 
-    @media (max-width: 400px){
+    @media (max-width: 500px){
         
         .logo-cab img{
             width: 60px;
