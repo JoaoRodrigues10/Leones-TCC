@@ -17,10 +17,6 @@ const Cabecalho = styled.div`
         
     }
 
-    .b {
-    text-decoration: underline;
-  }
-
     .opcoes {
         padding-right: 1em;
         padding-left: 1em;
@@ -82,6 +78,21 @@ const Cabecalho = styled.div`
 
     .login button:hover {
         text-decoration: underline;
+    }
+
+    @media (max-width: 400px){
+        
+        .logo-cab img{
+            width: 60px;
+        }
+
+        .opcoes{
+            font-size: 12px;
+        }
+
+        .login button{
+            font-size: 10px;
+        }
     }
 `
 

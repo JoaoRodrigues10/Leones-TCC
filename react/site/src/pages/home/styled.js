@@ -221,6 +221,104 @@ const Container = styled.div`
     }
     
   }
+
+  
+  @media (max-width: 500px){
+
+    .faixa-cabelo{
+    }
+
+    .text-cabelo {
+      font-size: 100px;
+      padding: 50px 0px;
+    }
+
+    .faixa2{
+      padding: 50px 0px;
+    }
+
+    .titulo{
+      font-size: 30px;
+      margin: 0px;
+    }
+
+    .desc2{
+      margin: 20px 0px 0px 0px;
+    }
+    
+    .equipe{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align:
+    }
+    
+    .equipe img {
+      width: 216px;
+      height: 209px;
+      margin: 0px;
+    }
+
+    .text-cabelo{
+      font-size: 30px;
+    }
+
+    .faixa3{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 0px;
+    }
+
+    .faixa3 img{
+      width: 270px;
+      height: 200px;
+      margin: 0px;
+    }
+
+    .faixa3 .titulo {
+      font-size: 30px;
+      padding: 20px 0px 0px 0px;
+    }
+
+    .desc{
+      display: flex; 
+      align-items: center;
+      justify-content: center;
+    }
+
+    .faixa3 .desc2 {
+      font-size: 10px;
+      margin: 20px 0px 0px 0px;
+      padding: 0px;
+    }
+
+    .titulo2{
+      font-size: 40px;
+    }
+
+    .destaques{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .marcas{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .faixa5{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-rodape img{
+      width: 300px;
+      margin: 20px 0px;
+    }
+  }
   
 `
 
