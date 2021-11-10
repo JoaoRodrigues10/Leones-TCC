@@ -9,12 +9,28 @@ const CabecalhoImage = styled.div`
     .faixa1 {
         display: flex;
         flex-direction: row;
+        align-items: start;
+        justify-content: start;
         height: 60px;
     }
     
     .f1-logo img {
         width: 300px;
         height: 144.28px;
+    }
+
+    @media(max-width: 500px){
+        .faixa1 {
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: start;
+        }
+
+        .f1-logo img {
+            width: 200px;
+            height: auto;
+        }        
     }
 `
 

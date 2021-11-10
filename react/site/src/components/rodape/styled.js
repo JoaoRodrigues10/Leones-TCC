@@ -7,9 +7,6 @@ const Container = styled.div`
   background-color: #242424;
   justify-content: center;
   padding: 50px 30px;
-  
-  width: auto;
-  height: 290px;
 }
   
 .rodape-nome {
@@ -57,6 +54,18 @@ const Container = styled.div`
   .rodape-text{
     font-size: 9px;
     margin: 0px;
+  }
+}
+
+@media (max-width: 500px){
+  .rodape{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .img-local img{
+    width: 300px;
   }
 }
 
