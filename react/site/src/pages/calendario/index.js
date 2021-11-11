@@ -99,11 +99,11 @@ export default function Calendariooo(props) {
                     <div className="titulo2"> Horários disponiveis para o dia {date.getDate()} de {mes(date)} </div>
                     <div className="horarios-dispo"> 
 
-                    {horario.map(item => 
-                            
-                            <Botaoconfirmar horas={item} />
-                            
-                    )}
+                      {horario.map(item => 
+                              
+                              <Botaoconfirmar horas={item} />
+                              
+                      )}
 
                     </div>
                 </Container>

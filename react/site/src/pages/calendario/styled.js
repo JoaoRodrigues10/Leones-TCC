@@ -37,9 +37,20 @@ const Container = styled.div`
         border-radius: 22px;
     }
 
-    @media (max-width: 1024px){
+    @media (max-width: 500px){
+        .titulo {
+            font-size: 1em ;
+        }
 
-        
+        .titulo2 {
+            font-size: 1em ;
+        }
+
+        .horarios-dispo button {
+            font-size: 1em;
+            height: 2em;
+            width: 5em;
+        }
       }
       
 `

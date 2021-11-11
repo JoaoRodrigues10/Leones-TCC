@@ -9,3 +9,10 @@
 .react-calendar__tile {
     padding: 1em 0.5em !important;
 }
+
+@media (max-width: 500px) {
+    .react-calendar {
+        width: 300px !important;
+        height: auto;
+    }  
+}

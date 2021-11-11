@@ -41,17 +41,11 @@ export default function MeuPerfil(){
     const [agendamentos, setAgendamentos] = useState([]);
     const [usu] = useState(usuarioLogado.nm_cliente)
     const [imgusu, setImgUsu] = useState(usuarioLogado.img_cliente)
+    const [idusu] = useState(usuarioLogado.id_cliente)
     
     let loading = useRef(null);
 
-    const atualizar = async() => {
-        loading.current.continuousStart();
     
-        const cliente = await api.listar(1);
-        setAgendamentos(cliente)
-    
-        loading.current.complete();
-    }
  
     async function listar() {
         loading.current.continuousStart();
@@ -70,12 +64,12 @@ export default function MeuPerfil(){
                 {
                     label: 'Sim',
                     onClick: async() => {
-                        let r = await api.remover(id);
+                        let r = await api.RemoverAgendamento(id);
                         if(r.erro){
                             toast.dark(`${r.erro}`);
                         } else {
                             toast.dark('Agendamento removido')
-                            listar();
+                            
                         }
                     }
                 },
@@ -86,7 +80,7 @@ export default function MeuPerfil(){
         })
         
         listar();
-        atualizar();
+        
         loading.current.complete();
     }
 
@@ -185,7 +179,7 @@ export default function MeuPerfil(){
                         <tbody>
                             {agendamentos.map((item) =>   
                                 <tr>
-                                    <td> {item.id_agendamento} </td>
+                                    <td> {idusu} </td>
                                     <td title={item.id_cliente_infod_leo_cliente.nm_cliente}>
                                         {item.id_cliente_infod_leo_cliente.nm_cliente != null && item.id_cliente_infod_leo_cliente.nm_cliente.length >= 15
                                                 ? item.id_cliente_infod_leo_cliente.nm_cliente.substr(0, 15) + "..." 

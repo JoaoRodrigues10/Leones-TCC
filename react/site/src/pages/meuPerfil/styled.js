@@ -166,6 +166,10 @@ th {
     visibility: hidden;
     position: absolute;
   }
+
+  @media (max-width: 500px){
+    
+  }
   
 
 `
