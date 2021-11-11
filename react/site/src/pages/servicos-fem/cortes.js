@@ -79,7 +79,7 @@ export default function Cortes() {
               </div>           
 
                     <div class="info">
-                        <div class="texto">.
+                        <div class="texto">
                         <div class="text2">
                             Um bom corte de cabelo é essencial <br />
                             para que o rosto tenha harmonia. Além <br />

@@ -108,6 +108,50 @@ const Container = styled.div`
       width: 251px;
       height: 40px;
     }
+
+  }
+
+  @media(max-width: 500px){
+
+    .carrosel {
+      width: 90%;
+    }
+
+    .cabelo img {
+      width: 126px;
+      height: 200px;
+      margin: 0px;
+    }
+  
+    .titulo {
+      font-size: 20px;
+    }
+    
+  
+    .text2{
+      font-size: 10px;
+      margin 0px;
+      line-height: 15px;
+    }
+  
+    .botao button {
+      width: 150px;
+      height: 40px;
+      margin: 0px;
+      font-size: 10px;
+    }
+  
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 0px 0px 0px;
+    }
+  
+    .texto{
+      margin: 0px 0px 30px 0px;
+    }
+    
   }
   
   
@@ -166,6 +210,37 @@ const ServicosMascu = styled.div`
     font-size: 20px;
     color: #ffffff;
   }
+
+  @media(max-width: 500px){
+    .botao{
+      padding: 0px 0px;
+      margin: 20px 0px;
+    }
+
+    .botoes{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .botao button {
+      width: 60px;
+      height: 60px;
+    }
+
+    .botao img {
+      width: 20px;
+    }
+
+    .titulo {
+      font-size: 15px;
+    }
+
+    li {
+      font-size: 15px;
+    }
+  }
+
   
 `
 

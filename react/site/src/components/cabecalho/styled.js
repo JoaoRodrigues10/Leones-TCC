@@ -93,6 +93,16 @@ const Cabecalho = styled.div`
         .login button{
             font-size: 10px;
         }
+
+        .imagem-cab2 img {
+            width: 35px;
+            height: 35px;
+            margin: 0px;
+        }
+
+        .ft {
+            margin: 0px 5px 0px 0px;
+        }
     }
 `
 

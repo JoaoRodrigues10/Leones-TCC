@@ -17,11 +17,11 @@ export default function ServicosFem() {
                     </button>
                 </Link>
 
-            <Link to="/cortes"><div class="titulo"> CORTES </div> </Link>
+                <Link to="/cortes"><div class="titulo"> CORTES </div> </Link>
 
-            <ul class="serv">
-                <li> Como você <br /> desejar </li>
-            </ul>
+                <ul class="serv">
+                    <li> Como você <br /> desejar </li>
+                </ul>
             </div>
 
             <div class="botao">

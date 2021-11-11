@@ -87,6 +87,26 @@ const Container = styled.div`
       padding: 0.5em 2.5em;
     }
   }
+
+  @media (max-width: 500px){
+    .boas-vindas {
+      font-size: 20px;  
+    }
+    
+    
+    .boas-vindas2 {
+      font-size: 20px;
+    }
+
+    button{
+      width: 140px;
+      height: 30px;
+      padding: 0px;
+      font-weight: 700;
+      font-size: 20px;
+      margin: 0px 10px 0px 10px;
+    }
+  }
   
 `
 
