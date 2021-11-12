@@ -30,6 +30,11 @@ export default class Api {
         let b = await api.post('/login', { email, senha })
         return b.data;
     }
+    
+    async servico( nome) {
+        let r = await api.get('/servico', { nome })
+        return r.data;
+    }
 
     
 
@@ -111,8 +116,8 @@ export default class Api {
         return r.data;
     }
 
-    async InserirAgendamento(funcionario, cliente, servico, agendamento, situacao) {
-        let r = await api.post('/agendamento', { funcionario, cliente, servico, agendamento, situacao });
+    async InserirAgendamento(funcionario, cliente, servico, agendamento ) {
+        let r = await api.post('/agendamento', { funcionario, cliente, servico, agendamento });
         return r.data;
     }
 
