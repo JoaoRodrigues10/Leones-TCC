@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  background-color: #3B70A2;
+  background-color: #3B50A2;
 
   padding-top: 2em;
 
@@ -9,7 +9,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;    
   
-  background-color: #174580;
+  background-color: #154580;
   color: white;
 
   padding: 2.5em;
@@ -45,7 +45,7 @@ const Container = styled.div`
 }
 
 .faixa2{
-  background-color: #174580;
+  background-color: #154580;
   color: white;
 
   border-radius: 20px;
@@ -56,6 +56,8 @@ const Container = styled.div`
 
 .textaviso{
   font-size: 30px;
+
+  padding: 0px 0px 15px 0px;
 }
 
 .avisos{
@@ -63,7 +65,7 @@ const Container = styled.div`
     color: black;
     font-size: 20px;
 
-    margin: 0.1em;
+    margin: 0.1.1em;
     padding: 0.5em;
 
     justify-content: center;
@@ -71,7 +73,7 @@ const Container = styled.div`
 }
 
 .faixa3{
-  background-color: #174580;
+  background-color: #154580;
   color: white; 
 
   border-radius: 20px;
@@ -93,12 +95,12 @@ const Container = styled.div`
 
   flex-direction: column;
 
-  padding: 1em;
+  padding: 1.1em;
 
 }   
 
 thead{
-  background-color: #3B70A2;
+  background-color: #3B50A2;
 }
 
 table {
@@ -154,8 +156,8 @@ th {
     position: relative;
   }
   .input-file div {
-    padding: .2em 1em;
-    border-radius: 1em;
+    padding: .2em 1.1em;
+    border-radius: 1.1em;
     border: none;
     outline: none;
     background-color: #000;
@@ -168,6 +170,65 @@ th {
   }
 
   @media (max-width: 500px){
+    .fotoperfil img{
+      width: 5em;
+      height: 5em;
+    }
+
+    .dados{
+      font-size: 20px;
+    }
+
+    .avisotext{
+      font-size: 10px;
+      margin: 10px 0px 0px 0px;
+    }
+
+    .textaviso{
+      font-size: 20px;
+    }
+
+    .minhaagenda{
+      font-size: 15px;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    th {
+      font-size: 9px;
+      font-weight: 600;
+    
+      padding: 1em;
+    
+      padding-left: 0.8em;
+      padding-right: 1.1em;
+    }
+    
+    td {
+      font-weight: 600;
+    
+      padding: 0px;
+    
+      padding-left: 10.4px;
+      padding-right: 11.5px;
+
+      font-size: 10px;
+    
+    }
+
+    td img{
+      width: 10px;
+      height: 10px;
+    }
+
+    td button{
+      width: 20px;
+      height: 20px;
+    }
+
+    .table-user{
+      padding: 0px;
+    }
     
   }
   

@@ -137,27 +137,26 @@ export default function MeuPerfil(){
           
                 <div className="faixa1">
                     <div className="fotoperfil" onClick={selectFile}> <input id="arquivo-input-file" type="file" onChange={e => setArquivo(e.target.files[0])} />
-                    <img src={previewImage()} alt="" /></div>
-                    <button onClick={fazerUpload}>  Salvar foto  </button>                 
+                        <img src={previewImage()} alt="" /></div>
+                        <button onClick={fazerUpload}>  Salvar foto  </button>                 
                     
                     
                     
-                    <div className="dadosperfil">
-                        <div className="dados"> {usu}  </div>
-                    </div>
+                        <div className="dadosperfil">
+                            <div className="dados"> {usu}  </div>
+                        </div>
                 </div>
         
                 <div className="faixa2"> 
                     <div className="textaviso">Avisos</div>
-                    <div className="avisos">
-                    <div className="avisotext">(11:21:22) Carlos desmarcou o serviço do dia xxxx as xxx horas</div>
-                    <div className="avisotext">(11:21:22) Carlos Remarcou o serviço do dia xxxx as xxx para o dia xxxx as xxxx horas</div>
-                    <div className="avisotext"><br></br></div>
-                    <div className="avisotext"><br></br></div>
-                    <div className="avisotext"><br></br></div>
-                    <div className="avisotext"><br></br></div>
-                    <div className="avisotext"><br></br></div>
-                    
+                        <div className="avisos">
+                        <div className="avisotext">(11:21:22) Carlos desmarcou o serviço do dia xxxx as xxx horas</div>
+                        <div className="avisotext">(11:21:22) Carlos Remarcou o serviço do dia xxxx as xxx para o dia xxxx as xxxx horas</div>
+                        <div className="avisotext"><br></br></div>
+                        <div className="avisotext"><br></br></div>
+                        <div className="avisotext"><br></br></div>
+                        <div className="avisotext"><br></br></div>
+                        <div className="avisotext"><br></br></div>
                     </div>
                 </div>
         
@@ -166,11 +165,14 @@ export default function MeuPerfil(){
                     <table className="table-user">
                         <thead>
                             <tr>
-                                <th> Id </th>
-                                <th> Serviço </th>
                                 <th> Profissional </th>
-                                <th> Horario Agenda </th>
-                                <th> Situacão </th>
+                                <th> Serviço </th>
+                                <th> Horário Agenda </th>
+                                <th> Situação </th>
+                                <th className="a"> </th>
+                                <th className="a"> </th>
+                                <th className="a"> </th>
+                                <th className="a"> </th>
                                 <th className="a"> </th>
                                 <th className="a"> </th>
                             </tr>
@@ -179,16 +181,15 @@ export default function MeuPerfil(){
                         <tbody>
                             {agendamentos.map((item) =>   
                                 <tr>
-                                    <td> {idusu} </td>
                                     <td title={item.id_cliente_infod_leo_cliente.nm_cliente}>
                                         {item.id_cliente_infod_leo_cliente.nm_cliente != null && item.id_cliente_infod_leo_cliente.nm_cliente.length >= 15
                                                 ? item.id_cliente_infod_leo_cliente.nm_cliente.substr(0, 15) + "..." 
                                                 : item.id_cliente_infod_leo_cliente.nm_cliente} 
                                     </td>
                                     <td> {item.id_servico_infod_leo_servico.nm_servico} </td>
-                                    <td> {item.id_funcionario_infod_leo_funcionario.nm_funcionario} </td>
                                     <td> {item.dt_agendamento.substr(0, 10)} </td>
                                     <td> {item.tp_situacao} </td>
+                                    <td> </td>
                                     <td className="acao"> <button onClick={ () => editar(item) }> <img src="/assets/images/edit.svg" alt="" /> </button> </td>
                                     <td className="acao"> <button onClick={ () => remover(item.id_agendamento) }> <img src="/assets/images/delete.svg" alt="" /> </button> </td>
                                 </tr>
