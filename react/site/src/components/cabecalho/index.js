@@ -27,8 +27,9 @@ export default function Cabecalhooo() {
     const navigation = useHistory()
     let usuarioLogado = lerUsuarioLogado(navigation) || {} ;
     const [imgusu] = useState(usuarioLogado.img_cliente)
+    const [imgfunc] = useState(usuarioLogado.img_funcionario)
     const [usu] = useState(`http://localhost:3030/imagemPerfil?imagem=${imgusu}`)
-    const [usufuncionario] = useState(usuarioLogado.img_funcionario)
+    const [usufuncionario] = useState(`http://localhost:3030/imagemPerfil?imagem=${imgfunc}`)
 
     
     function logadoOUnao() {

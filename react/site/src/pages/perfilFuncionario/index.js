@@ -18,7 +18,7 @@ const api = new Api();
 function lerUsuarioLogado(navigation) {
     let logado = Cookies.get('usuario-logado');
     if ( logado == null){
-        navigation.push('/perfilFuncionario');
+        
         return null;
     }
 
@@ -34,7 +34,8 @@ export default function MeuPerfil(){
     const [arquivo, setArquivo] = useState('');
     const [agendamentos, setAgendamentos] = useState([]);
     const [usu] = useState(usuarioLogado.nm_funcionario)
-    const [usufuncionario] = useState(usuarioLogado.img_funcionario)
+    const [usufuncionario, setUsufuncionario] = useState(usuarioLogado.img_funcionario)
+    
     
     
     
@@ -102,11 +103,16 @@ export default function MeuPerfil(){
         let formData = new FormData();
         formData.append('arquivo', arquivo);
 
-        let resp = await axios.post('http://localhost:3030/criarArquivo2', formData, {
+        let resp = await axios.put(`http://localhost:3030/criarArquivo2?id=${usuarioLogado.id_funcionario}`, formData, {
           headers: {
             "Content-Type": "multipart/form-data"
           }});
     
+        let usuario = lerUsuarioLogado(navigation);
+        usuario.img_funcionario = resp.data.img_funcionario;
+
+        setUsufuncionario(resp.data.img_funcionario);
+        Cookies.set('usuario-logado', JSON.stringify(usuario));
         console.log(resp.data);
       }
 
@@ -115,7 +121,7 @@ export default function MeuPerfil(){
         if (arquivo) {
           return URL.createObjectURL(arquivo);
         } else{
-            return usufuncionario
+            return `http://localhost:3030/imagemPerfil2?imagem=${usufuncionario}`
         }
       }
     

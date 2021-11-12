@@ -41,7 +41,7 @@ export default function MeuPerfil(){
     const [agendamentos, setAgendamentos] = useState([]);
     const [usu] = useState(usuarioLogado.nm_cliente)
     const [imgusu, setImgUsu] = useState(usuarioLogado.img_cliente)
-    const [idusu] = useState(usuarioLogado.id_cliente)
+    
     
     let loading = useRef(null);
 
