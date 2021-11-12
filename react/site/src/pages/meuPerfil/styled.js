@@ -119,7 +119,7 @@ td {
   padding: 2em;
 
   padding-left: 3em;
-  padding-right: 3.5em;
+  padding-right: 3em;
 
 }
 
@@ -130,9 +130,11 @@ th {
 
   padding: 2em;
 
-  padding-left: 3.5em;
-  padding-right: 3.5em;
+  padding-left: 4em;
+  padding-right: 4em;
 } 
+
+
 
  .faixa1 button {
   background: none;

@@ -167,14 +167,11 @@ export default function MeuPerfil(){
                             <tr>
                                 <th> Profissional </th>
                                 <th> Serviço </th>
-                                <th> Horário Agenda </th>
+                                <th> Horário <br/>Agenda </th>
                                 <th> Situação </th>
                                 <th className="a"> </th>
                                 <th className="a"> </th>
-                                <th className="a"> </th>
-                                <th className="a"> </th>
-                                <th className="a"> </th>
-                                <th className="a"> </th>
+                                
                             </tr>
                         </thead>
         
@@ -189,7 +186,6 @@ export default function MeuPerfil(){
                                     <td> {item.id_servico_infod_leo_servico.nm_servico} </td>
                                     <td> {item.dt_agendamento.substr(0, 10)} </td>
                                     <td> {item.tp_situacao} </td>
-                                    <td> </td>
                                     <td className="acao"> <button onClick={ () => editar(item) }> <img src="/assets/images/edit.svg" alt="" /> </button> </td>
                                     <td className="acao"> <button onClick={ () => remover(item.id_agendamento) }> <img src="/assets/images/delete.svg" alt="" /> </button> </td>
                                 </tr>
