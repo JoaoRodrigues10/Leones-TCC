@@ -162,7 +162,7 @@ export default function MeuPerfil(){
                 </div>
         
                 <div className="faixa3"> 
-                    <div className="minhaagenda">Minha Agenda</div>
+                    <div className="minhaagenda">Minha agenda</div>
                     <table className="table-user">
                         <thead>
                             <tr>

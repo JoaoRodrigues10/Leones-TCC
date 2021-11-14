@@ -153,25 +153,23 @@ export default function MeuPerfil(){
                         <div className="dados"> {usu} </div>
                     </div>
                 </div>
-
-                
         
                 <div className="faixa2"> 
                     <div className="textaviso">Avisos</div>
                     <div className="avisos">
-                    <div className="avisotext">(11:21:22) Bruno desmarcou o serviço do dia xxxx as xxx horas</div>
-                    <div className="avisotext">(11:21:22) Bruno Remarcou o serviço do dia xxxx as xxx para o dia xxxx as xxxx horas</div>
-                    <div className="avisotext"><br></br></div>
-                    <div className="avisotext"><br></br></div>
-                    <div className="avisotext"><br></br></div>
-                    <div className="avisotext"><br></br></div>
-                    <div className="avisotext"><br></br></div>
+                        <div className="avisotext">(11:21:22) Bruno desmarcou o serviço do dia xxxx as xxx horas</div>
+                        <div className="avisotext">(11:21:22) Bruno Remarcou o serviço do dia xxxx as xxx para o dia xxxx as xxxx horas</div>
+                        <div className="avisotext"><br></br></div>
+                        <div className="avisotext"><br></br></div>
+                        <div className="avisotext"><br></br></div>
+                        <div className="avisotext"><br></br></div>
+                        <div className="avisotext"><br></br></div>
                     
                     </div>
                 </div>
         
                 <div className="faixa3"> 
-                    <div className="minhaagenda">Minha Agenda</div>
+                    <div className="minhaagenda">Minha agenda</div>
                     <table className="table-user">
                         <thead>
                             <tr>

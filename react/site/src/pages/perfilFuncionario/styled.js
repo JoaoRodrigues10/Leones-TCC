@@ -45,6 +45,10 @@ background-color: #3B70A2;
 }
 
 .faixa2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #174580;
   color: white;
 
@@ -59,18 +63,32 @@ background-color: #3B70A2;
 }
 
 .avisos{
+    display: flex;
+    flex-direction: column;
     background-color: white;
     color: black;
     font-size: 20px;
 
-    margin: 0.1em;
-    padding: 0.5em;
+    margin: 10px 0px;
 
-    justify-content: center;
-    align-items: center;
+    padding: 1em;
+
+    width: 900px;
+    height: 300px; 
+
+    justify-content: start;
+    align-items: flex-start;
+}
+
+.avisotext{
+  margin: 5px 0px;
 }
 
 .faixa3{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #174580;
   color: white; 
 
@@ -147,7 +165,7 @@ td {
   
   padding: 2em;
 
-  padding-left: 3em;
+  padding-left: 3.1em;
   padding-right: 3em;
 
 }
@@ -166,8 +184,20 @@ td {
   padding: 2em;
 
   padding-left: 3em;
-  padding-right: 3.3em;
+  padding-right: 3.07em;
 
+}
+
+.acao2 img{
+  width: 20px;
+}
+
+.acao2 > button {
+  background-color: #E3B052;
+  border-radius: 50px;
+  border: none;
+  width: 30px;
+  height: 30px;
 }
 
 th {
@@ -193,7 +223,13 @@ th {
   background-color: #E3B052;
   border-radius: 50px;
   border: none;
-    }
+  width: 30px;
+  height: 30px;
+}
+
+.acao img{
+  width: 20px;
+}
 
     .input-file {
     position: relative;

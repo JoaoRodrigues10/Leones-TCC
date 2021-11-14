@@ -45,6 +45,10 @@ const Container = styled.div`
 }
 
 .faixa2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #154580;
   color: white;
 
@@ -65,14 +69,20 @@ const Container = styled.div`
     color: black;
     font-size: 20px;
 
-    margin: 0.1.1em;
-    padding: 0.5em;
+    margin: 10px 0px;
+    padding: 1em;
 
     justify-content: center;
     align-items: center;
+    width: 900px;
+    height: 300px; 
 }
 
 .faixa3{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #154580;
   color: white; 
 
