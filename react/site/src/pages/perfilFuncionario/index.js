@@ -103,7 +103,7 @@ export default function MeuPerfil(){
         let formData = new FormData();
         formData.append('arquivo', arquivo);
 
-        let resp = await axios.put(`https://leones20.herokuapp.com/criarArquivo?id=${usuarioLogado.id_funcionario}`, formData, {
+        let resp = await axios.put(`https://leones20.herokuapp.com/criarArquivo2?id=${usuarioLogado.id_funcionario}`, formData, {
           headers: {
             "Content-Type": "multipart/form-data"
           }});

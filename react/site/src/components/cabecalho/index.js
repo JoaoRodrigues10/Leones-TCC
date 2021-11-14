@@ -24,6 +24,8 @@ function lerUsuarioLogado(navigation) {
 export default function Cabecalhooo() {
     const [logado, setLogado] = useState(false)
     const [naologado, setNao] = useState(false)
+    const [logadoUsu, setLogadoUsu] = useState(false)
+    const [logadoFunc, setLogadoFunc] = useState(false)
     const navigation = useHistory()
     let usuarioLogado = lerUsuarioLogado(navigation) || {} ;
     const [imgusu] = useState(usuarioLogado.img_cliente)
@@ -42,6 +44,23 @@ export default function Cabecalhooo() {
         }
     }
 
+    function logadoUSU() {
+        
+        if (imgusu == null) {
+            setLogadoUsu(false)
+        } else {
+            setLogadoUsu(true);
+        }
+    }
+    function logadoFUNC() {
+        if (imgfunc == null) {
+            setLogadoFunc(false)
+        } else {
+            setLogadoFunc(true);
+        }
+    }
+
+
     function naoLogado(){
         let usuarioLogado = Cookies.get('usuario-logado')
         if (usuarioLogado == null) {
@@ -54,6 +73,8 @@ export default function Cabecalhooo() {
 
     useEffect(logadoOUnao, []);
     useEffect(naoLogado, []);
+    useEffect(logadoUSU, []);
+    useEffect(logadoFUNC, []);
 
 
 
@@ -96,8 +117,23 @@ export default function Cabecalhooo() {
                
                 {logado &&
                     <div className="ft" >
-                        <Link to="/meuPerfil"><div className="imagem-cab2"> <img src={usu || usufuncionario} alt=""  /> </div></Link>
+                        
+
+                        <Link to="/meuPerfil">
+                        <div className="imagem-cab2"> 
+                        {logadoUsu &&
+                           <img src={usu} alt=""  /> 
+                        }
+                        {logadoFunc &&
+                           <img src={usufuncionario} alt=""  /> 
+                        }
+                        
+                            
+                        </div>
+                        </Link> 
+                             
                         <button onClick={() => sairdaConta()}> Sair </button> 
+                        
                     </div>
                 }
 
