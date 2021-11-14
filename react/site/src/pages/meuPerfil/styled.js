@@ -118,8 +118,8 @@ td {
 
   padding: 2em;
 
-  padding-left: 3em;
-  padding-right: 3em;
+  padding-left: 3.5em;
+  padding-right: 3.5em;
 
 }
 
@@ -139,13 +139,9 @@ th {
  .faixa1 button {
   background: none;
   border: none;
-  margin: 0px 0px 0px 20px;
-}
-
-.faixa1 button:hover {
-  background-color: #E3B052;
-  border-radius: 50px;
-  border: none;
+  text-decoration: underline;
+  color: white;
+  cursor: pointer;
 }
 
 .acao > button {
@@ -169,6 +165,12 @@ th {
   input[type=file] {
     visibility: hidden;
     position: absolute;
+  }
+  
+  .usuario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   @media (max-width: 500px){

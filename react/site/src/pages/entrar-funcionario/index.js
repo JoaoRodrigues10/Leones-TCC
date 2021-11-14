@@ -27,7 +27,7 @@ export default function Entrarr() {
 
     } else {
       Cookies.set('usuario-logado', JSON.stringify(b));
-      navigation.push('/')
+      navigation.push('/perfilFuncionario')
     }
   }
 

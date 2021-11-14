@@ -136,10 +136,11 @@ export default function MeuPerfil(){
             <div className="containerperfil"> 
           
                 <div className="faixa1">
-                    <div className="fotoperfil" onClick={selectFile}> <input id="arquivo-input-file" type="file" onChange={e => setArquivo(e.target.files[0])} />
-                        <img src={previewImage()} alt="" /></div>
-                        <button onClick={fazerUpload}>  Salvar foto  </button>                 
-                    
+                    <div className="usuario">
+                        <div className="fotoperfil" onClick={selectFile}> <input id="arquivo-input-file" type="file" onChange={e => setArquivo(e.target.files[0])} />
+                            <img src={previewImage()} alt="" /></div>
+                            <button onClick={fazerUpload}>  Salvar foto  </button>                 
+                    </div>
                     
                     
                         <div className="dadosperfil">
@@ -178,12 +179,16 @@ export default function MeuPerfil(){
                         <tbody>
                             {agendamentos.map((item) =>   
                                 <tr>
-                                    <td title={item.id_cliente_infod_leo_cliente.nm_cliente}>
-                                        {item.id_cliente_infod_leo_cliente.nm_cliente != null && item.id_cliente_infod_leo_cliente.nm_cliente.length >= 15
-                                                ? item.id_cliente_infod_leo_cliente.nm_cliente.substr(0, 15) + "..." 
-                                                : item.id_cliente_infod_leo_cliente.nm_cliente} 
+                                    <td title={item.id_funcionario_infod_leo_funcionario.nm_funcionario}>
+                                        {item.id_funcionario_infod_leo_funcionario.nm_funcionario != null && item.id_funcionario_infod_leo_funcionario.nm_funcionario.length >= 15
+                                                ? item.id_funcionario_infod_leo_funcionario.nm_funcionario.substr(0, 6) + "..." 
+                                                : item.id_funcionario_infod_leo_funcionario.nm_funcionario} 
                                     </td>
-                                    <td> {item.id_servico_infod_leo_servico.nm_servico} </td>
+                                    <td title={item.id_servico_infod_leo_servico.nm_servico}> 
+                                    {item.id_servico_infod_leo_servico.nm_servico != null && item.id_servico_infod_leo_servico.nm_servico.length >= 15
+                                                ? item.id_servico_infod_leo_servico.nm_servico.substr(0, 6) + "..." 
+                                                : item.id_servico_infod_leo_servico.nm_servico} 
+                                    </td>
                                     <td> {item.dt_agendamento.substr(0, 10)} </td>
                                     <td> {item.tp_situacao} </td>
                                     <td className="acao"> <button onClick={ () => editar(item) }> <img src="/assets/images/edit.svg" alt="" /> </button> </td>

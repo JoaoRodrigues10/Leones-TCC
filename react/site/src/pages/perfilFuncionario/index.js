@@ -103,16 +103,17 @@ export default function MeuPerfil(){
         let formData = new FormData();
         formData.append('arquivo', arquivo);
 
-        let resp = await axios.put(`https://leones20.herokuapp.com/criarArquivo2?id=${usuarioLogado.id_funcionario}`, formData, {
+        let resp = await axios.put(`https://leones20.herokuapp.com/criarArquivo?id=${usuarioLogado.id_funcionario}`, formData, {
           headers: {
             "Content-Type": "multipart/form-data"
           }});
-    
+
         let usuario = lerUsuarioLogado(navigation);
         usuario.img_funcionario = resp.data.img_funcionario;
 
         setUsufuncionario(resp.data.img_funcionario);
         Cookies.set('usuario-logado', JSON.stringify(usuario));
+    
         console.log(resp.data);
       }
 
@@ -141,16 +142,19 @@ export default function MeuPerfil(){
             <div className="containerperfil"> 
           
                 <div className="faixa1">
-                    <div className="fotoperfil" onClick={selectFile}> <input id="arquivo-input-file" type="file" onChange={e => setArquivo(e.target.files[0])} />
-                    <img src={previewImage()} alt="" /></div>
-                    <button onClick={fazerUpload}> Salvar Imagem </button>                 
-                    
+                    <div className="usuario">
+                        <div className="fotoperfil" onClick={selectFile}> <input id="arquivo-input-file" type="file" onChange={e => setArquivo(e.target.files[0])} />
+                        <img src={previewImage()} alt="" /></div>
+                        <button onClick={fazerUpload}> Salvar Imagem </button>                 
+                    </div>
                     
                     
                     <div className="dadosperfil">
                         <div className="dados"> {usu} </div>
                     </div>
                 </div>
+
+                
         
                 <div className="faixa2"> 
                     <div className="textaviso">Avisos</div>
@@ -171,11 +175,11 @@ export default function MeuPerfil(){
                     <table className="table-user">
                         <thead>
                             <tr>
-                                <th> Id </th>
                                 <th> Cliente </th>
                                 <th> Serviço </th>
-                                <th> Horario Agenda </th>
-                                <th> Situacão </th>
+                                <th> Horário agenda </th>
+                                <th> Situação </th>
+                                <th className="a"> </th>
                                 <th className="a"> </th>
                                 <th className="a"> </th>
                             </tr>
@@ -184,15 +188,15 @@ export default function MeuPerfil(){
                         <tbody>
                             {agendamentos.map((item) =>   
                                 <tr >
-                                    <td> {item.id_agendamento} </td>
                                     <td title={item.id_cliente_infod_leo_cliente.nm_cliente}>
-                                        {item.id_cliente_infod_leo_cliente.nm_cliente != null && item.nm_cliente.length >= 15
-                                                ? item.id_cliente_infod_leo_cliente.nm_cliente.substr(0, 15) + "..." 
+                                        {item.id_cliente_infod_leo_cliente.nm_cliente != null && item.id_cliente_infod_leo_cliente.nm_cliente.length >= 15
+                                                ? item.id_cliente_infod_leo_cliente.nm_cliente.substr(0, 6) + "..." 
                                                 : item.id_cliente_infod_leo_cliente.nm_cliente} 
                                     </td>
                                     <td> {item.id_servico_infod_leo_servico.nm_servico} </td>
                                     <td> {item.dt_agendamento.substr(0, 10)} </td>
                                     <td> {item.tp_situacao} </td>
+                                    <td></td>
                                     <td className="acao"> <button onClick={ () => editar(item) }> <img src="/assets/images/edit.svg" alt="" /> </button> </td>
                                     <td className="acao"> <button onClick={ () => remover(item.id_agendamento) }> <img src="/assets/images/delete.svg" alt="" /> </button> </td>
                                 </tr>
