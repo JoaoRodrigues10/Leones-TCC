@@ -45,8 +45,8 @@ export default function MeuPerfil(){
     const atualizar = async() => {
         loading.current.continuousStart();
     
-        const cliente = await api.listar(1);
-        agendamentos(cliente)
+        let cliente = await api.ListarAgendamento();
+        setAgendamentos(cliente)
     
         loading.current.complete();
     }
