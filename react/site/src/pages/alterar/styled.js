@@ -36,6 +36,14 @@ const Container2 = styled.div`
         border-radius: 20px;
     }
 
+    .Informacoes input{
+        background: none;
+        border: none;
+        font-family: "Josefin Sans";
+        color: white;
+        font-size: 30px;
+    }
+
     .Alterar{
         background-color: #3B70A2;  
 

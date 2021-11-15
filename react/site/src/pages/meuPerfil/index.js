@@ -215,7 +215,7 @@ export default function MeuPerfil(){
                     <Container2>
                         <div className="Container">
                             <div className="Box-1">
-                                <h1> Editar Agendamento </h1>
+                                <h1> Editar agendamento </h1>
                                 <hr></hr>
                             </div>
                             <div className="Box-2">
@@ -223,13 +223,32 @@ export default function MeuPerfil(){
                                     <h1> Informações </h1>
                                     <ul>
                                         <li> {usu} </li>
-                                        <li> <input type="text" value={servico} onChange={e => setServico(e.target.value)} class="text-input" /> </li>
-                                        <li> <input type="text" value={agendamento} onChange={e => setAgendamento(e.target.value)} class="text-input" /> </li>
+                                        <li> <input type="text" value={servico} onChange={e => setServico(e.target.value)} class="text-input" disabled="disabled" /> </li>
+                                        <li> <input type="text" value={agendamento} onChange={e => setAgendamento(e.target.value)} class="text-input" disabled="disabled"/> </li>
                                     </ul>
                                 </div>
                                 <div className="Alterar">
                                     <h1> Alterar </h1>
-                                    <div className="Alterar-Horario">Horario: <input></input></div>
+                                    <div className="Alterar-Horario">
+                                        <label for=""> Selecione o horário </label>
+                                        <select required="" name="horario">
+                                            <option selected="selected" value=""> 8:00 </option>
+                                            <option value="1"> 8:00 </option>
+                                            <option value="2"> 9:00 </option>
+                                            <option value="3"> 10:00 </option>
+                                            <option value="4"> 11:00 </option>
+                                            <option value="5"> 12:00 </option>
+                                            <option value="6"> 13:00 </option>
+                                            <option value="7"> 14:00 </option>
+                                            <option value="8"> 15:00 </option>
+                                            <option value="9"> 16:00 </option>
+                                            <option value="10"> 17:00 </option>
+                                            <option value="11"> 18:00 </option>
+                                            <option value="12"> 19:00 </option>
+                                            <option value="13"> 20:00 </option>
+                                            <option value="14"> 21:00 </option> 
+                                        </select>
+                                    </div>
                                     <div className="Botao-alterar"><button> Atualizar </button></div> 
                                 </div>
                             </div>
