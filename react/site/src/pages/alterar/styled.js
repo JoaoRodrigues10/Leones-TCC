@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
-const Container = styled.div`
-    background-color: #3B70A2;
+const Container2 = styled.div`
+    background-color: #3B50A2;
 
     padding: 2.5em;
     color: white;
@@ -80,4 +80,4 @@ const Container = styled.div`
      
 `
 
-export { Container }
+export { Container2 }
