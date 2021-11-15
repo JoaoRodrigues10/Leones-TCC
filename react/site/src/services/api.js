@@ -31,7 +31,7 @@ export default class Api {
         return b.data;
     }
     
-    async servico( nome) {
+    async servico(nome) {
         let r = await api.get('/servico', { nome })
         return r.data;
     }
