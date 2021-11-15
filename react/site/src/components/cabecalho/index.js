@@ -119,18 +119,22 @@ export default function Cabecalhooo() {
                     <div className="ft" >
                         
 
-                        <Link to="/meuPerfil">
+                        
                         <div className="imagem-cab2"> 
                         {logadoUsu &&
+                           <Link to="/meuPerfil">
                            <img src={usu} alt=""  /> 
+                           </Link>
                         }
                         {logadoFunc &&
+                           <Link to="/perfilFuncionario">
                            <img src={usufuncionario} alt=""  /> 
+                           </Link>
                         }
                         
                             
                         </div>
-                        </Link> 
+                        
                              
                         <button onClick={() => sairdaConta()}> Sair </button> 
                         
