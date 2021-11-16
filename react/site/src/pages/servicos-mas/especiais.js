@@ -17,7 +17,8 @@ export default function EspeciaisMas() {
 
     useEffect(() => {
         setServico({
-        nome: "Especiais"
+        nome: "Especiais",
+        id: 6
         })
     }, []);
 

@@ -16,7 +16,8 @@ export default function Pigmentacao() {
 
     useEffect(() => {
         setServico({
-        nome: "Pigmentação"
+        nome: "Pigmentação",
+        id: 11
         })
     }, []);
 

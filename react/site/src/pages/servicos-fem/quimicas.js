@@ -15,7 +15,8 @@ export default function Quimicas() {
 
   useEffect(() => {
     setServico({
-      nome: "Químicas em Geral"
+      nome: "Químicas em Geral",
+      id: 5
     })
   }, []);
 

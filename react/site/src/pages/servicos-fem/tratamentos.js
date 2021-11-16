@@ -15,7 +15,8 @@ export default function Tratamentos() {
 
   useEffect(() => {
     setServico({
-      nome: "Tratamento Capilar"
+      nome: "Tratamento Capilar",
+      id: 4
     })
   }, []);
 

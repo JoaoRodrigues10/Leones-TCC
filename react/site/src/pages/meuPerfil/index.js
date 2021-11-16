@@ -35,6 +35,8 @@ function lerUsuarioLogado(navigation) {
     return usuarioLogado;
 }
 
+
+
 export default function MeuPerfil(props){
     const navigation = useHistory( );
     let usuarioLogado = lerUsuarioLogado(navigation) || {} ;
@@ -48,7 +50,6 @@ export default function MeuPerfil(props){
     const [ serv2, setServico2 ] = useState('');
     const [ agenda, setAgenda ] = useState('');  
     const [ hora, setHora ] = useState('');  
-    
     
     
     async function listar() {

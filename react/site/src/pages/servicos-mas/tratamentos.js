@@ -16,7 +16,8 @@ export default function TratamentoMas() {
 
     useEffect(() => {
         setServico({
-        nome: "Tratamentos"
+        nome: "Tratamentos",
+        id: 4
         })
     }, []);
 

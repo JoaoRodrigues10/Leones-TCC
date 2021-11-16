@@ -14,7 +14,8 @@ export default function Penteados() {
 
   useEffect(() => {
     setServico({
-      nome: "Especiais"
+      nome: "Especiais",
+      id: 6
     })
   }, []);
 

@@ -14,7 +14,8 @@ export default function Penteados() {
 
   useEffect(() => {
     setServico({
-      nome: "Manicure e Pedicure"
+      nome: "Manicure e Pedicure",
+      id: 7
     })
   }, []);
 

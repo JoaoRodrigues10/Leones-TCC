@@ -15,7 +15,8 @@ export default function Cortes() {
 
   useEffect(() => {
     setServico({
-      nome: "Cortes"
+      nome: "Cortes",
+      id: 2
     })
   }, []);
 

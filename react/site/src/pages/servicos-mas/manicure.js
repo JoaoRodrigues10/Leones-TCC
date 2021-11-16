@@ -16,7 +16,8 @@ export default function ManicureMas() {
 
     useEffect(() => {
         setServico({
-        nome: "Manicure e Pedicure"
+        nome: "Manicure e Pedicure",
+        id: 7
         })
     }, []);
 

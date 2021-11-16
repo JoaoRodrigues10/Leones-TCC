@@ -7,6 +7,7 @@ import Cabecalho from '../../components/cabecalho'
 
 
 import Botaoconfirmar from '../botaoconfirmar'
+import { Link } from 'react-router-dom';
 
 export default function Calendariooo(props) {
     const servico = props.location.state;
@@ -100,9 +101,16 @@ export default function Calendariooo(props) {
                     <div className="horarios-dispo"> 
 
                       {horario.map(item => 
-                              
-                              <Botaoconfirmar horas={item} />
-                              
+                          <Link to={{
+                            pathname: '/confirmar',
+                            state: {
+                              horas: item.hora,
+                              dia: date,
+                              nomeser: servico
+                            }
+                          }}>
+                              <Botaoconfirmar horas={item}  />
+                          </Link>
                       )}
 
                     </div>
