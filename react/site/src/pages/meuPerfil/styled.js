@@ -140,9 +140,34 @@ th {
 
   padding: 2em;
 
-  padding-left: 4em;
-  padding-right: 4em;
+  
 } 
+
+th:nth-child(1){
+  padding-right: 5em;
+  padding-left: 2em;
+
+}
+th:nth-child(2){
+  padding-right: 10em;
+  padding-left: 2em;
+
+}
+th:nth-child(3){
+  padding-right: 5em;
+  padding-left: 0em;
+
+}
+th:nth-child(4){
+  padding-right: 4em;
+  padding-left: 2em;
+
+}
+th:nth-child(5){
+  padding-right: 15em;
+  padding-left: 2em;
+
+}
 
 
 

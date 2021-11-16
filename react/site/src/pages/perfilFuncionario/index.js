@@ -187,10 +187,8 @@ export default function MeuPerfil(){
                         <tbody>
                             {agendamentos.map((item) =>   
                                 <tr >
-                                    <td title={item.id_cliente_infod_leo_cliente.nm_cliente}>
-                                        {item.id_cliente_infod_leo_cliente.nm_cliente != null && item.id_cliente_infod_leo_cliente.nm_cliente.length >= 15
-                                                ? item.id_cliente_infod_leo_cliente.nm_cliente.substr(0, 6) + "..." 
-                                                : item.id_cliente_infod_leo_cliente.nm_cliente} 
+                                    <td>
+                                        {item.id_cliente_infod_leo_cliente.nm_cliente} 
                                     </td>
                                     <td> {item.id_servico_infod_leo_servico.nm_servico} </td>
                                     <td> {item.dt_agendamento.substr(0, 10)} </td>

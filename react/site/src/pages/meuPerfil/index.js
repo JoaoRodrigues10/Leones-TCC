@@ -185,7 +185,8 @@ export default function MeuPerfil(props){
                                 <tr>
                                     <th> Profissional </th>
                                     <th> Serviço </th>
-                                    <th> Horário <br/>Agenda </th>
+                                    <th> Dia </th>
+                                    <th> Horário</th>
                                     <th> Situação </th>
                                     <th className="a"> </th>
                                     <th className="a"> </th>
@@ -197,16 +198,13 @@ export default function MeuPerfil(props){
                                 {agendamentos.map((item) =>   
                                     <tr>
                                         <td title={item.id_funcionario_infod_leo_funcionario.nm_funcionario}>
-                                            {item.id_funcionario_infod_leo_funcionario.nm_funcionario != null && item.id_funcionario_infod_leo_funcionario.nm_funcionario.length >= 15
-                                                    ? item.id_funcionario_infod_leo_funcionario.nm_funcionario.substr(0, 6) + "..." 
-                                                    : item.id_funcionario_infod_leo_funcionario.nm_funcionario} 
+                                            {item.id_funcionario_infod_leo_funcionario.nm_funcionario} 
                                         </td>
                                         <td title={item.id_servico_infod_leo_servico.nm_servico}> 
-                                        {item.id_servico_infod_leo_servico.nm_servico != null && item.id_servico_infod_leo_servico.nm_servico.length >= 15
-                                                    ? item.id_servico_infod_leo_servico.nm_servico.substr(0, 6) + "..." 
-                                                    : item.id_servico_infod_leo_servico.nm_servico} 
+                                        {item.id_servico_infod_leo_servico.nm_servico} 
                                         </td>
                                         <td> {item.dt_agendamento.substr(0, 10)} </td>
+                                        <td> {item.dt_agendamento.substr(11, 5)} </td>
                                         <td> {item.tp_situacao} </td>
                                         <td className="acao"> <button onClick={ () => editar(item) }> <img src="/assets/images/edit.svg" alt="" /> </button> </td>
                                         <td className="acao"> <button onClick={ () => remover(item.id_agendamento) }> <img src="/assets/images/delete.svg" alt="" /> </button> </td>
