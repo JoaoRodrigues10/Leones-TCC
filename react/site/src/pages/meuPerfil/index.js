@@ -4,6 +4,9 @@ import Rodape from "../../components/rodape";
 import { Container } from "./styled";
 import { Container2 } from "../alterar/styled";
 
+import Calendar from 'react-calendar';
+import './calendario.css'
+import 'react-calendar/dist/Calendar.css';
    
 
 import { useState, useEffect, useRef } from 'react';
@@ -36,7 +39,7 @@ function lerUsuarioLogado(navigation) {
     return usuarioLogado;
 }
 
-export default function MeuPerfil(){
+export default function MeuPerfil(props){
     const navigation = useHistory( );
     let usuarioLogado = lerUsuarioLogado(navigation) || {} ;
 
@@ -45,9 +48,8 @@ export default function MeuPerfil(){
     const [usu] = useState(usuarioLogado.nm_cliente)
     const [imgusu, setImgUsu] = useState(usuarioLogado.img_cliente)
     const [ idAlterando, setIdAlterando ] = useState(0);
-    const [ servico, setServico ] = useState('');
-    const [ agendamento, setAgendamento ] = useState('');
-    
+    const [ serv, setServico ] = useState('');
+    const [ agendamento, setAgendamento ] = useState('');    
     
     let loading = useRef(null);
 
@@ -132,9 +134,28 @@ export default function MeuPerfil(){
         let input = document.getElementById("arquivo-input-file");
         input.click();
       }
-    
 
+      const [date, setDate] = useState(new Date())
+      const onChange = date => {
+      setDate(date)
+    }
 
+    function mes(data) {
+        switch(data.getMonth()){
+            case 0: return 'Janeiro'
+            case 1: return 'Fevereiro'
+            case 2: return 'Março'
+            case 3: return 'Abril'
+            case 4: return 'Maio'
+            case 5: return 'Junho'
+            case 6: return 'Julho'
+            case 7: return 'Agosto'
+            case 8: return 'Setembro'
+            case 9: return 'Outubro'
+            case 10: return 'Novembro'
+            default: return 'Dezembro'
+        }
+    }
     return(
         <div>
         <Cabecalho/>
@@ -221,31 +242,59 @@ export default function MeuPerfil(){
                                     <h1> Informações </h1>
                                     <ul>
                                         <li> {usu} </li>
-                                        <li> <input type="text" value={servico} onChange={e => setServico(e.target.value)} class="text-input" disabled="disabled" /> </li>
+                                        <li> <input type="text" value={serv} onChange={e => setServico(e.target.value)} class="text-input" disabled="disabled" /> </li>
                                         <li> <input type="text" value={agendamento} onChange={e => setAgendamento(e.target.value)} class="text-input" disabled="disabled"/> </li>
                                     </ul>
                                 </div>
                                 <div className="Alterar">
-                                    <h1> Alterar </h1>
+                                    <h1> Remarcar serviço {serv} </h1>
                                     <div className="Alterar-Horario">
-                                        <label for=""> Selecione o horário </label>
-                                        <select required="" name="horario">
-                                            <option selected="selected" value=""> 8:00 </option>
-                                            <option value="1"> 8:00 </option>
-                                            <option value="2"> 9:00 </option>
-                                            <option value="3"> 10:00 </option>
-                                            <option value="4"> 11:00 </option>
-                                            <option value="5"> 12:00 </option>
-                                            <option value="6"> 13:00 </option>
-                                            <option value="7"> 14:00 </option>
-                                            <option value="8"> 15:00 </option>
-                                            <option value="9"> 16:00 </option>
-                                            <option value="10"> 17:00 </option>
-                                            <option value="11"> 18:00 </option>
-                                            <option value="12"> 19:00 </option>
-                                            <option value="13"> 20:00 </option>
-                                            <option value="14"> 21:00 </option> 
-                                        </select>
+
+
+                                        <div className="data">
+                                            <label for=""> Selecione o serviço: </label>
+                                                <select required="" name="servico">
+                                                    <option selected="selected" value=""> Cortes </option>
+                                                    <option value="1"> Cortes femininos </option>
+                                                    <option value="2"> Penteados </option>
+                                                    <option value="3"> Tratamento capilar </option>
+                                                    <option value="4"> Químicas em geral </option>
+                                                    <option value="5"> Serviços especiais </option>
+                                                    <option value="6"> Manicure e pedicure </option>
+                                                    <option value="7"> Cortes masculinos </option>
+                                                    <option value="8"> Pigmentação </option>
+                                                </select>
+                                        </div>
+
+                                          <div className="data"> 
+                                             Selecione a data:  
+                                            <div className="react-calendar">
+                                                <Calendar onChange={onChange} value={date} minDate={new Date()}  />
+                                            </div> 
+                                          </div>  
+
+                                        <div className="data"> 
+                                            
+                                                  
+                                            <label for=""> Selecione o horário: </label>
+                                            <select required="" name="horario">
+                                                <option selected="selected" value=""> 8:00 </option>
+                                                <option value="1"> 8:00 </option>
+                                                <option value="2"> 9:00 </option>
+                                                <option value="3"> 10:00 </option>
+                                                <option value="4"> 11:00 </option>
+                                                <option value="5"> 12:00 </option>
+                                                <option value="6"> 13:00 </option>
+                                                <option value="7"> 14:00 </option>
+                                                <option value="8"> 15:00 </option>
+                                                <option value="9"> 16:00 </option>
+                                                <option value="10"> 17:00 </option>
+                                                <option value="11"> 18:00 </option>
+                                                <option value="12"> 19:00 </option>
+                                                <option value="13"> 20:00 </option>
+                                                <option value="14"> 21:00 </option> 
+                                            </select>
+                                        </div>    
                                     </div>
                                     <div className="Botao-alterar"><button> Atualizar </button></div> 
                                 </div>

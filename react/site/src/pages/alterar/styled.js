@@ -29,9 +29,14 @@ const Container2 = styled.div`
     }
 
     .Informacoes{
-        background-color: #3B70A2;
+        display: flex;
+        flex-direction: column;
 
         padding: 2em;
+        background-color: #3B70A2;
+
+        width: 450px;
+        height: 500px;
 
         border-radius: 20px;
     }
@@ -47,8 +52,16 @@ const Container2 = styled.div`
     .Alterar{
         background-color: #3B70A2;  
 
-        padding: 2em;
-        margin-left: 5em;   
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 1em;
+        background-color: #3B70A2;
+
+        width: 400px;
+        height: 700px;
+        margin-left: 20px;
     
         border-radius: 20px;
     }
@@ -83,6 +96,12 @@ const Container2 = styled.div`
 
         background-color: #E3B052;
         color: white;
+    }
+
+    .Alterar-Horario{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
      
