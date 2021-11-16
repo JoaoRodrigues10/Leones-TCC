@@ -39,7 +39,7 @@ export default class Api {
     
 
     async cadastrar(email, cargo, senha) {
-        let r = await api.post('/funcionario/entrar', { email, cargo, senha })
+        let r = await api.post('/cadastro', { email, cargo, senha })
         return r.data;
     }
 

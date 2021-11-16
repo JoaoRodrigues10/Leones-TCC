@@ -8,7 +8,7 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
    
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom'
 
 
@@ -46,7 +46,10 @@ export default function MeuPerfil(props){
     const [ idAlterando, setIdAlterando ] = useState(0);
     const [ serv, setServico ] = useState('');
     const [ serv2, setServico2 ] = useState('');
-    const [ agenda, setAgenda ] = useState('');    
+    const [ agenda, setAgenda ] = useState('');  
+    const [ hora, setHora ] = useState('');  
+    
+    
     
     async function listar() {
         let b = await api.ListarAgendamento();
@@ -81,10 +84,11 @@ export default function MeuPerfil(props){
     }
 
     async function editar(item) {
-        setAgenda(item.dt_agendamento);
+        setAgenda(item.dt_agendamento.substr(0, 10));
         setServico(item.id_servico_infod_leo_servico.tp_servico);
         setServico2(item.id_servico_infod_leo_servico.nm_servico);
         setIdAlterando(item.id_agendamento);
+        setHora(item.dt_agendamento.substr(11, 5));
     }
 
     useEffect(() => {
@@ -227,14 +231,8 @@ export default function MeuPerfil(props){
                             </div>
                             <div className="Box-2">
                                 <div className="Alterar">
-                                    <h1> Remarcar serviço {serv} do dia {agenda} </h1>
+                                    <h1> Remarcar serviço {serv} do dia {agenda} ás  {hora} </h1>
                                     <div className="Alterar-Horario">
-
-
-                                        <div className="data">
-                                            <label for=""> Selecione o serviço: </label>
-                                                <input type="text" value={serv2} onChange={ e => setServico2(e.target.value)} />
-                                        </div>
 
                                           <div className="data"> 
                                              Selecione a data:  
