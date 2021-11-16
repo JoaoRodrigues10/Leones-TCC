@@ -33,6 +33,8 @@ import Aprovacao from './pages/aprovacao';
 import Confirmar from './pages/confirmar';
 import Alterar from './pages/alterar';
 
+import Leo from './pages/leo'
+
 import Recuperacao from './pages/esqueciSenha/recuperacao';
 import Reset from './pages/esqueciSenha/reset';
 
@@ -49,6 +51,7 @@ export default function Routes() {
 
                 <Route path="/meuPerfil" exact={true} component={meuPerfil}/>
                 <Route path="/perfilFuncionario" exact={true} component={perfilFuncionario}/>               
+                <Route path="/leo" exact={true} component={Leo}/>               
 
                 <Route path="/serviços" exact={true} component={Escolha} />
                

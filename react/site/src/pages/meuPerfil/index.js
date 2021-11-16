@@ -5,20 +5,16 @@ import { Container } from "./styled";
 import { Container2 } from "../alterar/styled";
 
 import Calendar from 'react-calendar';
-import './calendario.css'
 import 'react-calendar/dist/Calendar.css';
    
 
 import { useState, useEffect, useRef } from 'react';
 import { useHistory } from 'react-router-dom'
 
-import { Link } from "react-router-dom"
-
 
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
 
-import LoadingBar from 'react-top-loading-bar';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -49,21 +45,15 @@ export default function MeuPerfil(props){
     const [imgusu, setImgUsu] = useState(usuarioLogado.img_cliente)
     const [ idAlterando, setIdAlterando ] = useState(0);
     const [ serv, setServico ] = useState('');
-    const [ agendamento, setAgendamento ] = useState('');    
+    const [ serv2, setServico2 ] = useState('');
+    const [ agenda, setAgenda ] = useState('');    
     
-    let loading = useRef(null);
-
-    
- 
     async function listar() {
-        loading.current.continuousStart();
         let b = await api.ListarAgendamento();
         setAgendamentos(b);
-        loading.current.complete();
     }
 
     async function remover(id) {
-        loading.current.continuousStart();
 
         confirmAlert({
             title: 'Remover agendamento',
@@ -88,13 +78,12 @@ export default function MeuPerfil(props){
         })
         
         listar();
-        
-        loading.current.complete();
     }
 
     async function editar(item) {
-        setAgendamento(item.dt_agendamento);
-        setServico(item.id_servico);
+        setAgenda(item.dt_agendamento);
+        setServico(item.id_servico_infod_leo_servico.tp_servico);
+        setServico2(item.id_servico_infod_leo_servico.nm_servico);
         setIdAlterando(item.id_agendamento);
     }
 
@@ -161,7 +150,6 @@ export default function MeuPerfil(props){
         <Cabecalho/>
         <Container>
             <ToastContainer />
-            <LoadingBar color='#174580' ref={loading} />
                 <div className="containerperfil"> 
             
                     <div className="faixa1">
@@ -240,32 +228,14 @@ export default function MeuPerfil(props){
                                 <hr></hr>
                             </div>
                             <div className="Box-2">
-                                <div className="Informacoes">
-                                    <h1> Informações </h1>
-                                    <ul>
-                                        <li> {usu} </li>
-                                        <li> <input type="text" value={serv} onChange={e => setServico(e.target.value)} class="text-input" disabled="disabled" /> </li>
-                                        <li> <input type="text" value={agendamento} onChange={e => setAgendamento(e.target.value)} class="text-input" disabled="disabled"/> </li>
-                                    </ul>
-                                </div>
                                 <div className="Alterar">
-                                    <h1> Remarcar serviço {serv} </h1>
+                                    <h1> Remarcar serviço {serv} do dia {agenda} </h1>
                                     <div className="Alterar-Horario">
 
 
                                         <div className="data">
                                             <label for=""> Selecione o serviço: </label>
-                                                <select required="" name="servico">
-                                                    <option selected="selected" value=""> Cortes </option>
-                                                    <option value="1"> Cortes femininos </option>
-                                                    <option value="2"> Penteados </option>
-                                                    <option value="3"> Tratamento capilar </option>
-                                                    <option value="4"> Químicas em geral </option>
-                                                    <option value="5"> Serviços especiais </option>
-                                                    <option value="6"> Manicure e pedicure </option>
-                                                    <option value="7"> Cortes masculinos </option>
-                                                    <option value="8"> Pigmentação </option>
-                                                </select>
+                                                <input type="text" value={serv2} onChange={ e => setServico2(e.target.value)} />
                                         </div>
 
                                           <div className="data"> 
