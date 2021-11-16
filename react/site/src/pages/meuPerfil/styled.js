@@ -245,6 +245,22 @@ th {
     }
     
   }
+
+  .react-calendar {
+    width: 300px !important;
+    height: auto;
+    max-width: 100% !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    
+}
+
+.react-calendar__tile {
+    padding: 1em 0.5em !important;
+}
+
+.data {
+  margin: 10px 0px;
+}
   
 
 `
