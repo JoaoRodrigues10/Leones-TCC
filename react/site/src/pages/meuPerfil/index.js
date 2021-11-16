@@ -51,9 +51,10 @@ export default function MeuPerfil(props){
     const [ agenda, setAgenda ] = useState('');  
     const [ hora, setHora ] = useState('');  
     
-    
+
     async function listar() {
-        let b = await api.ListarAgendamento();
+        let b = await api.ListarAgendamento(usuarioLogado.id_cliente);
+        console.log(b)
         setAgendamentos(b);
     }
 

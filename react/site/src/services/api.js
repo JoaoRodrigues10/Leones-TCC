@@ -111,8 +111,8 @@ export default class Api {
     
     
     
-    async ListarAgendamento() {
-        let r = await api.get('/agendamento', {})
+    async ListarAgendamento(id) {
+        let r = await api.get(`/agendamento/${id}`)
         return r.data;
     }
 
