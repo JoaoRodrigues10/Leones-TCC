@@ -39,7 +39,7 @@ export default class Api {
     
 
     async cadastrar(email, cargo, senha) {
-        let r = await api.post('/cadastro', { email, cargo, senha })
+        let r = await api.post('/funcionario/entrar', { email, cargo, senha })
         return r.data;
     }
 
@@ -109,10 +109,19 @@ export default class Api {
         return r.data;
     }
     
-    
+    async ListarAgendamentos() {
+        let r = await api.get(`/agendamento`)
+        return r.data;
+    }
     
     async ListarAgendamento(id) {
         let r = await api.get(`/agendamento/${id}`)
+        return r.data;
+    }
+
+
+    async ListarAgendamento2(id) {
+        let r = await api.get(`/agendamento/funcionario/${id}`)
         return r.data;
     }
 

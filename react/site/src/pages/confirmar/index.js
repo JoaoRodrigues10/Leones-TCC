@@ -36,10 +36,19 @@ export default function Servicos(props) {
 
     const marcarHorario = async () => {
         let b = await api.InserirAgendamento(idfun, usu, nomeserID, diaconsulta)
+
+        
+
         if (b.erro) {
             toast.error(`${b.erro}`)
       
-          } else {
+          } 
+
+        
+          
+          
+          
+        else {
             navigation.push('/aprovacao')
           }
           console.log(b)

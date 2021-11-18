@@ -42,19 +42,12 @@ export default function MeuPerfil(){
 
     let loading = useRef(null);
 
-    const atualizar = async() => {
-        loading.current.continuousStart();
-    
-        let cliente = await api.ListarAgendamento();
-        setAgendamentos(cliente)
-    
-        loading.current.complete();
-    }
+
  
     async function listar() {
         loading.current.continuousStart();
 
-        let b = await api.ListarAgendamento();
+        let b = await api.ListarAgendamento2(usuarioLogado.id_funcionario);
         setAgendamentos(b);
 
         loading.current.complete();
@@ -86,7 +79,7 @@ export default function MeuPerfil(){
         })
         
         listar();
-        atualizar();
+        
         loading.current.complete();
     }
 
@@ -187,8 +180,8 @@ export default function MeuPerfil(){
                         <tbody>
                             {agendamentos.map((item) =>   
                                 <tr >
-                                    <td>
-                                        {item.id_cliente_infod_leo_cliente.nm_cliente} 
+                                    <td title={item.id_cliente_infod_leo_cliente.nm_cliente}>
+                                            {item.id_cliente_infod_leo_cliente.nm_cliente}  
                                     </td>
                                     <td> {item.id_servico_infod_leo_servico.nm_servico} </td>
                                     <td> {item.dt_agendamento.substr(0, 10)} </td>

@@ -13,7 +13,7 @@ export default function Recuperacao() {
     const nav = useHistory();
 
     async function recuperar() {
-        const r = await axios.post('https://leonesltda.herokuapp.com/esqueciASenha', {email: email});
+        const r = await axios.post('http://localhost:3030/email/esqueciASenha', {email: email});
         if (r.data.status === 'ok') {
             nav.push('/reset', {email: email });
         } else {

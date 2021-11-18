@@ -14,7 +14,7 @@ export default function Reset(props) {
     const nav = useHistory();
 
     async function validarCodigo() {
-        const r = await axios.post(`https://leonesltda.herokuapp.com/validarCodigo`, { email: props.location.state.email, codigo: codigo });
+        const r = await axios.post(`http://localhost:3030/email/validarCodigo`, { email: props.location.state.email, codigo: codigo });
         if (r.data.status === 'ok') {
             setValidado(true);
         } else {
@@ -24,7 +24,7 @@ export default function Reset(props) {
     }
 
     async function alterarSenha() {
-        const r = await axios.put(`https://leonesltda.herokuapp.com/resetSenha`, { 
+        const r = await axios.put(`http://localhost:3030/email/resetSenha`, { 
           email: props.location.state.email,
           codigo: codigo,
           novaSenha: novaSenha
