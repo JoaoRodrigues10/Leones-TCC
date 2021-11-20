@@ -37,26 +37,15 @@ export default function MeuPerfil(){
     const [usufuncionario, setUsufuncionario] = useState(usuarioLogado.img_funcionario)
     const [situacao1] = useState("Aprovado")
     const [situacao2] = useState("Recusado")
-    
-    
-    
-    
-
-    let loading = useRef(null);
 
 
  
     async function listar() {
-        loading.current.continuousStart();
-
         let b = await api.ListarAgendamento2(usuarioLogado.id_funcionario);
         setAgendamentos(b);
-
-        loading.current.complete();
     }
 
     async function remover(id) {
-        loading.current.continuousStart();
 
         confirmAlert({
             title: 'Remover agendamento',
@@ -81,8 +70,6 @@ export default function MeuPerfil(){
         })
         
         listar();
-        
-        loading.current.complete();
     }
 
     async function editar(item) {
@@ -153,7 +140,6 @@ export default function MeuPerfil(){
     <Cabecalho/>
         <Container>
         <ToastContainer />
-        <LoadingBar color='#174580' ref={loading} />
             <div className="containerperfil"> 
           
                 <div className="faixa1">
@@ -209,8 +195,8 @@ export default function MeuPerfil(){
                                     <td> {item.dt_agendamento.substr(0, 10)} </td>
                                     <td> {item.dt_agendamento.substr(11, 5)} </td>
                                     <td> {item.tp_situacao} </td>
-                                    <td className="acao"> <button onClick={ () => aceitar(item.id_agendamento) }> <img src="/assets/images/edit.svg" alt="" /> </button> </td>
-                                    <td className="acao"> <button onClick={ () => recusar(item.id_agendamento) }> <img src="/assets/images/edit.svg" alt="" /> </button> </td>
+                                    <td className="acao"> <button onClick={ () => aceitar(item.id_agendamento) }> <img src="/assets/images/check.svg" alt="" /> </button> </td>
+                                    <td className="acao"> <button onClick={ () => recusar(item.id_agendamento) }> <img src="/assets/images/erro.svg" alt="" /> </button> </td>
                                     <td className="acao"> <button onClick={ () => editar(item) }> <img src="/assets/images/edit.svg" alt="" /> </button> </td>
                                     <td className="acao"> <button onClick={ () => remover(item.id_agendamento) }> <img src="/assets/images/delete.svg" alt="" /> </button> </td>
                                 </tr>

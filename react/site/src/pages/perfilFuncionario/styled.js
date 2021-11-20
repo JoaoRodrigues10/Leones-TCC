@@ -152,22 +152,21 @@ tbody {
    background-color: #DDDDDD;
 }
 
-.dipo tr{
-  
-}
-
-
 td {
   text-align: left;
   color: black;
   font-weight: 600;
-
-  
   padding: 2em;
+}
 
-  padding-left: 3.1em;
-  padding-right: 3em;
+.acao > button {
+  visibility: hidden;
+}
 
+tr:hover {
+  .acao > button {
+    visibility: visible;
+  }
 }
 
 th:nth-child(5){
@@ -204,11 +203,13 @@ th:nth-child(3){
 
 }
 
-.acao2 img{
+.acao img{
   width: 20px;
 }
 
-.acao2 > button {
+.acao > button {
+  display: flex;
+  align-items: center;
   background-color: #E3B052;
   border-radius: 50px;
   border: none;
@@ -241,10 +242,6 @@ th {
   border: none;
   width: 30px;
   height: 30px;
-}
-
-.acao img{
-  width: 20px;
 }
 
     .input-file {
