@@ -111,8 +111,7 @@ export default function Cabecalhooo() {
                 </div>
                 <div className="paginas-cab">
                     <Link to="/"> <div className="opcoes" > Home </div> </Link>
-                    <Link to="/serviços"> <div className="opcoes"> Serviços </div> </Link>         
-                    <Link to="/home"> <div className="opcoes"> LEO </div> </Link>     
+                    <Link to="/serviços"> <div className="opcoes"> Serviços </div> </Link>              
                 </div>
                
                 {logado &&

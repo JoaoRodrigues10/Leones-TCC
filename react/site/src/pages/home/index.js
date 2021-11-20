@@ -86,12 +86,11 @@ export default function Home() {
                             saudáveis e bem cuidadas pode prevenir uma<br/>
                             série de infecções de fungos que se alimentam<br/>
                             da queratina e até mesmo a micose.<br/>
-                            O nosso salão possui ótimos profissionais<br/>
-                            para que você não precise se preocupar quando<br/>
-                            tiver algum evento.
+                            Deixamos algumas dicas pra você que <br/>
+                            não consegue manter as unhas grandes e fortes.
                         </div>
 
-                            <Link to="/manicure e pedicure">
+                            <Link to="/manicureDicas">
                                 <button>Ver Mais</button>
                             </Link>
                     </div>
@@ -105,11 +104,11 @@ export default function Home() {
                             e mantendo alinhado. Assim como um bom corte<br/>
                             para retirar pontas finas e duplas e deixar<br/>
                             o cabelo com um aspecto mais volumoso.<br/>
-                            Podemos também mudar a cor dos fios para<br/>
-                            dar uma mudada no look.<br/> 
+                            Para saber como manter isso dê uma <br/>
+                            nas nossas dicas.
                         </div>
                         
-                        <Link to="/quimicas">
+                        <Link to="/leo">
                             <button>Ver Mais</button>
                         </Link>
                     </div>
@@ -120,14 +119,12 @@ export default function Home() {
                         <div className="des">
                             O Leones Salão de Beleza está de cara nova, e <br />
                             acaba de inaugurar um espaço masculino, moderno e <br />
-                            equipado, para atender homens de bom gosto. Com <br />
-                            atendimento diferenciado, os profissionais da Leones <br />
-                            Barbershop estão antenados com as tendências atuais <br />
-                            em barba e cortes de cabelo, além de oferecer <br />
-                            serviços como Barboterapia.
+                            equipado, para atender homens de bom gosto. <br/>
+                            Confira aqui algumas dicas de como manter <br/>
+                            sua barba em casa.
                         </div>
 
-                        <Link to="/cortesmas">
+                        <Link to="/barbearia">
                             <button>Ver Mais</button>
                         </Link>
                     </div>

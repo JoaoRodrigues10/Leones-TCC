@@ -13,6 +13,29 @@ const Container = styled.div`
         height: 400px;
     }
 
+
+    .nails{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/images/nails.jpg");
+        background-repeat: repeat;
+        background-size: 270px;
+        height: 400px;
+    }
+
+    .barba{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/images/barba.jpg");
+        background-repeat: repeat;
+        background-size: 600px;
+        height: 400px;
+    }
+
     .titulo{
         color: white;
         font-size: 50px;

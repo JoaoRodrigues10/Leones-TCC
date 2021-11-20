@@ -33,10 +33,12 @@ import Aprovacao from './pages/aprovacao';
 import Confirmar from './pages/confirmar';
 import Alterar from './pages/alterar';
 
-import Leo from './pages/leo'
+import Leo from './pages/leo/index'
+import ManicureDicas from './pages/leo/manicure'
 
 import Recuperacao from './pages/esqueciSenha/recuperacao';
 import Reset from './pages/esqueciSenha/reset';
+import Barbearia from './pages/leo/barbearia';
 
 
 export default function Routes() {
@@ -52,6 +54,8 @@ export default function Routes() {
                 <Route path="/meuPerfil" exact={true} component={meuPerfil}/>
                 <Route path="/perfilFuncionario" exact={true} component={perfilFuncionario}/>               
                 <Route path="/leo" exact={true} component={Leo}/>               
+                <Route path="/manicureDicas" exact={true} component={ManicureDicas}/>
+                <Route path="/barbearia" exact={true} component={Barbearia}/>                              
 
                 <Route path="/serviços" exact={true} component={Escolha} />
                
