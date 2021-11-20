@@ -35,6 +35,8 @@ export default function MeuPerfil(){
     const [agendamentos, setAgendamentos] = useState([]);
     const [usu] = useState(usuarioLogado.nm_funcionario)
     const [usufuncionario, setUsufuncionario] = useState(usuarioLogado.img_funcionario)
+    const [situacao1] = useState("Aprovado")
+    const [situacao2] = useState("Recusado")
     
     
     
@@ -87,9 +89,29 @@ export default function MeuPerfil(){
         <Link to="/alterar"> </Link>
     }
 
+    async function aceitar(id) {
+        let r = await api.AceitarAgendamento(id, situacao1)
+        if(r.erro){
+            toast.dark(`${r.erro}`);
+        } else {
+            toast.dark('Agendamento Aprovado')
+            
+        }
+    }
+
+    async function recusar(id) {
+        let r = await api.AceitarAgendamento(id, situacao2)
+        if(r.erro){
+            toast.dark(`${r.erro}`);
+        } else {
+            toast.dark('Agendamento Recusado')
+            
+        }
+    }
+
     useEffect(() => {
         listar();
-    }, [])
+    }, [aceitar])
 
     async function fazerUpload() {
 
@@ -187,7 +209,8 @@ export default function MeuPerfil(){
                                     <td> {item.dt_agendamento.substr(0, 10)} </td>
                                     <td> {item.dt_agendamento.substr(11, 5)} </td>
                                     <td> {item.tp_situacao} </td>
-                                    <td></td>
+                                    <td className="acao"> <button onClick={ () => aceitar(item.id_agendamento) }> <img src="/assets/images/edit.svg" alt="" /> </button> </td>
+                                    <td className="acao"> <button onClick={ () => recusar(item.id_agendamento) }> <img src="/assets/images/edit.svg" alt="" /> </button> </td>
                                     <td className="acao"> <button onClick={ () => editar(item) }> <img src="/assets/images/edit.svg" alt="" /> </button> </td>
                                     <td className="acao"> <button onClick={ () => remover(item.id_agendamento) }> <img src="/assets/images/delete.svg" alt="" /> </button> </td>
                                 </tr>

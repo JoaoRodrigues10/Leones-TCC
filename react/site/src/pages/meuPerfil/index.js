@@ -6,8 +6,8 @@ import { Container2 } from "../alterar/styled";
 
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-   
-
+import { Link } from 'react-router-dom';
+import Botaoconfirmar from '../botaoconfirmar'
 import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom'
 
@@ -40,7 +40,10 @@ function lerUsuarioLogado(navigation) {
 export default function MeuPerfil(props){
     const navigation = useHistory( );
     let usuarioLogado = lerUsuarioLogado(navigation) || {} ;
-
+    const [date, setDate] = useState(new Date())
+    const onChange = date => {
+      setDate(date)
+    }
     const [arquivo, setArquivo] = useState('');
     const [agendamentos, setAgendamentos] = useState([]);
     const [usu] = useState(usuarioLogado.nm_cliente)
@@ -50,11 +53,32 @@ export default function MeuPerfil(props){
     const [ serv2, setServico2 ] = useState('');
     const [ agenda, setAgenda ] = useState('');  
     const [ hora, setHora ] = useState('');  
+    const [alteraragen, setAlteraragen] = useState(false);
+    const [horario, setHorario] = useState([])
+    const [ novahora, setNovahora ] = useState(''); 
+    const onChange2 = novahora => {
+        setNovahora(novahora)
+      }
+
+    function listarHoras() {
+        const r = [
+          {
+            hora: "8:00"
+          },
+          {
+            hora: "9:00"
+          },
+        ]
+    
+        setHorario(r);
+      }
+
+
+    useEffect(listarHoras, []);
     
 
     async function listar() {
         let b = await api.ListarAgendamento(usuarioLogado.id_cliente);
-        console.log(b)
         setAgendamentos(b);
     }
 
@@ -91,7 +115,17 @@ export default function MeuPerfil(props){
         setServico2(item.id_servico_infod_leo_servico.nm_servico);
         setIdAlterando(item.id_agendamento);
         setHora(item.dt_agendamento.substr(11, 5));
+        setAlteraragen(true);
     }
+
+    async function alterarHorario(id) {
+        let b = (id, date, novahora)
+        console.log(b)
+        console.log(hora)
+        console.log(date)
+        console.log()
+    }
+
 
     useEffect(() => {
         listar();
@@ -130,27 +164,8 @@ export default function MeuPerfil(props){
         input.click();
       }
 
-      const [date, setDate] = useState(new Date())
-      const onChange = date => {
-      setDate(date)
-    }
+      
 
-    function mes(data) {
-        switch(data.getMonth()){
-            case 0: return 'Janeiro'
-            case 1: return 'Fevereiro'
-            case 2: return 'Março'
-            case 3: return 'Abril'
-            case 4: return 'Maio'
-            case 5: return 'Junho'
-            case 6: return 'Julho'
-            case 7: return 'Agosto'
-            case 8: return 'Setembro'
-            case 9: return 'Outubro'
-            case 10: return 'Novembro'
-            default: return 'Dezembro'
-        }
-    }
     return(
         <div>
         <Cabecalho/>
@@ -224,7 +239,8 @@ export default function MeuPerfil(props){
                 </div>
 
 
-                <div>
+                {alteraragen && 
+                    <div>
                     <Container2>
                         <div className="Container">
                             <div className="Box-1">
@@ -244,34 +260,31 @@ export default function MeuPerfil(props){
                                           </div>  
 
                                         <div className="data"> 
-                                            
-                                                  
-                                            <label for=""> Selecione o horário: </label>
-                                            <select required="" name="horario">
-                                                <option selected="selected" value=""> 8:00 </option>
-                                                <option value="1"> 8:00 </option>
-                                                <option value="2"> 9:00 </option>
-                                                <option value="3"> 10:00 </option>
-                                                <option value="4"> 11:00 </option>
-                                                <option value="5"> 12:00 </option>
-                                                <option value="6"> 13:00 </option>
-                                                <option value="7"> 14:00 </option>
-                                                <option value="8"> 15:00 </option>
-                                                <option value="9"> 16:00 </option>
-                                                <option value="10"> 17:00 </option>
-                                                <option value="11"> 18:00 </option>
-                                                <option value="12"> 19:00 </option>
-                                                <option value="13"> 20:00 </option>
-                                                <option value="14"> 21:00 </option> 
-                                            </select>
+
+
+                                        {horario.map(item => 
+                                                <Link to={{
+                                                    pathname: '/confirmar',
+                                                    state: {
+                                                      horas: item.hora,
+                                                      dia: date,
+                                                      nomeser: serv
+                                                    }
+                                                  }}>
+                                                <Botaoconfirmar horas={item}  />
+                                                </Link>
+                                        )
+                                        }
+
+                      
                                         </div>    
                                     </div>
-                                    <div className="Botao-alterar"><button> Atualizar </button></div> 
+                                    <div className="Botao-alterar"><button onClick={alterarHorario}> Atualizar </button></div> 
                                 </div>
                             </div>
                         </div>
                     </Container2>   
-                </div>
+                </div>}
             </Container> 
             <Rodape/> 
         </div>  

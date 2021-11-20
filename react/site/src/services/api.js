@@ -130,8 +130,13 @@ export default class Api {
         return r.data;
     }
 
-    async AlterarAgendamento(id, funcionario, servico, agendamento) {
-        let r = await api.put('/agendamento' + id, { funcionario, servico, agendamento });
+    async AlterarAgendamento(id, agendamento) {
+        let r = await api.put('/agendamento/' + id, { agendamento });
+        return r.data;
+    }
+
+    async AceitarAgendamento(id, situacao) {
+        let r = await api.put('/agendamento/' + id, { situacao });
         return r.data;
     }
 
