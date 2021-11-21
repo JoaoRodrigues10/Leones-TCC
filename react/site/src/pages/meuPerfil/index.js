@@ -189,14 +189,14 @@ export default function MeuPerfil(props){
                     <div className="faixa2"> 
                         <div className="textaviso">Avisos</div>
                             <div className="avisos">
-                            <div className="avisotext">(11:21:22) Carlos desmarcou o serviço do dia xxxx as xxx horas</div>
-                            <div className="avisotext">(11:21:22) Carlos Remarcou o serviço do dia xxxx as xxx para o dia xxxx as xxxx horas</div>
-                            <div className="avisotext"><br></br></div>
-                            <div className="avisotext"><br></br></div>
-                            <div className="avisotext"><br></br></div>
-                            <div className="avisotext"><br></br></div>
-                            <div className="avisotext"><br></br></div>
-                        </div>
+                                <div className="avisotext">(11:21:22) Carlos desmarcou o serviço do dia xxxx as xxx horas</div>
+                                <div className="avisotext">(11:21:22) Carlos Remarcou o serviço do dia xxxx as xxx para o dia xxxx as xxxx horas</div>
+                                <div className="avisotext"><br></br></div>
+                                <div className="avisotext"><br></br></div>
+                                <div className="avisotext"><br></br></div>
+                                <div className="avisotext"><br></br></div>
+                                <div className="avisotext"><br></br></div>
+                            </div>
                     </div>
             
                     <div className="faixa3"> 

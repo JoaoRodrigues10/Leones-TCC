@@ -259,21 +259,67 @@ tr:hover {
     th {
       font-size: 9px;
       font-weight: 600;
-    
-      padding: 1em;
-    
-      padding-left: 0.8em;
-      padding-right: 1.1em;
     }
+
+    th:nth-child(1){
+      padding-right: 1em;
+      padding-left: 1em;
+    
+    }
+    th:nth-child(2){
+      padding-right: 1em;
+      padding-left: 0em;
+    
+    }
+    th:nth-child(3){
+      padding-right: 1em;
+      padding-left: 1em;
+    
+    }
+    th:nth-child(4){
+      padding-right: 1em;
+      padding-left: 2em;
+    
+    }
+    th:nth-child(5){
+      padding-right: 1.5em;
+      padding-left: 1em;
+    
+    }
+
+    td:nth-child(1){
+      padding-right: 1em;
+      padding-left: 1em;
+    
+    }
+    td:nth-child(2){
+      padding-right: 1em;
+      padding-left: 0em;
+    
+    }
+    td:nth-child(3){
+      padding-right: 1em;
+      padding-left: 0em;
+    
+    }
+    td:nth-child(4){
+      padding-right: 1em;
+      padding-left: 0em;
+    
+    }
+    td:nth-child(5){
+      padding-right: 1em;
+      padding-left: 1.8em;
+    
+    }
+    
     
     td {
       font-weight: 600;
     
       padding: 0px;
     
-      padding-left: 10.4px;
-      padding-right: 11.5px;
-
+    
       font-size: 10px;
     
     }
@@ -308,6 +354,23 @@ tr:hover {
 
 .data {
   margin: 10px 0px;
+}
+
+.avisos{
+  width: 300px;
+  height: 200px; 
+}
+
+.acao > button {
+  visibility: visible;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+td {
+  padding: 10px;
 }
   
 

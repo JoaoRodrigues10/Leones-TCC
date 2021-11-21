@@ -60,5 +60,39 @@ const Container = styled.div`
         display: flex;
         flex-direction: row;
     }
+
+    @media (max-width: 500px){
+        .nails{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            background-size: 500px;
+            height: 400px;
+        }
+
+        .hair{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            background-size: 500px;
+            height: 400px;
+        }
+
+        .barba{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            background-size: 600px;
+            height: 400px;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+        }
+    }
 `
 export { Container }

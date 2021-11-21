@@ -125,6 +125,7 @@ const Container = styled.div`
     color: #ffffff;
     font-size: 12px;
     margin: 27px 0px;
+    padding: 0px 40px;
   }
   
   .box button {

@@ -223,10 +223,27 @@ th {
   font-weight: 600;
 
   padding: 2em;
-
-  padding-left: 3.7em;
-  padding-right: 3.77em;
 } 
+
+th:nth-child(1){
+  padding-right: 7em;
+  padding-left: 2em;
+}
+
+th:nth-child(2){
+  padding-right: 5em;
+  padding-left: 2em;
+}
+
+th:nth-child(3){
+  padding-right: 0em;
+  padding-left: 3em;
+}
+
+th:nth-child(5){
+  padding-right: 12.5em;
+  padding-left: 2em;
+}
 
 .faixa1 button {
   background: none;
@@ -234,14 +251,6 @@ th {
   text-decoration: underline;
   color: white;
   cursor: pointer;
-}
-
-.acao > button {
-  background-color: #E3B052;
-  border-radius: 50px;
-  border: none;
-  width: 30px;
-  height: 30px;
 }
 
     .input-file {
@@ -297,9 +306,6 @@ th {
       font-weight: 600;
     
       padding: 1em;
-    
-      padding-left: 0.8em;
-      padding-right: 1.1em;
     }
     
     td {
@@ -307,8 +313,7 @@ th {
     
       padding: 0px;
     
-      padding-left: 10.4px;
-      padding-right: 11.5px;
+
 
       font-size: 10px;
     
@@ -326,6 +331,79 @@ th {
 
     .table-user{
       padding: 0px;
+    }
+
+
+    th:nth-child(1){
+      padding-right: 1em;
+      padding-left: 3em;
+    
+    }
+    th:nth-child(2){
+      padding-right: 1em;
+      padding-left: 3em;
+    
+    }
+    th:nth-child(3){
+      padding-right: 1em;
+      padding-left: 3em;
+    
+    }
+    th:nth-child(4){
+      padding-right: 1em;
+      padding-left: 1em;
+    
+    }
+    th:nth-child(5){
+      padding-right: 1em;
+      padding-left: 3em;
+    
+    }
+
+    td:nth-child(1){
+      padding-right: 1em;
+      padding-left: 1em;
+    
+    }
+    td:nth-child(2){
+      padding-right: 1em;
+      padding-left: 0em;
+    
+    }
+    td:nth-child(3){
+      padding-right: 1em;
+      padding-left: 0em;
+    
+    }
+    td:nth-child(4){
+      padding-right: 1em;
+      padding-left: 0em;
+    
+    }
+    td:nth-child(5){
+      padding-right: 1em;
+      padding-left: 1.8em;
+    
+    }
+
+    
+
+    .avisos{
+      width: 300px;
+      height: 200px; 
+    }
+
+    .acao img{
+      width: 7px;
+      height: 7px;
+    }
+
+    .acao > button {
+      visibility: visible;
+        width: 15px;
+        height: 15px;
+        display: flex;
+        align-items: center;
     }
     
   }

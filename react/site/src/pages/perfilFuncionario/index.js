@@ -181,7 +181,6 @@ export default function MeuPerfil(){
                                 <th> Situação </th>
                                 <th className="a"> </th>
                                 <th className="a"> </th>
-                                <th className="a"> </th>
                             </tr>
                         </thead>
         
@@ -195,10 +194,10 @@ export default function MeuPerfil(){
                                     <td> {item.dt_agendamento.substr(0, 10)} </td>
                                     <td> {item.dt_agendamento.substr(11, 5)} </td>
                                     <td> {item.tp_situacao} </td>
+                                    <td> </td>
+                                    <td></td>
                                     <td className="acao"> <button onClick={ () => aceitar(item.id_agendamento) }> <img src="/assets/images/check.svg" alt="" /> </button> </td>
                                     <td className="acao"> <button onClick={ () => recusar(item.id_agendamento) }> <img src="/assets/images/erro.svg" alt="" /> </button> </td>
-                                    <td className="acao"> <button onClick={ () => editar(item) }> <img src="/assets/images/edit.svg" alt="" /> </button> </td>
-                                    <td className="acao"> <button onClick={ () => remover(item.id_agendamento) }> <img src="/assets/images/delete.svg" alt="" /> </button> </td>
                                 </tr>
                             )}
                         </tbody>  

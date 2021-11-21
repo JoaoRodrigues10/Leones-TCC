@@ -82,11 +82,11 @@ export default function Home() {
                         <img src="/assets/images/unha1.png" alt="" />
 
                         <div className="des">
-                            Muito além da beleza, manter as unhas limpas,<br/>
-                            saudáveis e bem cuidadas pode prevenir uma<br/>
-                            série de infecções de fungos que se alimentam<br/>
-                            da queratina e até mesmo a micose.<br/>
-                            Deixamos algumas dicas pra você que <br/>
+                            Muito além da beleza, manter as unhas limpas,
+                            saudáveis e bem cuidadas pode prevenir uma
+                            série de infecções de fungos que se alimentam
+                            da queratina e até mesmo a micose.
+                            Deixamos algumas dicas pra você que 
                             não consegue manter as unhas grandes e fortes.
                         </div>
 
@@ -99,12 +99,12 @@ export default function Home() {
                         <img src="/assets/images/cabelo.png" alt="" />
 
                         <div className="des">
-                            Os tratamentos capilares devolvem nutrientes<br/>
-                            para o nosso cabelo, assim evitando o frizz<br/>
-                            e mantendo alinhado. Assim como um bom corte<br/>
-                            para retirar pontas finas e duplas e deixar<br/>
-                            o cabelo com um aspecto mais volumoso.<br/>
-                            Para saber como manter isso dê uma <br/>
+                            Os tratamentos capilares devolvem nutrientes
+                            para o nosso cabelo, assim evitando o frizz
+                            e mantendo alinhado. Assim como um bom corte
+                            para retirar pontas finas e duplas e deixar
+                            o cabelo com um aspecto mais volumoso.
+                            Para saber como manter isso dê uma 
                             nas nossas dicas.
                         </div>
                         
@@ -117,10 +117,10 @@ export default function Home() {
                         <img src="/assets/images/barbearia1.png" alt="" />
 
                         <div className="des">
-                            O Leones Salão de Beleza está de cara nova, e <br />
-                            acaba de inaugurar um espaço masculino, moderno e <br />
-                            equipado, para atender homens de bom gosto. <br/>
-                            Confira aqui algumas dicas de como manter <br/>
+                            O Leones Salão de Beleza está de cara nova, e
+                            acaba de inaugurar um espaço masculino, moderno e
+                            equipado, para atender homens de bom gosto. 
+                            Confira aqui algumas dicas de como manter
                             sua barba em casa.
                         </div>
 
