@@ -61,7 +61,6 @@ const Container2 = styled.div`
 
         width: 1000px;
         height: 700px;
-        margin-left: 20px;
     
         border-radius: 20px;
     }

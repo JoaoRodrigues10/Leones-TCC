@@ -338,39 +338,73 @@ tr:hover {
       padding: 0px;
     }
     
+  
+
+    .react-calendar {
+      width: 300px !important;
+      height: auto;
+      max-width: 100% !important;
+      font-family: Arial, Helvetica, sans-serif !important;
+      
   }
 
-  .react-calendar {
-    width: 300px !important;
-    height: auto;
-    max-width: 100% !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    
-}
+  .react-calendar__tile {
+      padding: 1em 0.5em !important;
+  }
 
-.react-calendar__tile {
-    padding: 1em 0.5em !important;
-}
+  .data {
+    margin: 10px 0px;
+  }
 
-.data {
-  margin: 10px 0px;
-}
+  .avisos{
+    width: 300px;
+    height: 200px; 
+  }
 
-.avisos{
-  width: 300px;
-  height: 200px; 
-}
+  .acao > button {
+    visibility: visible;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+  }
 
-.acao > button {
-  visibility: visible;
-    width: 20px;
-    height: 20px;
+  td {
+    padding: 10px;
+  }
+
+  .Box-1 {
     display: flex;
     align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 10px;
+  }
+
+  .Box-2{
+    padding: 1em; 
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;   
+}
+.Alterar{
+  
+  width: 700px;
+  height: 500px;
+  margin-left: 0px;
 }
 
-td {
-  padding: 10px;
+.Alterar h1{
+  font-size: 15px;
+  padding: 0px 30px;
+  text-align: center;
+}
+
+h1{
+        
+  padding: 0em;
+}
 }
   
 
