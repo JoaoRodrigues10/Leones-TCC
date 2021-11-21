@@ -42,11 +42,7 @@ export default function Servicos(props) {
         else {
             navigation.push('/aprovacao')
           }
-          console.log(b)
-          console.log(idfun)
-          console.log(usu)
-          console.log(nomeserID)
-          console.log(diaconsulta)
+         
     }
 
 

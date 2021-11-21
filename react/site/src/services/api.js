@@ -130,15 +130,16 @@ export default class Api {
         return r.data;
     }
 
-    async AlterarAgendamento(id, agendamento) {
-        let r = await api.put('/agendamento/' + id, { agendamento });
+    async AlterarAgendamento(id, agendamento, situacao) {
+        let r = await api.put('/agendamento/' + id, { agendamento, situacao });
         return r.data;
     }
 
     async AceitarAgendamento(id, situacao) {
-        let r = await api.put('/agendamento/' + id, { situacao });
+        let r = await api.put('/agendamento/v2/' + id, { situacao });
         return r.data;
     }
+    
 
     async RemoverAgendamento(id) {
         let r = await api.delete('/agendamento/' + id);
