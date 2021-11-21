@@ -56,19 +56,19 @@ export default function MeuPerfil(props){
     const [alteraragen, setAlteraragen] = useState(false);
     const [horario, setHorario] = useState([])
     const [ novahora, setNovahora ] = useState(''); 
-    const onChange2 = novahora => {
-        setNovahora(novahora)
-      }
+    const [idagendamento, setIdagendamento] = useState('')
 
     function listarHoras() {
         const r = [
-          {
-            hora: "8:00"
-          },
-          {
-            hora: "9:00"
-          },
-        ]
+            {
+              hora: "8:00"
+            },
+            {
+              hora: "9:00"
+            },
+            
+          ]
+      
     
         setHorario(r);
       }
@@ -116,6 +116,7 @@ export default function MeuPerfil(props){
         setIdAlterando(item.id_agendamento);
         setHora(item.dt_agendamento.substr(11, 5));
         setAlteraragen(true);
+        setIdagendamento(item.id_agendamento)
     }
 
     async function alterarHorario(id) {
@@ -129,7 +130,7 @@ export default function MeuPerfil(props){
 
     useEffect(() => {
         listar();
-    }, [])
+    }, [remover])
 
     async function fazerUpload() {
 
@@ -264,11 +265,12 @@ export default function MeuPerfil(props){
 
                                         {horario.map(item => 
                                                 <Link to={{
-                                                    pathname: '/confirmar',
+                                                    pathname: '/alterar',
                                                     state: {
                                                       horas: item.hora,
                                                       dia: date,
-                                                      nomeser: serv
+                                                      nomeser: serv,
+                                                      idagen: idagendamento
                                                     }
                                                   }}>
                                                 <Botaoconfirmar horas={item}  />
@@ -279,12 +281,13 @@ export default function MeuPerfil(props){
                       
                                         </div>    
                                     </div>
-                                    <div className="Botao-alterar"><button onClick={alterarHorario}> Atualizar </button></div> 
+                                     
                                 </div>
                             </div>
                         </div>
                     </Container2>   
                 </div>}
+
             </Container> 
             <Rodape/> 
         </div>  

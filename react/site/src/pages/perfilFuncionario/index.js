@@ -72,9 +72,7 @@ export default function MeuPerfil(){
         listar();
     }
 
-    async function editar(item) {
-        <Link to="/alterar"> </Link>
-    }
+    
 
     async function aceitar(id) {
         let r = await api.AceitarAgendamento(id, situacao1)
@@ -88,11 +86,12 @@ export default function MeuPerfil(){
 
     async function recusar(id) {
         let r = await api.AceitarAgendamento(id, situacao2)
+        let b = await api.ListarAgendamento2(usuarioLogado.id_funcionario);
         if(r.erro){
             toast.dark(`${r.erro}`);
         } else {
             toast.dark('Agendamento Recusado')
-            
+           
         }
     }
 
@@ -194,8 +193,6 @@ export default function MeuPerfil(){
                                     <td> {item.dt_agendamento.substr(0, 10)} </td>
                                     <td> {item.dt_agendamento.substr(11, 5)} </td>
                                     <td> {item.tp_situacao} </td>
-                                    <td> </td>
-                                    <td></td>
                                     <td className="acao"> <button onClick={ () => aceitar(item.id_agendamento) }> <img src="/assets/images/check.svg" alt="" /> </button> </td>
                                     <td className="acao"> <button onClick={ () => recusar(item.id_agendamento) }> <img src="/assets/images/erro.svg" alt="" /> </button> </td>
                                 </tr>
