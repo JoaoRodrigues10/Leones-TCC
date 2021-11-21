@@ -5,6 +5,10 @@ const Container = styled.div`
 
   padding-top: 2em;
 
+  .containerperfil{
+    padding: 10px 0px;
+  }
+
 .faixa1{
   display: flex;
   flex-direction: row;    
@@ -180,10 +184,29 @@ th:nth-child(5){
 }
 
 .acao > button {
+  visibility: hidden;
+}
+
+tr:hover {
+  .acao > button {
+    visibility: visible;
+  }
+}
+
+.acao img{
+  width: 20px;
+}
+
+
+.acao > button {
+  display: flex;
+  align-items: center;
   background-color: #E3B052;
   border-radius: 50px;
   border: none;
-    }
+  width: 30px;
+  height: 30px;
+}
 
     .input-file {
     position: relative;

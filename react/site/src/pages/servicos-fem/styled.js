@@ -127,6 +127,18 @@ const ContainerCortes = styled.div`
   height: 310px;
 }
 
+.cabelo2 img {
+  width: 160px;
+  height: 180px;
+}
+
+.cabelo2{
+  background-color: #252d4d;
+  padding: 62px 30px;
+
+  margin: 0px 15px;
+}
+
 .info {
   display: flex;
   flex-direction: row;

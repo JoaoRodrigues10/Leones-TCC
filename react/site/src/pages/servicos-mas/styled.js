@@ -88,6 +88,19 @@ const Container = styled.div`
     margin: 0px 0px 50px;
   }
 
+  .cabelo2 img {
+    width: 160px;
+    height: 180px;
+  }
+  
+  .cabelo2{
+    background-color: #252d4d;
+    padding: 62px 30px;
+  
+    margin: 0px 15px;
+  }
+  
+
   @media (max-width: 1024px){
 
     .carrosel {

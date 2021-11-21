@@ -62,17 +62,25 @@ export default function TratamentoMas() {
                                 <img src="./assets/images/tratamento3.png" alt="" />
                             </div>
 
-                            <div class="cabelo">
-                                <img src="./assets/images/tratamento3.png" alt="" />
+                            <div class="cabelo2">
+                                <img src="./assets/images/tratamento4.png" alt="" />
                             </div>
 
-                            <div class="cabelo">
-                                <img src="./assets/images/tratamento3.png" alt="" />
+                            <div class="cabelo2">
+                                <img src="./assets/images/tratamento5.png" alt="" />
                             </div>
 
-                            <div class="cabelo">
-                                <img src="./assets/images/tratamento3.png" alt="" />
+                            <div class="cabelo2">
+                                <img src="./assets/images/tratamento6.png" alt="" />
                             </div>
+
+                            <div class="cabelo2">
+                                    <img src="./assets/images/tratamento7.png" alt="" />
+                                </div>
+
+                                <div class="cabelo2">
+                                    <img src="./assets/images/tratamento8.png" alt="" />
+                                </div>
 
                             
                     </Carousel>
