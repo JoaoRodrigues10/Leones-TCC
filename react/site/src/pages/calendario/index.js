@@ -43,9 +43,6 @@ export default function Calendariooo(props) {
             hora: "16:00"
           },
           {
-            hora: "16:00"
-          },
-          {
             hora: "17:00"
           },
           {

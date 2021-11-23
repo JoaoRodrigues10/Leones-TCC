@@ -7,7 +7,7 @@ import { Container2 } from "../alterar/styled";
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import { Link } from 'react-router-dom';
-import Botaoconfirmar from '../botaoconfirmar'
+import Botaoconfirmar from '../botaoconfirmar2'
 import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom'
 
@@ -60,12 +60,48 @@ export default function MeuPerfil(props){
 
     function listarHoras() {
         const r = [
-            {
-              hora: "8:00"
-            },
-            {
-              hora: "9:00"
-            },
+                {
+                  hora: "8:00"
+                },
+                {
+                  hora: "9:00"
+                },
+                {
+                  hora: "10:00"
+                },
+                {
+                  hora: "11:00"
+                },
+                {
+                  hora: "12:00"
+                },
+                {
+                  hora: "13:00"
+                },
+                {
+                  hora: "14:00"
+                },
+                {
+                  hora: "15:00"
+                },
+                {
+                  hora: "16:00"
+                },
+                {
+                  hora: "17:00"
+                },
+                {
+                  hora: "18:00"
+                },
+                {
+                  hora: "19:00"
+                },
+                {
+                  hora: "20:00"
+                },
+                {
+                  hora: "21:00"
+                },
             
           ]
       
@@ -249,7 +285,7 @@ export default function MeuPerfil(props){
                                             </div> 
                                           </div>  
 
-                                        <div className="data"> 
+                                        <div className="horarios-dispo"> 
 
 
                                         {horario.map(item => 

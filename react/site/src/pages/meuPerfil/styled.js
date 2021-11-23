@@ -174,6 +174,25 @@ th:nth-child(5){
 }
 
 
+.horarios-dispo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+    .horarios-dispo button {
+        font-size: 1em;
+        margin: 1em;
+        background-color: #e3b052;
+        color: #ffffff;
+        height: 2em;
+        width: 6em;
+        border: none;
+        cursor: pointer;
+        border-radius: 11px;
+    }
+
+
 
  .faixa1 button {
   background: none;
