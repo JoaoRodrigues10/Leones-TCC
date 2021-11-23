@@ -109,7 +109,7 @@ export default function MeuPerfil(){
         let formData = new FormData();
         formData.append('arquivo', arquivo);
 
-        let resp = await axios.put(`http://localhost:3030/criarArquivo2?id=${usuarioLogado.id_funcionario}`, formData, {
+        let resp = await axios.put(`https://leones20.herokuapp.com/criarArquivo2?id=${usuarioLogado.id_funcionario}`, formData, {
           headers: {
             "Content-Type": "multipart/form-data"
           }});
@@ -128,7 +128,7 @@ export default function MeuPerfil(){
         if (arquivo) {
           return URL.createObjectURL(arquivo);
         } else{
-            return `http://localhost:3030/imagemPerfil2?imagem=${usufuncionario}`
+            return `https://leones20.herokuapp.com/imagemPerfil2?imagem=${usufuncionario}`
         }
       }
     

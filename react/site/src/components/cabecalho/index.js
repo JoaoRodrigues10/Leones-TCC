@@ -30,8 +30,8 @@ export default function Cabecalhooo() {
     let usuarioLogado = lerUsuarioLogado(navigation) || {} ;
     const [imgusu] = useState(usuarioLogado.img_cliente)
     const [imgfunc] = useState(usuarioLogado.img_funcionario)
-    const [usu] = useState(`http://localhost:3030/imagemPerfil?imagem=${imgusu}`)
-    const [usufuncionario] = useState(`http://localhost:3030/imagemPerfil?imagem=${imgfunc}`)
+    const [usu] = useState(`https://leones20.herokuapp.com/imagemPerfil?imagem=${imgusu}`)
+    const [usufuncionario] = useState(`https://leones20.herokuapp.com/imagemPerfil?imagem=${imgfunc}`)
 
     
     function logadoOUnao() {
