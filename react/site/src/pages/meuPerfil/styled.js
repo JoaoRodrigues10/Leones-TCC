@@ -5,6 +5,10 @@ const Container = styled.div`
 
   padding-top: 2em;
 
+  .remarcar{
+    
+  }
+
   .containerperfil{
     padding: 10px 0px;
   }
