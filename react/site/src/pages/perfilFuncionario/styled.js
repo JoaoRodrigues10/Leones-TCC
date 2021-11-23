@@ -169,22 +169,6 @@ tr:hover {
   }
 }
 
-th:nth-child(5){
-  padding-right: 3.77em;
-  padding-left: 0em;
-
-}
-th:nth-child(4){
-  padding-right: 4em;
-  padding-left: 3em;
-
-}
-th:nth-child(3){
-  padding-right: 3.77em;
-  padding-left: 5em;
-
-}
-
 .serv {
   color: white;
   font-size: 30px;
@@ -241,7 +225,7 @@ th:nth-child(3){
 }
 
 th:nth-child(5){
-  padding-right: 12.5em;
+  padding-right: 11.1em;
   padding-left: 2em;
 }
 
