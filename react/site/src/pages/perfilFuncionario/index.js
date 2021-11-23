@@ -99,12 +99,17 @@ export default function MeuPerfil(){
         listar();
     }, [aceitar])
 
+    useEffect(() => {
+        listar();
+    }, [recusar])
+
+
     async function fazerUpload() {
 
         let formData = new FormData();
         formData.append('arquivo', arquivo);
 
-        let resp = await axios.put(`https://leones20.herokuapp.com/criarArquivo2?id=${usuarioLogado.id_funcionario}`, formData, {
+        let resp = await axios.put(`http://localhost:3030/criarArquivo2?id=${usuarioLogado.id_funcionario}`, formData, {
           headers: {
             "Content-Type": "multipart/form-data"
           }});
@@ -123,7 +128,7 @@ export default function MeuPerfil(){
         if (arquivo) {
           return URL.createObjectURL(arquivo);
         } else{
-            return `https://leones20.herokuapp.com/imagemPerfil2?imagem=${usufuncionario}`
+            return `http://localhost:3030/imagemPerfil2?imagem=${usufuncionario}`
         }
       }
     
@@ -154,19 +159,7 @@ export default function MeuPerfil(){
                     </div>
                 </div>
         
-                <div className="faixa2"> 
-                    <div className="textaviso">Avisos</div>
-                    <div className="avisos">
-                        <div className="avisotext">(11:21:22) Bruno desmarcou o serviço do dia xxxx as xxx horas</div>
-                        <div className="avisotext">(11:21:22) Bruno Remarcou o serviço do dia xxxx as xxx para o dia xxxx as xxxx horas</div>
-                        <div className="avisotext"><br></br></div>
-                        <div className="avisotext"><br></br></div>
-                        <div className="avisotext"><br></br></div>
-                        <div className="avisotext"><br></br></div>
-                        <div className="avisotext"><br></br></div>
-                    
-                    </div>
-                </div>
+                
         
                 <div className="faixa3"> 
                     <div className="minhaagenda">Minha agenda</div>

@@ -1,7 +1,7 @@
 
 import axios from 'axios'
 const api = axios.create({
-    baseURL: 'https://leonesofc.herokuapp.com'
+    baseURL: 'http://localhost:3030'
 })
 
 export default class Api {
@@ -136,7 +136,7 @@ export default class Api {
     }
 
     async AceitarAgendamento(id, situacao) {
-        let r = await api.put('/agendamento/v2/' + id, { situacao });
+        let r = await api.put('/v2/' + id, { situacao });
         return r.data;
     }
     
